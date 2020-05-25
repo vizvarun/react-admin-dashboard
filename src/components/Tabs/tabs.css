@@ -17,7 +17,7 @@
   border-top: none !important;
   border-left: none !important;
   border-right: none !important ;
-  border-bottom: 2px solid #e4a503 !important;
+  border-bottom: 0.17em solid #e4a503 !important;
 }
 
 .nav-tabs {
@@ -34,12 +34,11 @@
   color: gray !important;
 }
 
-.nav-link:hover{
-  border: none !important;
-}
-
 @media (max-width: 500px) {
   .tabcon {
     margin-top: 4%;
+  }
+  .tabitem{
+      font-size: 0.85rem !important;
   }
 }

@@ -1,8 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { Nav } from "reactstrap";
-import './Sidebar.css';
-
+import "./Sidebar.css";
 
 class Sidebar extends React.Component {
   constructor(props) {
@@ -36,8 +35,11 @@ class Sidebar extends React.Component {
                     className="nav-link"
                     activeClassName="active"
                   >
-                    <i className={prop.icon} />
-                    <p>{prop.name}</p>
+                    {/* <i className={prop.icon} /> */}
+                    <div className="flexdisp">
+                      <img src={prop.image} className="imageicon" />
+                      <p className="nametext">{prop.name}</p>
+                    </div>
                   </NavLink>
                 </li>
               );

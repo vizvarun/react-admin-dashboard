@@ -16,6 +16,7 @@
   border-right: 1px;
   width: 2%;
   border-left: 1px;
+  margin-top: 11% !important;
 }
 
 .sidebar .sidebar-wrapper li.active > a:not([data-toggle="collapse"])::before,
@@ -89,5 +90,20 @@
 }
 p {
   font-family: "Montserrat", sans-serif;
-  font-weight: 500 !important;
+}
+.flexdisp {
+  display: flex;
+  flex-direction: row;
+}
+
+.imageicon {
+  margin-top: 15%;
+  margin-right: 5%;
+  margin-left: 10%;
+}
+
+.nametext {
+  margin-top: 15%;
+  margin-left: 5%;
+  font-weight: 600 !important;
 }

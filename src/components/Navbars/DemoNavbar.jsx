@@ -108,7 +108,7 @@ class Header extends React.Component {
                 <span className="navbar-toggler-bar bar3" />
               </button>
             </div>
-            <NavbarBrand href="/">
+            <NavbarBrand href="">
               <img src={require("assets/img/logo.png")} alt="logo" />
             </NavbarBrand>
           </div>
@@ -122,20 +122,20 @@ class Header extends React.Component {
             navbar
             className="justify-content-end"
           >
-            <form>
+            <form className="textbox">
               <InputGroup className="no-border textInp">
                 <Input placeholder="Search..." />
                 <InputGroupAddon addonType="append">
                   <InputGroupText>
-                    <i className="nc-icon nc-zoom-split" />
+                    <img src={require("assets/img/search.svg")} />
                   </InputGroupText>
                 </InputGroupAddon>
               </InputGroup>
             </form>
             <Nav navbar>
               <NavItem>
-                <Link to="#pablo" className="nav-link btn-rotate">
-                  <i className="nc-icon nc-circle-10" />
+                <Link to="#" className="nav-link btn-rotate">
+                  <img src={require("assets/img/account.svg")} />
                   <p>
                     <span className="d-lg-none d-md-block">Account</span>
                   </p>

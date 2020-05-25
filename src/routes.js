@@ -7,30 +7,30 @@ var routes = [
   {
     path: "/section1",
     name: "Section 1",
-    icon: "nc-icon nc-layout-11",
+    image: require("./assets/img/grid.svg"),
     component: Section1,
     layout: "/admin",
   },
   {
     path: "/section2",
     name: "Section 2",
-    icon: "nc-icon nc-tile-56",
+    image: require("./assets/img/add-to-list.svg"),
     component: Section2,
     layout: "/admin",
   },
 
   {
     path: "/section3",
-    name: "Section 3",
-    icon: "nc-icon nc-box-2",
+    name: " Section 3",
+    image: require("./assets/img/menu3.svg"),
     component: Section3,
     layout: "/admin",
   },
 
   {
     path: "/section4",
-    name: "Section 4",
-    icon: "nc-icon nc-single-copy-04",
+    name: "  Section 4",
+    image: require("./assets/img/menu4.svg"),
     component: Section4,
     layout: "/admin",
   },
