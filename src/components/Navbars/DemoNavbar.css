@@ -6,12 +6,12 @@
   background-color: white !important;
 }
 
-.navbar.navbar-transparent{
+.navbar.navbar-transparent {
   border: none;
 }
 
-@media(max-width:500px){
-  .navbrand{
+@media (max-width: 500px) {
+  .navbrand {
     margin-left: 10% !important;
   }
 }

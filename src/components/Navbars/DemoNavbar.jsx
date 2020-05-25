@@ -124,7 +124,7 @@ class Header extends React.Component {
           >
             <form className="textbox">
               <InputGroup className="no-border textInp">
-                <Input placeholder="Search..." />
+                <Input placeholder=" Search" />
                 <InputGroupAddon addonType="append">
                   <InputGroupText>
                     <img src={require("assets/img/search.svg")} />

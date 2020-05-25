@@ -38,6 +38,67 @@ class Tab1 extends React.Component {
                   className="filtericon"
                 />
               </div>
+              <div className="userInp">
+                <Card className="cardmain">
+                  <CardBody>
+                    <CardText>
+                      <div className="toptext">
+                        <h5 className="cardheadtext2">User Name</h5>
+                        <h5 className="cardheadtext2">Phone Number</h5>
+                        <h5 className="cardheadtext2">Type</h5>
+                        <h5 className="cardheadtext2">Contractor Name</h5>
+                        <h5 className="cardheadtext2">Status</h5>
+                      </div>
+                    </CardText>
+                  </CardBody>
+                </Card>
+              </div>
+              <div className="userInp">
+                <Card className="carddetails">
+                  <CardBody>
+                    <CardText>
+                      <div className="toptext">
+                        <h5 className="carddetailtext">User Name</h5>
+                        <h5 className="carddetailtext">Phone Number</h5>
+                        <h5 className="carddetailtext">Type</h5>
+                        <h5 className="carddetailtext">Contractor Name</h5>
+                        <h5 className="carddetailtext">Status</h5>
+                        <img
+                          src={require("assets/img/reddot.svg")}
+                          className="reddot"
+                        />
+                        <img
+                          src={require("assets/img/edit-square.svg")}
+                          className="editicon"
+                        />
+                      </div>
+                    </CardText>
+                  </CardBody>
+                </Card>
+              </div>
+              <div className="userInp">
+                <Card className="carddetails">
+                  <CardBody>
+                    <CardText>
+                      <div className="toptext">
+                        <h5 className="carddetailtext">User Name</h5>
+                        <h5 className="carddetailtext">Phone Number</h5>
+                        <h5 className="carddetailtext">Type</h5>
+                        <h5 className="carddetailtext">Contractor Name</h5>
+                        <h5 className="carddetailtext">Status</h5>
+                        <img
+                          src={require("assets/img/greendot.svg")}
+                          className="reddot"
+                        />
+                        <img
+                          src={require("assets/img/edit-square.svg")}
+                          className="editicon"
+                        />
+                      </div>
+                    </CardText>
+                  </CardBody>
+                </Card>
+              </div>
             </Col>
             <Col md="4">
               <Card className="cardUser">
@@ -73,6 +134,25 @@ class Tab1 extends React.Component {
                     </div>
                   </CardText>
                 </CardBody>
+              </Card>
+
+              <Card className="cardUser2">
+                <div className="iconright">
+                  <img
+                    src={require("assets/img/filter2.svg")}
+                    className="filtericon2"
+                  />
+                </div>
+                <div className="internalrow">
+                  <Row>
+                    <Col md="6">
+                      <h5 className="cardheadtext">Production House</h5>
+                    </Col>
+                    <Col md="6">
+                      <h5 className="cardheadtext">Your overview</h5>
+                    </Col>
+                  </Row>
+                </div>
               </Card>
             </Col>
           </Row>
