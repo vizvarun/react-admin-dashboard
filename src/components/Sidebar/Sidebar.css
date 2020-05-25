@@ -11,7 +11,7 @@
   .nav
   li:after {
   border-radius: 100px !important;
-  border-color: orange !important;
+  border-color: #e4a503 !important;
   margin-right: 2% !important;
   border-right: 1px;
   width: 2%;
@@ -26,7 +26,7 @@
   + div
   .nav
   li:before {
-  border-color: orange !important;
+  border-color: #e4a503 !important;
   border-radius: 100px !important;
   margin-right: 2% !important;
   border-right: 1px;
@@ -36,4 +36,9 @@
 .sidebar[data-color="black"]:after,
 .off-canvas-sidebar[data-color="black"]:after {
   background-color: #000 !important;
+}
+
+
+.sidebar[data-active-color="info"] .nav li.active > a, .sidebar[data-active-color="info"] .nav li.active > a i, .sidebar[data-active-color="info"] .nav li.active > a[data-toggle="collapse"], .sidebar[data-active-color="info"] .nav li.active > a[data-toggle="collapse"] i, .sidebar[data-active-color="info"] .nav li.active > a[data-toggle="collapse"] ~ div > ul > li.active .sidebar-mini-icon, .sidebar[data-active-color="info"] .nav li.active > a[data-toggle="collapse"] ~ div > ul > li.active > a, .off-canvas-sidebar[data-active-color="info"] .nav li.active > a, .off-canvas-sidebar[data-active-color="info"] .nav li.active > a i, .off-canvas-sidebar[data-active-color="info"] .nav li.active > a[data-toggle="collapse"], .off-canvas-sidebar[data-active-color="info"] .nav li.active > a[data-toggle="collapse"] i, .off-canvas-sidebar[data-active-color="info"] .nav li.active > a[data-toggle="collapse"] ~ div > ul > li.active .sidebar-mini-icon, .off-canvas-sidebar[data-active-color="info"] .nav li.active > a[data-toggle="collapse"] ~ div > ul > li.active > a{
+  color: white;
 }
