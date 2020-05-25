@@ -2,7 +2,15 @@ import React from "react";
 // react plugin used to create charts
 import { Line, Pie } from "react-chartjs-2";
 // reactstrap components
-import { Card, CardBody, CardText, Row, Col } from "reactstrap";
+import {
+  Card,
+  CardBody,
+  CardText,
+  Row,
+  Col,
+  Input,
+  InputGroup,
+} from "reactstrap";
 // core components
 import {
   dashboard24HoursPerformanceChart,
@@ -11,6 +19,7 @@ import {
 } from "variables/charts.jsx";
 
 import "./tabs.css";
+import DropdownBtn from "components/DropdownBtn";
 
 class Tab1 extends React.Component {
   render() {
@@ -31,11 +40,37 @@ class Tab1 extends React.Component {
               </div>
             </Col>
             <Col md="4">
-              <Card>
+              <Card className="cardUser">
                 <CardBody>
                   <CardText>
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
+                    <h5 className="cardheadtext">Create New User</h5>
+                    <div className="cardInp">
+                      <h6 className="cardsubtext">User Type</h6>
+                      <div className="drop">
+                        <DropdownBtn />
+                      </div>
+                    </div>
+                    <div className="cardInp">
+                      <h6 className="cardsubtext">User Name</h6>
+                      <InputGroup className="no-border cardtextInp">
+                        <Input placeholder="Type Here" />
+                      </InputGroup>
+                    </div>
+                    <div className="cardInp">
+                      <h6 className="cardsubtext">Phone Number</h6>
+                      <InputGroup className="no-border cardtextInp">
+                        <Input placeholder="Type Here" />
+                      </InputGroup>
+                    </div>
+                    <div className="cardInp">
+                      <h6 className="cardsubtext">Contractor Name</h6>
+                      <InputGroup className="no-border cardtextInp">
+                        <Input placeholder="Type Here" />
+                      </InputGroup>
+                    </div>
+                    <div className="cardInp buttoncon mb">
+                      <button className="button">Add User</button>
+                    </div>
                   </CardText>
                 </CardBody>
               </Card>

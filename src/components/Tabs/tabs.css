@@ -48,11 +48,73 @@
   margin-bottom: 5%;
 }
 
+.cardUser {
+  background-color: #f9f9f9;
+  box-shadow: none;
+}
+
+.cardheadtext {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.cardInp {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 5%;
+}
+
+.cardtextInp {
+  width: 60%;
+  margin-left: 15%;
+  margin-top: -2%;
+  background-color: #fff !important;
+}
+
+.cardsubtext {
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.buttoncon {
+  float: right;
+  margin-top: 7%;
+  margin-right: 5%;
+}
+
+.button {
+  background-color: #e4a503;
+  color: white;
+  border: none;
+  width: 7rem;
+  height: 2.5rem;
+  font-weight: 600;
+  border-radius: 10px !important;
+}
+
+.mb {
+  margin-bottom: 5%;
+}
+
+.drop {
+  margin-left: 15%;
+  margin-top: -4%;
+}
+
+.droptext {
+  text-transform: none;
+}
+
 @media (max-width: 500px) {
   .tabcon {
     margin-top: 4%;
   }
   .tabitem {
     font-size: 0.85rem !important;
+  }
+  .cardtextInp {
+    margin-top: -5%;
   }
 }
