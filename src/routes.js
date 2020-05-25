@@ -8,10 +8,33 @@ import UserPage from "views/User.jsx";
 
 var routes = [
   {
+    path: "/user-page",
+    name: "Section 1",
+    icon: "nc-icon nc-layout-11",
+    component: UserPage,
+    layout: "/admin",
+  },
+  {
     path: "/dashboard",
-    name: "Dashboard",
-    icon: "nc-icon nc-bank",
+    name: "Section 2",
+    icon: "nc-icon nc-tile-56",
     component: Dashboard,
+    layout: "/admin",
+  },
+
+  {
+    path: "/notifications",
+    name: "Section 3",
+    icon: "nc-icon nc-box-2",
+    component: Notifications,
+    layout: "/admin",
+  },
+
+  {
+    path: "/maps",
+    name: "Section 4",
+    icon: "nc-icon nc-single-copy-04",
+    component: Maps,
     layout: "/admin",
   },
   {
@@ -19,27 +42,6 @@ var routes = [
     name: "Icons",
     icon: "nc-icon nc-diamond",
     component: Icons,
-    layout: "/admin",
-  },
-  {
-    path: "/maps",
-    name: "Maps",
-    icon: "nc-icon nc-pin-3",
-    component: Maps,
-    layout: "/admin",
-  },
-  {
-    path: "/notifications",
-    name: "Notifications",
-    icon: "nc-icon nc-bell-55",
-    component: Notifications,
-    layout: "/admin",
-  },
-  {
-    path: "/user-page",
-    name: "User Profile",
-    icon: "nc-icon nc-single-02",
-    component: UserPage,
     layout: "/admin",
   },
   {
