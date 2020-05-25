@@ -20,7 +20,7 @@ import {
 
 import "./main.css";
 
-class Dashboard extends React.Component {
+class Section2 extends React.Component {
   render() {
     return (
       <>
@@ -215,4 +215,4 @@ class Dashboard extends React.Component {
   }
 }
 
-export default Dashboard;
+export default Section2;
