@@ -1,11 +1,45 @@
 .tabcon {
-  margin-top: 3%;
+  margin-top: 2%;
 }
 
 .tabslist {
-    margin-top: 7% !important;
+  margin-top: 7% !important;
 }
 
-.tabitem:hover{
-    cursor: pointer;
+.tabitem:hover {
+  cursor: pointer;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  color: #e4a503 !important;
+  transition: ease-in-out 1.2ms;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important ;
+  border-bottom: 2px solid #e4a503;
+}
+
+.nav-tabs {
+  border: none !important;
+  font-weight: 600;
+  color: #b8b8b8;
+}
+
+.nav-tab:hover {
+  border: none !important;
+}
+
+.nav-link:hover {
+  color: gray !important;
+}
+
+.nav-link:hover{
+  border: none !important;
+}
+
+@media (max-width: 500px) {
+  .tabcon {
+    margin-top: 4%;
+  }
 }
