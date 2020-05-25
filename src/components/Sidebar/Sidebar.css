@@ -10,16 +10,12 @@
   + div
   .nav
   li:after {
-  border-right: 17px solid gold !important;
-  border-top: 17px solid transparent;
-  border-bottom: 17px solid transparent;
-  border-left: 17px solid transparent;
-  content: "";
-  display: block !important;
-  position: absolute;
-  opacity: 1;
-  top: 7px;
-  transition: opacity 150ms ease-in;
+  border-radius: 100px !important;
+  border-color: orange !important;
+  margin-right: 2% !important;
+  border-right: 1px;
+  width: 2%;
+  border-left: 1px;
 }
 
 .sidebar .sidebar-wrapper li.active > a:not([data-toggle="collapse"])::before,
@@ -30,14 +26,14 @@
   + div
   .nav
   li:before {
-  border-right: 17px solid gold !important;
-  border-top: 17px solid transparent;
-  border-bottom: 17px solid transparent;
-  border-left: 17px solid transparent;
-  content: "";
-  display: block !important;
-  position: absolute;
-  opacity: 1;
-  top: 7px;
-  transition: opacity 150ms ease-in;
+  border-color: orange !important;
+  border-radius: 100px !important;
+  margin-right: 2% !important;
+  border-right: 1px;
+  border-left: 1px;
+}
+
+.sidebar[data-color="black"]:after,
+.off-canvas-sidebar[data-color="black"]:after {
+  background-color: #000 !important;
 }
