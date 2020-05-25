@@ -1,6 +1,5 @@
 import Section1 from "views/Section1.jsx";
 import Section3 from "views/Section3.jsx";
-import Icons from "views/Icons.jsx";
 import Section4 from "views/Section4.jsx";
 import Section2 from "views/Section2.jsx";
 
@@ -33,13 +32,6 @@ var routes = [
     name: "Section 4",
     icon: "nc-icon nc-single-copy-04",
     component: Section4,
-    layout: "/admin",
-  },
-  {
-    path: "/icons",
-    name: "Icons",
-    icon: "nc-icon nc-diamond",
-    component: Icons,
     layout: "/admin",
   },
 ];

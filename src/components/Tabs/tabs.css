@@ -1,0 +1,11 @@
+.tabcon {
+  margin-top: 3%;
+}
+
+.tabslist {
+    margin-top: 7% !important;
+}
+
+.tabitem:hover{
+    cursor: pointer;
+}
