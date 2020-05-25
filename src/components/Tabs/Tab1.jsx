@@ -18,7 +18,18 @@ class Tab1 extends React.Component {
       <>
         <div className="content tabcon">
           <Row>
-            <Col md="8"></Col>
+            <Col md="8">
+              <div className="filtericoncon">
+                <img
+                  src={require("assets/img/filter1.svg")}
+                  className="filtericon"
+                />
+                <img
+                  src={require("assets/img/filter2.svg")}
+                  className="filtericon"
+                />
+              </div>
+            </Col>
             <Col md="4">
               <Card>
                 <CardBody>

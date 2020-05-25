@@ -5,3 +5,13 @@
 .main-panel {
   background-color: white !important;
 }
+
+.navbar.navbar-transparent{
+  border: none;
+}
+
+@media(max-width:500px){
+  .navbrand{
+    margin-left: 10% !important;
+  }
+}

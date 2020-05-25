@@ -34,11 +34,25 @@
   color: gray !important;
 }
 
+.filtericon {
+  margin-bottom: 5%;
+  cursor: pointer;
+  margin-left: 35%;
+}
+
+.filtericoncon {
+  float: right;
+  display: flex;
+  flex-direction: row;
+  margin-right: 5%;
+  margin-bottom: 5%;
+}
+
 @media (max-width: 500px) {
   .tabcon {
     margin-top: 4%;
   }
-  .tabitem{
-      font-size: 0.85rem !important;
+  .tabitem {
+    font-size: 0.85rem !important;
   }
 }
