@@ -17,7 +17,7 @@
   border-top: none !important;
   border-left: none !important;
   border-right: none !important ;
-  border-bottom: 2px solid #e4a503;
+  border-bottom: 2px solid #e4a503 !important;
 }
 
 .nav-tabs {
