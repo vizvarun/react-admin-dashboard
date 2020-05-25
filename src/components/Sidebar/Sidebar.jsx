@@ -1,12 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { Nav } from "reactstrap";
-import PerfectScrollbar from "perfect-scrollbar";
 import './Sidebar.css';
 
-import logo from "logo.svg";
-
-var ps;
 
 class Sidebar extends React.Component {
   constructor(props) {
@@ -16,19 +12,6 @@ class Sidebar extends React.Component {
   }
   activeRoute(routeName) {
     return this.props.location.pathname.indexOf(routeName) > -1 ? "active" : "";
-  }
-  componentDidMount() {
-    if (navigator.platform.indexOf("Win") > -1) {
-      ps = new PerfectScrollbar(this.sidebar.current, {
-        suppressScrollX: true,
-        suppressScrollY: false,
-      });
-    }
-  }
-  componentWillUnmount() {
-    if (navigator.platform.indexOf("Win") > -1) {
-      ps.destroy();
-    }
   }
   render() {
     return (
