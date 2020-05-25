@@ -109,7 +109,7 @@ class Header extends React.Component {
               </button>
             </div>
             <NavbarBrand href="/">
-              <img src="https://imgur.com/EZ8wvEX.png" alt="logo" />
+              <img src={require("assets/img/logo.png")} alt="logo" />
             </NavbarBrand>
           </div>
           <NavbarToggler onClick={this.toggle}>
