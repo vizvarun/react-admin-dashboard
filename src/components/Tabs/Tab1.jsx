@@ -12,12 +12,8 @@ import {
   InputGroup,
   Table
 } from "reactstrap";
-// core components
-import {
-  dashboard24HoursPerformanceChart,
-  dashboardEmailStatisticsChart,
-  dashboardNASDAQChart,
-} from "variables/charts.jsx";
+
+import Donut from '../../variables/charts';
 
 import "./tabs.css";
 import DropdownBtn from "components/DropdownBtn";
@@ -85,36 +81,38 @@ class Tab1 extends React.Component {
             <Col md="4">
               <Card className="cardUser">
                 <CardBody>
-                  <CardText>
+                  
+					<div className="inp-grp">
+					<CardText>
                     <h5 className="cardheadtext">Create New User</h5>
-                    <div className="cardInp">
-                      <h6 className="cardsubtext">User Type</h6>
-                      <div className="drop">
+                  	</CardText>
+					<div className="cardInp">
+                      
+					  <h6 className="cardsubtext">User Type</h6>
                         <DropdownBtn />
-                      </div>
                     </div>
                     <div className="cardInp">
                       <h6 className="cardsubtext">User Name</h6>
-                      <InputGroup className="no-border cardtextInp">
+					  <InputGroup className="no-border">
                         <Input placeholder="Type Here" />
                       </InputGroup>
                     </div>
                     <div className="cardInp">
                       <h6 className="cardsubtext">Phone Number</h6>
-                      <InputGroup className="no-border cardtextInp">
+					  <InputGroup className="no-border">
                         <Input placeholder="Type Here" />
                       </InputGroup>
                     </div>
                     <div className="cardInp">
                       <h6 className="cardsubtext">Contractor Name</h6>
-                      <InputGroup className="no-border cardtextInp">
+                      <InputGroup className="no-border">
                         <Input placeholder="Type Here" />
                       </InputGroup>
                     </div>
+					</div>
                     <div className="cardInp buttoncon mb">
                       <button className="button">Add User</button>
                     </div>
-                  </CardText>
                 </CardBody>
               </Card>
 
@@ -129,6 +127,7 @@ class Tab1 extends React.Component {
                   <Row>
                     <Col md="6">
                       <h5 className="cardheadtext">Production House</h5>
+					  <Donut/>
                     </Col>
                     <Col md="6">
                       <h5 className="cardheadtext">Your overview</h5>
