@@ -88,19 +88,19 @@ class Tab1 extends React.Component {
                     <div className="cardInp">
                       <h6 className="cardsubtext">User Name</h6>
                       <InputGroup className="no-border">
-                        <Input placeholder="Type Here" />
+                        <Input className="phold" placeholder="Type Here" />
                       </InputGroup>
                     </div>
                     <div className="cardInp">
                       <h6 className="cardsubtext">Phone Number</h6>
                       <InputGroup className="no-border">
-                        <Input placeholder="Type Here" />
+                        <Input className="phold" placeholder="Type Here" />
                       </InputGroup>
                     </div>
                     <div className="cardInp">
                       <h6 className="cardsubtext">Contractor Name</h6>
                       <InputGroup className="no-border">
-                        <Input placeholder="Type Here" />
+                        <Input className="phold" placeholder="Type Here" />
                       </InputGroup>
                     </div>
                   </div>

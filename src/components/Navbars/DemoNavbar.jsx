@@ -135,7 +135,7 @@ class Header extends React.Component {
             <Nav navbar>
               <NavItem>
                 <Link to="#" className="nav-link btn-rotate">
-                  <img src={require("assets/img/account.svg")} />
+                  <img src={require("assets/img/account.svg")} className="mr-3" />
                   <p>
                     <span className="d-lg-none d-md-block">Account</span>
                   </p>
