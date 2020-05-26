@@ -12,11 +12,11 @@
   li:after {
   border-radius: 100px !important;
   border-color: #e4a503 !important;
-  margin-right: 2% !important;
+  margin-right: 7% !important;
   border-right: 1px;
-  width: 2%;
+  width: 4%;
   border-left: 1px;
-  margin-top: 11% !important;
+  margin-top: 15% !important;
 }
 
 .sidebar .sidebar-wrapper li.active > a:not([data-toggle="collapse"])::before,
@@ -29,7 +29,7 @@
   li:before {
   border-color: #e4a503 !important;
   border-radius: 100px !important;
-  margin-right: 2% !important;
+  margin-right: 5% !important;
   border-right: 1px;
   border-left: 1px;
 }
@@ -97,7 +97,7 @@ p {
 }
 
 .imageicon {
-  margin-top: 15%;
+  margin-top: 25%;
   margin-right: 5%;
   margin-left: 10%;
 }
@@ -106,4 +106,14 @@ p {
   margin-top: 15%;
   margin-left: 5%;
   font-weight: 600 !important;
+}
+
+.sidebar,
+.off-canvas-sidebar {
+  width: 100px !important;
+}
+
+.sidebar .sidebar-wrapper,
+.off-canvas-sidebar .sidebar-wrapper {
+  width: inherit;
 }

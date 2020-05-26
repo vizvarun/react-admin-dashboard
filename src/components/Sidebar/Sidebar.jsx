@@ -38,7 +38,7 @@ class Sidebar extends React.Component {
                     {/* <i className={prop.icon} /> */}
                     <div className="flexdisp">
                       <img src={prop.image} className="imageicon" />
-                      <p className="nametext">{prop.name}</p>
+                      {/* <p className="nametext">{prop.name}</p> */}
                     </div>
                   </NavLink>
                 </li>

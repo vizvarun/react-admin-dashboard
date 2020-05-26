@@ -174,3 +174,8 @@
     margin-top: -5%;
   }
 }
+
+.tble-hd {
+	display: flex;
+	flex-direction: row;
+}

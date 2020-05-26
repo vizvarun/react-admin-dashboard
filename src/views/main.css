@@ -3,3 +3,14 @@
 * {
   font-family: "Montserrat", sans-serif;
 }
+
+.main-panel {
+	width: calc(100% - 100px) !important;
+}
+
+@media screen and (max-width: 991px){
+
+.main-panel {
+    width: 100% !important;
+}
+}

@@ -5,6 +5,7 @@ import {
   Nav,
   NavItem,
   NavLink,
+  Table
 } from "reactstrap";
 import classnames from "classnames";
 import Tab1 from "./Tab1";
@@ -20,7 +21,9 @@ const TabsSection2 = (props) => {
   return (
     <div className="tabslist">
       <Nav tabs>
-        <NavItem className="tabitem">
+        <Table responsive className="tble-hd">
+			<thead>
+			<NavItem className="tabitem">
           <NavLink
             className={classnames({ active: activeTab === "1" })}
             onClick={() => {
@@ -90,6 +93,8 @@ const TabsSection2 = (props) => {
             Rejection Reason
           </NavLink>
         </NavItem>
+			</thead>
+		</Table>
       </Nav>
       <TabContent activeTab={activeTab}>
         <TabPane tabId="1">

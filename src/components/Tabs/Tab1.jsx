@@ -10,6 +10,7 @@ import {
   Col,
   Input,
   InputGroup,
+  Table
 } from "reactstrap";
 // core components
 import {
@@ -38,8 +39,10 @@ class Tab1 extends React.Component {
                   className="filtericon"
                 />
               </div>
-              <div className="userInp">
-                <Card className="cardmain">
+			  <Table responsive>
+			  <thead className="userInp">
+				<tr>
+				<Card className="cardmain">
                   <CardBody>
                     <CardText>
                       <div className="toptext">
@@ -48,13 +51,15 @@ class Tab1 extends React.Component {
                         <h5 className="cardheadtext2">Type</h5>
                         <h5 className="cardheadtext2">Contractor Name</h5>
                         <h5 className="cardheadtext2">Status</h5>
+						<h5 className="cardheadtext2">&nbsp;</h5>
                       </div>
                     </CardText>
                   </CardBody>
                 </Card>
-              </div>
-              <div className="userInp">
-                <Card className="carddetails">
+				</tr>
+				</thead>
+				<tbody className="userInp">
+				<Card className="carddetails">
                   <CardBody>
                     <CardText>
                       <div className="toptext">
@@ -62,30 +67,6 @@ class Tab1 extends React.Component {
                         <h5 className="carddetailtext">Phone Number</h5>
                         <h5 className="carddetailtext">Type</h5>
                         <h5 className="carddetailtext">Contractor Name</h5>
-                        <h5 className="carddetailtext">Status</h5>
-                        <img
-                          src={require("assets/img/reddot.svg")}
-                          className="reddot"
-                        />
-                        <img
-                          src={require("assets/img/edit-square.svg")}
-                          className="editicon"
-                        />
-                      </div>
-                    </CardText>
-                  </CardBody>
-                </Card>
-              </div>
-              <div className="userInp">
-                <Card className="carddetails">
-                  <CardBody>
-                    <CardText>
-                      <div className="toptext">
-                        <h5 className="carddetailtext">User Name</h5>
-                        <h5 className="carddetailtext">Phone Number</h5>
-                        <h5 className="carddetailtext">Type</h5>
-                        <h5 className="carddetailtext">Contractor Name</h5>
-                        <h5 className="carddetailtext">Status</h5>
                         <img
                           src={require("assets/img/greendot.svg")}
                           className="reddot"
@@ -98,7 +79,8 @@ class Tab1 extends React.Component {
                     </CardText>
                   </CardBody>
                 </Card>
-              </div>
+				</tbody>
+			  </Table>
             </Col>
             <Col md="4">
               <Card className="cardUser">
