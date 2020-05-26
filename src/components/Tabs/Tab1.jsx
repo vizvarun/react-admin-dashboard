@@ -10,10 +10,10 @@ import {
   Col,
   Input,
   InputGroup,
-  Table
+  Table,
 } from "reactstrap";
 
-import Donut from '../../variables/charts';
+import Donut from "../../variables/charts";
 
 import "./tabs.css";
 import DropdownBtn from "components/DropdownBtn";
@@ -35,71 +35,68 @@ class Tab1 extends React.Component {
                   className="filtericon"
                 />
               </div>
-			  <Table responsive>
-			  <thead className="userInp">
-				<tr>
-				<Card className="cardmain">
-                  <CardBody>
-                    <CardText>
-                      <div className="toptext">
-                        <h5 className="cardheadtext2">User Name</h5>
-                        <h5 className="cardheadtext2">Phone Number</h5>
-                        <h5 className="cardheadtext2">Type</h5>
-                        <h5 className="cardheadtext2">Contractor Name</h5>
-                        <h5 className="cardheadtext2">Status</h5>
-						<h5 className="cardheadtext2">&nbsp;</h5>
-                      </div>
-                    </CardText>
-                  </CardBody>
-                </Card>
-				</tr>
-				</thead>
-				<tbody className="userInp">
-				<Card className="carddetails">
-                  <CardBody>
-                    <CardText>
-                      <div className="toptext">
-                        <h5 className="carddetailtext">User Name</h5>
-                        <h5 className="carddetailtext">Phone Number</h5>
-                        <h5 className="carddetailtext">Type</h5>
-                        <h5 className="carddetailtext">Contractor Name</h5>
-                        <img
-                          src={require("assets/img/greendot.svg")}
-                          className="reddot"
-                        />
-                        <img
-                          src={require("assets/img/edit-square.svg")}
-                          className="editicon"
-                        />
-                      </div>
-                    </CardText>
-                  </CardBody>
-                </Card>
-				</tbody>
-			  </Table>
+              <Table responsive>
+                <thead>
+                  <tr>
+                    <th className="tablehead">User Name</th>
+                    <th className="tablehead">Phone Number</th>
+                    <th className="tablehead">Type</th>
+                    <th className="tablehead">Contractor Name</th>
+                    <th className="tablehead">Status</th>
+                    <th className="tablehead">&nbsp;</th>
+                    <th className="tablehead">&nbsp;</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>
+                      <img src={require("../../assets/img/reddot.svg")} />
+                    </td>
+                    <td>
+                      <img src={require("../../assets/img/edit-square.svg")} />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>
+                      <img src={require("../../assets/img/greendot.svg")} />
+                    </td>
+                    <td>
+                      <img src={require("../../assets/img/edit-square.svg")} />
+                    </td>
+                  </tr>
+                </tbody>
+              </Table>
             </Col>
             <Col md="4">
               <Card className="cardUser">
                 <CardBody>
-                  
-					<div className="inp-grp">
-					<CardText>
-                    <h5 className="cardheadtext">Create New User</h5>
-                  	</CardText>
-					<div className="cardInp">
-                      
-					  <h6 className="cardsubtext">User Type</h6>
-                        <DropdownBtn />
+                  <div className="inp-grp">
+                    <CardText>
+                      <h5 className="cardheadtext">Create New User</h5>
+                    </CardText>
+                    <div className="cardInp">
+                      <h6 className="cardsubtext">User Type</h6>
+                      <DropdownBtn />
                     </div>
                     <div className="cardInp">
                       <h6 className="cardsubtext">User Name</h6>
-					  <InputGroup className="no-border">
+                      <InputGroup className="no-border">
                         <Input placeholder="Type Here" />
                       </InputGroup>
                     </div>
                     <div className="cardInp">
                       <h6 className="cardsubtext">Phone Number</h6>
-					  <InputGroup className="no-border">
+                      <InputGroup className="no-border">
                         <Input placeholder="Type Here" />
                       </InputGroup>
                     </div>
@@ -109,10 +106,10 @@ class Tab1 extends React.Component {
                         <Input placeholder="Type Here" />
                       </InputGroup>
                     </div>
-					</div>
-                    <div className="cardInp buttoncon mb">
-                      <button className="button">Add User</button>
-                    </div>
+                  </div>
+                  <div className="cardInp buttoncon mb">
+                    <button className="button">Add User</button>
+                  </div>
                 </CardBody>
               </Card>
 
@@ -127,7 +124,7 @@ class Tab1 extends React.Component {
                   <Row>
                     <Col md="6">
                       <h5 className="cardheadtext">Production House</h5>
-					  <Donut/>
+                      <Donut />
                     </Col>
                     <Col md="6">
                       <h5 className="cardheadtext">Your overview</h5>

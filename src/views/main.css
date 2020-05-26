@@ -5,12 +5,28 @@
 }
 
 .main-panel {
-	width: calc(100% - 100px) !important;
+  width: calc(100% - 100px) !important;
 }
 
-@media screen and (max-width: 991px){
-
-.main-panel {
+@media screen and (max-width: 991px) {
+  .main-panel {
     width: 100% !important;
+  }
 }
+
+@media screen and (max-width: 991px) {
+  .nav-open .main-panel {
+    right: 0;
+    transform: translate3d(100px, 0, 0);
+  }
+}
+
+*::-webkit-scrollbar {
+  display: none !important;
+}
+*::-webkit-scrollbar-track {
+  display: none !important;
+}
+*::-webkit-scrollbar-thumb {
+  display: none !important;
 }

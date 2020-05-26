@@ -20,6 +20,12 @@
   border-bottom: 0.17em solid #e4a503 !important;
 }
 
+.nav-link {
+  text-transform: none;
+  color: #b8b8b8 !important;
+  font-weight: 500 !important;
+}
+
 .nav-tabs {
   border: none !important;
   font-weight: 600;
@@ -75,19 +81,19 @@
 }
 
 .cardInp {
-display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-	margin-bottom: 5%;
-	padding-right: 3%;
-    padding-left: 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5%;
+  padding-right: 3%;
+  padding-left: 3%;
 }
 
 .inp-grp {
-	display: flex;
-	flex-direction: column;
-	align-items: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
 }
 
 .cardtextInp {
@@ -151,9 +157,6 @@ display: flex;
 .cardheadtext2 {
   font-size: 1rem;
   font-weight: 600;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 5%;
 }
 
 .carddetailtext {
@@ -163,11 +166,11 @@ display: flex;
   color: #4d4d4d;
 }
 
-.editicon{
+.editicon {
   margin-top: -2%;
 }
 
-.reddot{
+.reddot {
   margin-top: -2%;
   margin-right: 5%;
 }
@@ -185,10 +188,19 @@ display: flex;
 }
 
 .tble-hd {
-	display: flex;
-	flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
-.input-group{
-	width: unset;
+.input-group {
+  width: unset;
+}
+
+.table-responsive{
+  padding-bottom: unset !important;
+}
+
+.tablehead{
+  text-transform: none !important;
+  font-weight: 600 !important;
 }
