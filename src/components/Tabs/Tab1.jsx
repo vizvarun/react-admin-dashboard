@@ -43,17 +43,15 @@ class Tab1 extends React.Component {
                     <th className="tablehead">Type</th>
                     <th className="tablehead">Contractor Name</th>
                     <th className="tablehead">Status</th>
-                    <th className="tablehead">&nbsp;</th>
-                    <th className="tablehead">&nbsp;</th>
+                    <th className="tablehead">Edit</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <td>Manish Jain</td>
+                    <td>8889997770</td>
+                    <td>Payroll</td>
+                    <td>N/A</td>
                     <td>
                       <img src={require("../../assets/img/reddot.svg")} />
                     </td>
@@ -62,11 +60,10 @@ class Tab1 extends React.Component {
                     </td>
                   </tr>
                   <tr>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <td>Manish Jain</td>
+                    <td>8889997770</td>
+                    <td>Payroll</td>
+                    <td>N/A</td>
                     <td>
                       <img src={require("../../assets/img/greendot.svg")} />
                     </td>
