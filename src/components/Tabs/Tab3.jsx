@@ -17,6 +17,7 @@ import {
 import "./tabs.css";
 import DropdownBtn from "components/DropdownBtn";
 import Donut from "../../variables/doughnut";
+import TableList from "variables/tablelist";
 
 const Tab3 = (props) => {
   const { buttonLabel, className } = props;
@@ -24,6 +25,20 @@ const Tab3 = (props) => {
   const [modal, setModal] = useState(false);
 
   const toggle = () => setModal(!modal);
+  const data = {
+    tableHeading: [
+      "Machine",
+      "Location",
+      "Machine Code",
+      "Category Name",
+      "Status",
+      "Edit",
+    ],
+    tableData: [
+      ["ABC345", "Noida", "ABC345", "Newcode", true],
+      ["XYZ123", "Noida", "XYZ123", "Newcode", false],
+    ],
+  };
 
   return (
     <>
@@ -40,52 +55,11 @@ const Tab3 = (props) => {
                 className="filtericon"
               />
             </div>
-            <Table responsive>
-              <thead>
-                <tr>
-                  <th className="tablehead">Machine</th>
-                  <th className="tablehead">Location</th>
-                  <th className="tablehead">Machine Code</th>
-                  <th className="tablehead">Category Name</th>
-                  <th className="tablehead">Status</th>
-                  <th className="tablehead">Edit</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>ABC345</td>
-                  <td>Noida</td>
-                  <td>ABC345</td>
-                  <td>Newcode</td>
-                  <td>
-                    <img src={require("../../assets/img/reddot.svg")} />
-                  </td>
-                  <td>
-                    <img
-                      className="pointer-cursor"
-                      onClick={toggle}
-                      src={require("../../assets/img/edit-square.svg")}
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>ABC345</td>
-                  <td>Noida</td>
-                  <td>ABC345</td>
-                  <td>Newcode</td>
-                  <td>
-                    <img src={require("../../assets/img/greendot.svg")} />
-                  </td>
-                  <td>
-                    <img
-                      className="pointer-cursor"
-                      onClick={toggle}
-                      src={require("../../assets/img/edit-square.svg")}
-                    />
-                  </td>
-                </tr>
-              </tbody>
-            </Table>
+            <TableList
+              toggle={toggle}
+              tableHead={data.tableHeading}
+              tableData={data.tableData}
+            />
           </Col>
           <Col md="4">
             <Card className="cardUser">

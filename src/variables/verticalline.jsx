@@ -1,44 +1,42 @@
 import React, { PureComponent } from "react";
 import {
   ResponsiveContainer,
-  PieChart,
-  Pie,
-  Legend,
-  LineChart,
-  Line,
+  BarChart,
+  Bar,
+  Cell,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
+  Legend,
 } from "recharts";
-
 const data = [
   {
-    name: "22:00",
+    name: "Page A",
     uv: 4000,
     pv: 2400,
     amt: 2400,
   },
   {
-    name: "20:00",
+    name: "Page B",
     uv: 3000,
     pv: 1398,
     amt: 2210,
   },
   {
-    name: "18:00",
+    name: "Page C",
     uv: 2000,
     pv: 9800,
     amt: 2290,
   },
   {
-    name: "16:00",
+    name: "Page D",
     uv: 2780,
     pv: 3908,
     amt: 2000,
   },
   {
-    name: "14:00",
+    name: "Page E",
     uv: 1890,
     pv: 4800,
     amt: 2181,
@@ -58,14 +56,13 @@ const data = [
 ];
 
 export default class Example extends PureComponent {
-  static jsfiddleUrl = "//jsfiddle.net/alidingling/6okmehja/";
+  static jsfiddleUrl = "//jsfiddle.net/alidingling/9wnuL90w/";
 
   render() {
     return (
-      <div style={{ width: "100%", height: 400 }}>
+      <div style={{ width: 500, height: 300 }}>
         <ResponsiveContainer>
-          <LineChart
-            layout="vertical"
+          <BarChart
             width={500}
             height={300}
             data={data}
@@ -77,13 +74,13 @@ export default class Example extends PureComponent {
             }}
           >
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis type="number" />
-            <YAxis dataKey="name" type="category" />
+            <XAxis dataKey="name" />
+            <YAxis />
             <Tooltip />
             <Legend />
-            <Line dataKey="pv" stroke="#8884d8" />
-            <Line dataKey="uv" stroke="#82ca9d" />
-          </LineChart>
+            <Bar dataKey="pv" stackId="a" fill="#8884d8" />
+            <Bar dataKey="uv" stackId="a" fill="#82ca9d" />
+          </BarChart>
         </ResponsiveContainer>
       </div>
     );

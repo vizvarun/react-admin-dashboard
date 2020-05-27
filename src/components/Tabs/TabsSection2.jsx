@@ -6,6 +6,9 @@ import "./tabs.css";
 import Tab2 from "./Tab2";
 import Tab3 from "./Tab3";
 import Tab4 from "./Tab4";
+import Tab5 from "./Tab5";
+import Tab6 from "./Tab6";
+import Tab7 from "./Tab7";
 
 const TabsSection2 = (props) => {
   const [activeTab, setActiveTab] = useState("1");
@@ -126,19 +129,13 @@ const TabsSection2 = (props) => {
           <Tab4 />
         </TabPane>
         <TabPane tabId="5">
-          <div>
-            <h4>Content 5</h4>
-          </div>
+          <Tab5 />
         </TabPane>
         <TabPane tabId="6">
-          <div>
-            <h4>Content 6</h4>
-          </div>
+          <Tab6 />
         </TabPane>
         <TabPane tabId="7">
-          <div>
-            <h4>Content 7</h4>
-          </div>
+          <Tab7 />
         </TabPane>
       </TabContent>
     </div>

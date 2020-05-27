@@ -20,8 +20,9 @@ import Donut from "../../variables/doughnut";
 import VerticalLine from "variables/verticalline";
 import ResponsiveContainer from "recharts/lib/component/ResponsiveContainer";
 import TableList from "variables/tablelist";
+import Bars from "variables/Bar";
 
-const Tab4 = (props) => {
+const Tab7 = (props) => {
   const { buttonLabel, className } = props;
 
   const [modal, setModal] = useState(false);
@@ -29,17 +30,16 @@ const Tab4 = (props) => {
   const toggle = () => setModal(!modal);
   const data = {
     tableHeading: [
-      "Shift Name",
-      "Shift Description",
-      "Start Time",
-      "End Time",
-      "Overtime",
+      "Reason Code",
+      "Reason Name",
+      "Product Category",
+      "Reason Description",
       "Status",
       "Edit",
     ],
     tableData: [
-      ["A-Shift", "Lorem Ipsum Dolor Sit", "07:00", "16:00", "No", true],
-      ["A-Shift", "Lorem Ipsum Dolor Sit", "09:00", "18:00", "No", false],
+      ["AFR456", "Asthetics", "Category 1", "Lorem Ipsum Dolor Sit", true],
+      ["AFR456", "Asthetics", "Category 1", "Lorem Ipsum Dolor Sit", false],
     ],
   };
   return (
@@ -124,7 +124,7 @@ const Tab4 = (props) => {
               <div className="internalrow">
                 <Row>
                   <Col md="6">
-                    <VerticalLine />
+                    <Bars />
                   </Col>
                 </Row>
               </div>
@@ -183,4 +183,4 @@ const Tab4 = (props) => {
   );
 };
 
-export default Tab4;
+export default Tab7;

@@ -21,7 +21,7 @@ import VerticalLine from "variables/verticalline";
 import ResponsiveContainer from "recharts/lib/component/ResponsiveContainer";
 import TableList from "variables/tablelist";
 
-const Tab4 = (props) => {
+const Tab5 = (props) => {
   const { buttonLabel, className } = props;
 
   const [modal, setModal] = useState(false);
@@ -29,17 +29,15 @@ const Tab4 = (props) => {
   const toggle = () => setModal(!modal);
   const data = {
     tableHeading: [
-      "Shift Name",
-      "Shift Description",
-      "Start Time",
-      "End Time",
-      "Overtime",
+      "Reason Code",
+      "Reason Name",
+      "Scheduled Loss",
       "Status",
       "Edit",
     ],
     tableData: [
-      ["A-Shift", "Lorem Ipsum Dolor Sit", "07:00", "16:00", "No", true],
-      ["A-Shift", "Lorem Ipsum Dolor Sit", "09:00", "18:00", "No", false],
+      ["ABCD345", "Break Down", "No", true],
+      ["XYZ123", "Lunch Break", "Yes", false],
     ],
   };
   return (
@@ -124,7 +122,26 @@ const Tab4 = (props) => {
               <div className="internalrow">
                 <Row>
                   <Col md="6">
-                    <VerticalLine />
+                    <h5 className="cardheadtext">Production House</h5>
+                    <div className="doughnut-graph">
+                      <Donut
+                        labels={["Scheduled", "UnScheduled"]}
+                        data={[70, 30]}
+                        bgColor={["#336481", "#7ABEBA"]}
+                        hoverBgColor={["#336481", "#7ABEBA"]}
+                      />
+                    </div>
+                  </Col>
+                  <Col md="6">
+                    <h5 className="cardheadtext">Your overview</h5>
+                    <div className="doughnut-graph">
+                      <Donut
+                        labels={["Scheduled", "UnScheduled"]}
+                        data={[85, 15]}
+                        bgColor={["#8D5CF6", "#FAD84A"]}
+                        hoverBgColor={["#8D5CF6", "#FAD84A"]}
+                      />
+                    </div>
                   </Col>
                 </Row>
               </div>
@@ -183,4 +200,4 @@ const Tab4 = (props) => {
   );
 };
 
-export default Tab4;
+export default Tab5;

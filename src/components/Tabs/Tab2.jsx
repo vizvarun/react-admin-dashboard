@@ -17,11 +17,28 @@ import {
 import "./tabs.css";
 import DropdownBtn from "components/DropdownBtn";
 import Donut from "../../variables/doughnut";
+import TableList from "variables/tablelist";
 
 const Tab2 = (props) => {
   const { buttonLabel, className } = props;
 
   const [modal, setModal] = useState(false);
+  const data = {
+    tableHeading: [
+      "Product Code",
+      "Product Name",
+      "Product Type",
+      "Category Name",
+      "Category Name",
+      "Unit",
+      "Status",
+      "Edit",
+    ],
+    tableData: [
+      ["ABC345", "Valvet", "None", "Newcode", 400.0, "m/hr", true],
+      ["XYZ123", "Valvet", "None", "Newcode", 400.0, "m/hr", false],
+    ],
+  };
   const [catExpand, setCatExpand] = useState(false);
   const toggle = () => setModal(!modal);
   const toggleCatExpand = () => setCatExpand(!catExpand);
@@ -57,58 +74,11 @@ const Tab2 = (props) => {
                 className="filtericon"
               />
             </div>
-            <Table responsive>
-              <thead>
-                <tr>
-                  <th className="tablehead">Product Code</th>
-                  <th className="tablehead">Product Number</th>
-                  <th className="tablehead">Product Type</th>
-                  <th className="tablehead">Category Name</th>
-                  <th className="tablehead">Cycle Time</th>
-                  <th className="tablehead">Unit</th>
-                  <th className="tablehead">Status</th>
-                  <th className="tablehead">Edit</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>ABC345</td>
-                  <td>Valvet</td>
-                  <td>None</td>
-                  <td>Newcode</td>
-                  <td>400.00</td>
-                  <td>m/hr</td>
-                  <td>
-                    <img src={require("../../assets/img/reddot.svg")} />
-                  </td>
-                  <td>
-                    <img
-                      className="pointer-cursor"
-                      onClick={toggle}
-                      src={require("../../assets/img/edit-square.svg")}
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>ABC345</td>
-                  <td>Valvet</td>
-                  <td>None</td>
-                  <td>Newcode</td>
-                  <td>400.00</td>
-                  <td>m/hr</td>
-                  <td>
-                    <img src={require("../../assets/img/greendot.svg")} />
-                  </td>
-                  <td>
-                    <img
-                      className="pointer-cursor"
-                      onClick={toggle}
-                      src={require("../../assets/img/edit-square.svg")}
-                    />
-                  </td>
-                </tr>
-              </tbody>
-            </Table>
+            <TableList
+              toggle={toggle}
+              tableHead={data.tableHeading}
+              tableData={data.tableData}
+            />
           </Col>
           <Col md="4">
             <Card className="cardUser">
