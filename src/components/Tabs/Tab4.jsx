@@ -17,8 +17,10 @@ import {
 import "./tabs.css";
 import DropdownBtn from "components/DropdownBtn";
 import Donut from "../../variables/doughnut";
+import VerticalLine from "variables/verticalline";
+import ResponsiveContainer from "recharts/lib/component/ResponsiveContainer";
 
-const Tab1 = (props) => {
+const Tab4 = (props) => {
   const { buttonLabel, className } = props;
 
   const [modal, setModal] = useState(false);
@@ -43,20 +45,22 @@ const Tab1 = (props) => {
             <Table responsive>
               <thead>
                 <tr>
-                  <th className="tablehead">User Name</th>
-                  <th className="tablehead">Phone Number</th>
-                  <th className="tablehead">Type</th>
-                  <th className="tablehead">Contractor Name</th>
+                  <th className="tablehead">Shift Name</th>
+                  <th className="tablehead">Shift Description</th>
+                  <th className="tablehead">Start Time</th>
+                  <th className="tablehead">End Time</th>
+                  <th className="tablehead">Overnight</th>
                   <th className="tablehead">Status</th>
                   <th className="tablehead">Edit</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Manish Jain</td>
-                  <td>8889997770</td>
-                  <td>Payroll</td>
-                  <td>N/A</td>
+                  <td>A-Shift</td>
+                  <td>Lorem Ipsum Dolor Sit</td>
+                  <td>07:00</td>
+                  <td>16:00</td>
+                  <td>No</td>
                   <td>
                     <img src={require("../../assets/img/reddot.svg")} />
                   </td>
@@ -69,10 +73,11 @@ const Tab1 = (props) => {
                   </td>
                 </tr>
                 <tr>
-                  <td>Manish Jain</td>
-                  <td>8889997770</td>
-                  <td>Payroll</td>
-                  <td>N/A</td>
+                  <td>A-Shift</td>
+                  <td>Lorem Ipsum Dolor Sit</td>
+                  <td>07:00</td>
+                  <td>16:00</td>
+                  <td>No</td>
                   <td>
                     <img src={require("../../assets/img/greendot.svg")} />
                   </td>
@@ -92,33 +97,48 @@ const Tab1 = (props) => {
               <CardBody>
                 <div className="inp-grp">
                   <CardText>
-                    <h5 className="cardheadtext">Create New User</h5>
+                    <h5 className="cardheadtext">Add new Shift</h5>
                   </CardText>
                   <div className="cardInp">
-                    <h6 className="cardsubtext">User Type</h6>
+                    <h6 className="cardsubtext">Shift Name</h6>
+                    <InputGroup className="no-border">
+                      <Input className="phold" placeholder="Type Here" />
+                    </InputGroup>
+                  </div>
+                  <div className="cardInp">
+                    <h6 className="cardsubtext">Shift Description</h6>
+                    <InputGroup className="no-border">
+                      <Input className="phold" placeholder="Type Here" />
+                    </InputGroup>
+                  </div>
+                  <div className="cardInp">
+                    <h6 className="cardsubtext">Start Time</h6>
                     <DropdownBtn />
+                    <DropdownBtn />
+                    <img src={require("assets/img/plus-circle.svg")} />
                   </div>
                   <div className="cardInp">
-                    <h6 className="cardsubtext">User Name</h6>
-                    <InputGroup className="no-border">
-                      <Input className="phold" placeholder="Type Here" />
-                    </InputGroup>
+                    <h6 className="cardsubtext">Break Time</h6>
+                    <img src={require("assets/img/plus-circle.svg")} />
                   </div>
                   <div className="cardInp">
-                    <h6 className="cardsubtext">Phone Number</h6>
-                    <InputGroup className="no-border">
-                      <Input className="phold" placeholder="Type Here" />
-                    </InputGroup>
+                    <h6 className="cardsubtext">End Time</h6>
+                    <DropdownBtn />
+                    <DropdownBtn />
+                    <img src={require("assets/img/plus-circle.svg")} />
                   </div>
                   <div className="cardInp">
-                    <h6 className="cardsubtext">Contractor Name</h6>
-                    <InputGroup className="no-border">
-                      <Input className="phold" placeholder="Type Here" />
-                    </InputGroup>
+                    <h6 className="cardsubtext">Overnight</h6>
+                    <form>
+                      <input type="radio" value="yes" />
+                      Yes
+                      <input type="radio" value="no" />
+                      No
+                    </form>
                   </div>
                 </div>
                 <div className="cardInp buttoncon mb">
-                  <button className="button">Add User</button>
+                  <button className="button">Add Shift</button>
                 </div>
               </CardBody>
             </Card>
@@ -133,24 +153,7 @@ const Tab1 = (props) => {
               <div className="internalrow">
                 <Row>
                   <Col md="6">
-                    <h5 className="cardheadtext">Production House</h5>
-                    <Donut
-                      labels={["Contractor", "Payroll"]}
-                      data={[60, 40]}
-                      bgColor={["#CD0F5F", "#82CA27"]}
-                      hoverBgColor={["#CD0F5F", "#82CA27"]}
-                    />
-                  </Col>
-                  <Col md="6">
-                    <h5 className="cardheadtext">Your overview</h5>
-                    <div className="doughnut-graph">
-                      <Donut
-                        labels={["Contractor", "Payroll"]}
-                        data={[70, 30]}
-                        bgColor={["#2B47E3", "#E32B2B"]}
-                        hoverBgColor={["#2B47E3", "#E32B2B"]}
-                      />
-                    </div>
+                    <VerticalLine />
                   </Col>
                 </Row>
               </div>
@@ -159,7 +162,7 @@ const Tab1 = (props) => {
         </Row>
         <Modal centered isOpen={modal} toggle={toggle} className={className}>
           <ModalHeader toggle={toggle} className="modalhead">
-            Edit Existing User
+            Edit Existing Product
           </ModalHeader>
           <ModalBody>
             <div className="inp-grp">
@@ -209,4 +212,4 @@ const Tab1 = (props) => {
   );
 };
 
-export default Tab1;
+export default Tab4;

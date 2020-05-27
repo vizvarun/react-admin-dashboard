@@ -171,9 +171,9 @@ const Tab2 = (props) => {
                     <div className="doughnut-graph">
                       <Donut
                         labels={["Inactive", "Active"]}
-                        data={[70, 30]}
-                        bgColor={["#943563", "#F3A465"]}
-                        hoverBgColor={["#943563", "#F3A465"]}
+                        data={[85, 15]}
+                        bgColor={["#1F578E", "#ED692C"]}
+                        hoverBgColor={["#1F578E", "#ED692C"]}
                       />
                     </div>
                   </Col>
@@ -184,7 +184,7 @@ const Tab2 = (props) => {
         </Row>
         <Modal centered isOpen={modal} toggle={toggle} className={className}>
           <ModalHeader toggle={toggle} className="modalhead">
-            Edit Existing User
+            Edit Existing Product
           </ModalHeader>
           <ModalBody>
             <div className="inp-grp">
