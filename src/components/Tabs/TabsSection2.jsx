@@ -14,11 +14,12 @@ const TabsSection2 = (props) => {
   return (
     <div>
       <Nav tabs>
-        <Table responsive>
+       <div className="desktop-table">
+       <Table>
           <thead>
             <tr>
               <th>
-                <NavItem className="">
+                <NavItem className="navitem-cursor">
                   <NavLink
                     className={classnames({ active: activeTab === "1" })}
                     onClick={() => {
@@ -31,7 +32,7 @@ const TabsSection2 = (props) => {
               </th>
               <th>
                 {" "}
-                <NavItem className="">
+                <NavItem className="navitem-cursor">
                   <NavLink
                     className={classnames({ active: activeTab === "2" })}
                     onClick={() => {
@@ -43,7 +44,7 @@ const TabsSection2 = (props) => {
                 </NavItem>
               </th>
               <th>
-                <NavItem className="">
+                <NavItem className="navitem-cursor">
                   <NavLink
                     className={classnames({ active: activeTab === "3" })}
                     onClick={() => {
@@ -56,7 +57,7 @@ const TabsSection2 = (props) => {
               </th>
               <th>
                 {" "}
-                <NavItem className="">
+                <NavItem className="navitem-cursor">
                   <NavLink
                     className={classnames({ active: activeTab === "4" })}
                     onClick={() => {
@@ -68,7 +69,7 @@ const TabsSection2 = (props) => {
                 </NavItem>
               </th>
               <th>
-                <NavItem className="">
+                <NavItem className="navitem-cursor">
                   <NavLink
                     className={classnames({ active: activeTab === "5" })}
                     onClick={() => {
@@ -80,7 +81,7 @@ const TabsSection2 = (props) => {
                 </NavItem>
               </th>
               <th>
-                <NavItem className="">
+                <NavItem className="navitem-cursor">
                   <NavLink
                     className={classnames({ active: activeTab === "6" })}
                     onClick={() => {
@@ -92,7 +93,7 @@ const TabsSection2 = (props) => {
                 </NavItem>
               </th>
               <th>
-                <NavItem className="">
+                <NavItem className="navitem-cursor">
                   <NavLink
                     className={classnames({ active: activeTab === "7" })}
                     onClick={() => {
@@ -106,6 +107,101 @@ const TabsSection2 = (props) => {
             </tr>
           </thead>
         </Table>
+        <div className="mobile-table">
+        <Table responsive>
+          <thead>
+            <tr>
+              <th>
+                <NavItem className="navitem-cursor">
+                  <NavLink
+                    className={classnames({ active: activeTab === "1" })}
+                    onClick={() => {
+                      toggle("1");
+                    }}
+                  >
+                    User
+                  </NavLink>
+                </NavItem>
+              </th>
+              <th>
+                {" "}
+                <NavItem className="navitem-cursor">
+                  <NavLink
+                    className={classnames({ active: activeTab === "2" })}
+                    onClick={() => {
+                      toggle("2");
+                    }}
+                  >
+                    Product
+                  </NavLink>
+                </NavItem>
+              </th>
+              <th>
+                <NavItem className="navitem-cursor">
+                  <NavLink
+                    className={classnames({ active: activeTab === "3" })}
+                    onClick={() => {
+                      toggle("3");
+                    }}
+                  >
+                    Machine
+                  </NavLink>
+                </NavItem>
+              </th>
+              <th>
+                {" "}
+                <NavItem className="navitem-cursor">
+                  <NavLink
+                    className={classnames({ active: activeTab === "4" })}
+                    onClick={() => {
+                      toggle("4");
+                    }}
+                  >
+                    Shift
+                  </NavLink>
+                </NavItem>
+              </th>
+              <th>
+                <NavItem className="navitem-cursor">
+                  <NavLink
+                    className={classnames({ active: activeTab === "5" })}
+                    onClick={() => {
+                      toggle("5");
+                    }}
+                  >
+                    Stoppage Reason
+                  </NavLink>
+                </NavItem>
+              </th>
+              <th>
+                <NavItem className="navitem-cursor">
+                  <NavLink
+                    className={classnames({ active: activeTab === "6" })}
+                    onClick={() => {
+                      toggle("6");
+                    }}
+                  >
+                    Sub Stoppage Reason
+                  </NavLink>
+                </NavItem>
+              </th>
+              <th>
+                <NavItem className="navitem-cursor">
+                  <NavLink
+                    className={classnames({ active: activeTab === "7" })}
+                    onClick={() => {
+                      toggle("7");
+                    }}
+                  >
+                    Rejection Reason
+                  </NavLink>
+                </NavItem>
+              </th>
+            </tr>
+          </thead>
+        </Table>
+        </div>
+       </div>
       </Nav>
       <TabContent activeTab={activeTab}>
         <TabPane tabId="1">

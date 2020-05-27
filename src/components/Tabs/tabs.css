@@ -238,3 +238,24 @@
   border-bottom: 0;
   border-left: 0.3em solid transparent;
 }
+
+.mobile-table{
+  display: none;
+}
+
+.navitem-cursor{
+  cursor: pointer;
+}
+
+.pointer-cursor{
+  cursor: pointer;
+}
+
+@media(max-width:500px){
+  .mobile-table{
+    display: block;
+  }
+  .desktop-table{
+    display: none;
+  }
+}

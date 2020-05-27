@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Card,
   CardBody,
@@ -8,131 +8,168 @@ import {
   Input,
   InputGroup,
   Table,
+  Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
 } from "reactstrap";
 import "./tabs.css";
 import DropdownBtn from "components/DropdownBtn";
 import Donut from "../../variables/charts";
 
-class Tab1 extends React.Component {
-  render() {
-    return (
-      <>
-        <div className="content tabcon">
-          <Row>
-            <Col md="8">
-              <div className="filtericoncon">
-                <img
-                  src={require("assets/img/filter1.svg")}
-                  className="filtericon"
-                />
+const Tab1 = (props) => {
+  const { buttonLabel, className } = props;
+
+  const [modal, setModal] = useState(false);
+
+  const toggle = () => setModal(!modal);
+
+  return (
+    <>
+      <div className="content tabcon">
+        <Row>
+          <Col md="8">
+            <div className="filtericoncon">
+              <img
+                src={require("assets/img/filter1.svg")}
+                className="filtericon"
+              />
+              <img
+                src={require("assets/img/filter2.svg")}
+                className="filtericon"
+              />
+            </div>
+            <Table responsive>
+              <thead>
+                <tr>
+                  <th className="tablehead">User Name</th>
+                  <th className="tablehead">Phone Number</th>
+                  <th className="tablehead">Type</th>
+                  <th className="tablehead">Contractor Name</th>
+                  <th className="tablehead">Status</th>
+                  <th className="tablehead">Edit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Manish Jain</td>
+                  <td>8889997770</td>
+                  <td>Payroll</td>
+                  <td>N/A</td>
+                  <td>
+                    <img src={require("../../assets/img/reddot.svg")} />
+                  </td>
+                  <td>
+                    <img
+                      className="pointer-cursor"
+                      onClick={toggle}
+                      src={require("../../assets/img/edit-square.svg")}
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Manish Jain</td>
+                  <td>8889997770</td>
+                  <td>Payroll</td>
+                  <td>N/A</td>
+                  <td>
+                    <img src={require("../../assets/img/greendot.svg")} />
+                  </td>
+                  <td>
+                    <img
+                      className="pointer-cursor"
+                      onClick={toggle}
+                      src={require("../../assets/img/edit-square.svg")}
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </Table>
+          </Col>
+          <Col md="4">
+            <Card className="cardUser">
+              <CardBody>
+                <div className="inp-grp">
+                  <CardText>
+                    <h5 className="cardheadtext">Create New User</h5>
+                  </CardText>
+                  <div className="cardInp">
+                    <h6 className="cardsubtext">User Type</h6>
+                    <DropdownBtn />
+                  </div>
+                  <div className="cardInp">
+                    <h6 className="cardsubtext">User Name</h6>
+                    <InputGroup className="no-border">
+                      <Input className="phold" placeholder="Type Here" />
+                    </InputGroup>
+                  </div>
+                  <div className="cardInp">
+                    <h6 className="cardsubtext">Phone Number</h6>
+                    <InputGroup className="no-border">
+                      <Input className="phold" placeholder="Type Here" />
+                    </InputGroup>
+                  </div>
+                  <div className="cardInp">
+                    <h6 className="cardsubtext">Contractor Name</h6>
+                    <InputGroup className="no-border">
+                      <Input className="phold" placeholder="Type Here" />
+                    </InputGroup>
+                  </div>
+                </div>
+                <div className="cardInp buttoncon mb">
+                  <button className="button">Add User</button>
+                </div>
+              </CardBody>
+            </Card>
+
+            <Card className="cardUser2">
+              <div className="iconright">
                 <img
                   src={require("assets/img/filter2.svg")}
-                  className="filtericon"
+                  className="filtericon2"
                 />
               </div>
-              <Table responsive>
-                <thead>
-                  <tr>
-                    <th className="tablehead">User Name</th>
-                    <th className="tablehead">Phone Number</th>
-                    <th className="tablehead">Type</th>
-                    <th className="tablehead">Contractor Name</th>
-                    <th className="tablehead">Status</th>
-                    <th className="tablehead">Edit</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Manish Jain</td>
-                    <td>8889997770</td>
-                    <td>Payroll</td>
-                    <td>N/A</td>
-                    <td>
-                      <img src={require("../../assets/img/reddot.svg")} />
-                    </td>
-                    <td>
-                      <img src={require("../../assets/img/edit-square.svg")} />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Manish Jain</td>
-                    <td>8889997770</td>
-                    <td>Payroll</td>
-                    <td>N/A</td>
-                    <td>
-                      <img src={require("../../assets/img/greendot.svg")} />
-                    </td>
-                    <td>
-                      <img src={require("../../assets/img/edit-square.svg")} />
-                    </td>
-                  </tr>
-                </tbody>
-              </Table>
-            </Col>
-            <Col md="4">
-              <Card className="cardUser">
-                <CardBody>
-                  <div className="inp-grp">
-                    <CardText>
-                      <h5 className="cardheadtext">Create New User</h5>
-                    </CardText>
-                    <div className="cardInp">
-                      <h6 className="cardsubtext">User Type</h6>
-                      <DropdownBtn />
-                    </div>
-                    <div className="cardInp">
-                      <h6 className="cardsubtext">User Name</h6>
-                      <InputGroup className="no-border">
-                        <Input className="phold" placeholder="Type Here" />
-                      </InputGroup>
-                    </div>
-                    <div className="cardInp">
-                      <h6 className="cardsubtext">Phone Number</h6>
-                      <InputGroup className="no-border">
-                        <Input className="phold" placeholder="Type Here" />
-                      </InputGroup>
-                    </div>
-                    <div className="cardInp">
-                      <h6 className="cardsubtext">Contractor Name</h6>
-                      <InputGroup className="no-border">
-                        <Input className="phold" placeholder="Type Here" />
-                      </InputGroup>
-                    </div>
-                  </div>
-                  <div className="cardInp buttoncon mb">
-                    <button className="button">Add User</button>
-                  </div>
-                </CardBody>
-              </Card>
-
-              <Card className="cardUser2">
-                <div className="iconright">
-                  <img
-                    src={require("assets/img/filter2.svg")}
-                    className="filtericon2"
-                  />
-                </div>
-                <div className="internalrow">
-                  <Row>
-                    <Col md="6">
-                      <h5 className="cardheadtext">Production House</h5>
+              <div className="internalrow">
+                <Row>
+                  <Col md="6">
+                    <h5 className="cardheadtext">Production House</h5>
+                    <Donut />
+                  </Col>
+                  <Col md="6">
+                    <h5 className="cardheadtext">Your overview</h5>
+                    <div className="doughnut-graph">
                       <Donut />
-                    </Col>
-                    <Col md="6">
-                      <h5 className="cardheadtext">Your overview</h5>
-                      <div className="doughnut-graph">
-                        <Donut />
-                      </div>
-                    </Col>
-                  </Row>
-                </div>
-              </Card>
-            </Col>
-          </Row>
-        </div>
-      </>
-    );
-  }
-}
+                    </div>
+                  </Col>
+                </Row>
+              </div>
+            </Card>
+          </Col>
+        </Row>
+        <Modal centered isOpen={modal} toggle={toggle} className={className}>
+          <ModalHeader toggle={toggle}>Modal title</ModalHeader>
+          <ModalBody>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </ModalBody>
+          <ModalFooter>
+            <Button color="primary" onClick={toggle}>
+              Do Something
+            </Button>{" "}
+            <Button color="secondary" onClick={toggle}>
+              Cancel
+            </Button>
+          </ModalFooter>
+        </Modal>
+      </div>
+    </>
+  );
+};
 
 export default Tab1;
