@@ -16,7 +16,7 @@ import {
 } from "reactstrap";
 import "./tabs.css";
 import DropdownBtn from "components/DropdownBtn";
-import Donut from "../../variables/charts";
+import Donut from "../../variables/doughnut";
 
 const Tab1 = (props) => {
   const { buttonLabel, className } = props;
@@ -134,12 +134,22 @@ const Tab1 = (props) => {
                 <Row>
                   <Col md="6">
                     <h5 className="cardheadtext">Production House</h5>
-                    <Donut />
+                    <Donut
+                      labels={["Contractor", "Payroll"]}
+                      data={[60, 40]}
+                      bgColor={["#CD0F5F", "#82CA27"]}
+                      hoverBgColor={["#CD0F5F", "#82CA27"]}
+                    />
                   </Col>
                   <Col md="6">
                     <h5 className="cardheadtext">Your overview</h5>
                     <div className="doughnut-graph">
-                      <Donut />
+                      <Donut
+                        labels={["Contractor", "Payroll"]}
+                        data={[60, 40]}
+                        bgColor={["#CD0F5F", "#82CA27"]}
+                        hoverBgColor={["#CD0F5F", "#82CA27"]}
+                      />
                     </div>
                   </Col>
                 </Row>
