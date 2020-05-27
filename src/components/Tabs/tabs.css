@@ -239,23 +239,40 @@
   border-left: 0.3em solid transparent;
 }
 
-.mobile-table{
+.mobile-table {
   display: none;
 }
 
-.navitem-cursor{
+.navitem-cursor {
   cursor: pointer;
 }
 
-.pointer-cursor{
+.pointer-cursor {
   cursor: pointer;
 }
 
-@media(max-width:500px){
-  .mobile-table{
+.modalhead {
+  font-size: 0.8em !important;
+  border-bottom: none;
+}
+.modal-footer{
+  border-top: none !important;
+}
+
+.modal-title {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 600 !important;
+}
+
+.modal-content{
+  background-color: #f9f9f9 !important;
+}
+
+@media (max-width: 500px) {
+  .mobile-table {
     display: block;
   }
-  .desktop-table{
+  .desktop-table {
     display: none;
   }
 }

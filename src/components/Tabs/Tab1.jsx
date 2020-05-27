@@ -148,23 +148,50 @@ const Tab1 = (props) => {
           </Col>
         </Row>
         <Modal centered isOpen={modal} toggle={toggle} className={className}>
-          <ModalHeader toggle={toggle}>Modal title</ModalHeader>
+          <ModalHeader toggle={toggle} className="modalhead">
+            Edit Existing User
+          </ModalHeader>
           <ModalBody>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            <div className="inp-grp">
+              <div className="cardInp">
+                <h6 className="cardsubtext">User Type</h6>
+                <DropdownBtn />
+              </div>
+              <div className="cardInp">
+                <h6 className="cardsubtext">User Name</h6>
+                <InputGroup className="no-border">
+                  <Input className="phold" placeholder="Type Here" />
+                </InputGroup>
+              </div>
+              <div className="cardInp">
+                <h6 className="cardsubtext">Phone Number</h6>
+                <InputGroup className="no-border">
+                  <Input className="phold" placeholder="Type Here" />
+                </InputGroup>
+              </div>
+              <div className="cardInp">
+                <h6 className="cardsubtext">Contractor Name</h6>
+                <InputGroup className="no-border">
+                  <Input className="phold" placeholder="Type Here" />
+                </InputGroup>
+              </div>
+              <div className="cardInp">
+                <h6 className="cardsubtext">Status</h6>
+                <form>
+                  <input type="radio" value="active" />
+                  Active
+                  <input type="radio" value="inactive" />
+                  Inactive
+                </form>
+              </div>
+            </div>
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={toggle}>
-              Do Something
-            </Button>{" "}
-            <Button color="secondary" onClick={toggle}>
-              Cancel
-            </Button>
+            <div className="cardInp buttoncon mb">
+              <button className="button" onClick={toggle}>
+                Save
+              </button>
+            </div>
           </ModalFooter>
         </Modal>
       </div>
