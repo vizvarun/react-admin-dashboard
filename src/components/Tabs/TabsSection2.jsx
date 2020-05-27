@@ -3,6 +3,7 @@ import { TabContent, TabPane, Nav, NavItem, NavLink, Table } from "reactstrap";
 import classnames from "classnames";
 import Tab1 from "./Tab1";
 import "./tabs.css";
+import Tab2 from "./Tab2";
 
 const TabsSection2 = (props) => {
   const [activeTab, setActiveTab] = useState("1");
@@ -14,194 +15,98 @@ const TabsSection2 = (props) => {
   return (
     <div>
       <Nav tabs>
-       <div className="desktop-table">
-       <Table>
-          <thead>
-            <tr>
-              <th>
-                <NavItem className="navitem-cursor">
-                  <NavLink
-                    className={classnames({ active: activeTab === "1" })}
-                    onClick={() => {
-                      toggle("1");
-                    }}
-                  >
-                    User
-                  </NavLink>
-                </NavItem>
-              </th>
-              <th>
-                {" "}
-                <NavItem className="navitem-cursor">
-                  <NavLink
-                    className={classnames({ active: activeTab === "2" })}
-                    onClick={() => {
-                      toggle("2");
-                    }}
-                  >
-                    Product
-                  </NavLink>
-                </NavItem>
-              </th>
-              <th>
-                <NavItem className="navitem-cursor">
-                  <NavLink
-                    className={classnames({ active: activeTab === "3" })}
-                    onClick={() => {
-                      toggle("3");
-                    }}
-                  >
-                    Machine
-                  </NavLink>
-                </NavItem>
-              </th>
-              <th>
-                {" "}
-                <NavItem className="navitem-cursor">
-                  <NavLink
-                    className={classnames({ active: activeTab === "4" })}
-                    onClick={() => {
-                      toggle("4");
-                    }}
-                  >
-                    Shift
-                  </NavLink>
-                </NavItem>
-              </th>
-              <th>
-                <NavItem className="navitem-cursor">
-                  <NavLink
-                    className={classnames({ active: activeTab === "5" })}
-                    onClick={() => {
-                      toggle("5");
-                    }}
-                  >
-                    Stoppage Reason
-                  </NavLink>
-                </NavItem>
-              </th>
-              <th>
-                <NavItem className="navitem-cursor">
-                  <NavLink
-                    className={classnames({ active: activeTab === "6" })}
-                    onClick={() => {
-                      toggle("6");
-                    }}
-                  >
-                    Sub Stoppage Reason
-                  </NavLink>
-                </NavItem>
-              </th>
-              <th>
-                <NavItem className="navitem-cursor">
-                  <NavLink
-                    className={classnames({ active: activeTab === "7" })}
-                    onClick={() => {
-                      toggle("7");
-                    }}
-                  >
-                    Rejection Reason
-                  </NavLink>
-                </NavItem>
-              </th>
-            </tr>
-          </thead>
-        </Table>
-        <div className="mobile-table">
-        <Table responsive>
-          <thead>
-            <tr>
-              <th>
-                <NavItem className="navitem-cursor">
-                  <NavLink
-                    className={classnames({ active: activeTab === "1" })}
-                    onClick={() => {
-                      toggle("1");
-                    }}
-                  >
-                    User
-                  </NavLink>
-                </NavItem>
-              </th>
-              <th>
-                {" "}
-                <NavItem className="navitem-cursor">
-                  <NavLink
-                    className={classnames({ active: activeTab === "2" })}
-                    onClick={() => {
-                      toggle("2");
-                    }}
-                  >
-                    Product
-                  </NavLink>
-                </NavItem>
-              </th>
-              <th>
-                <NavItem className="navitem-cursor">
-                  <NavLink
-                    className={classnames({ active: activeTab === "3" })}
-                    onClick={() => {
-                      toggle("3");
-                    }}
-                  >
-                    Machine
-                  </NavLink>
-                </NavItem>
-              </th>
-              <th>
-                {" "}
-                <NavItem className="navitem-cursor">
-                  <NavLink
-                    className={classnames({ active: activeTab === "4" })}
-                    onClick={() => {
-                      toggle("4");
-                    }}
-                  >
-                    Shift
-                  </NavLink>
-                </NavItem>
-              </th>
-              <th>
-                <NavItem className="navitem-cursor">
-                  <NavLink
-                    className={classnames({ active: activeTab === "5" })}
-                    onClick={() => {
-                      toggle("5");
-                    }}
-                  >
-                    Stoppage Reason
-                  </NavLink>
-                </NavItem>
-              </th>
-              <th>
-                <NavItem className="navitem-cursor">
-                  <NavLink
-                    className={classnames({ active: activeTab === "6" })}
-                    onClick={() => {
-                      toggle("6");
-                    }}
-                  >
-                    Sub Stoppage Reason
-                  </NavLink>
-                </NavItem>
-              </th>
-              <th>
-                <NavItem className="navitem-cursor">
-                  <NavLink
-                    className={classnames({ active: activeTab === "7" })}
-                    onClick={() => {
-                      toggle("7");
-                    }}
-                  >
-                    Rejection Reason
-                  </NavLink>
-                </NavItem>
-              </th>
-            </tr>
-          </thead>
-        </Table>
-        </div>
-       </div>
+          <Table responsive>
+            <thead>
+              <tr>
+                <th>
+                  <NavItem className="navitem-cursor">
+                    <NavLink
+                      className={classnames({ active: activeTab === "1" })}
+                      onClick={() => {
+                        toggle("1");
+                      }}
+                    >
+                      User
+                    </NavLink>
+                  </NavItem>
+                </th>
+                <th>
+                  {" "}
+                  <NavItem className="navitem-cursor">
+                    <NavLink
+                      className={classnames({ active: activeTab === "2" })}
+                      onClick={() => {
+                        toggle("2");
+                      }}
+                    >
+                      Product
+                    </NavLink>
+                  </NavItem>
+                </th>
+                <th>
+                  <NavItem className="navitem-cursor">
+                    <NavLink
+                      className={classnames({ active: activeTab === "3" })}
+                      onClick={() => {
+                        toggle("3");
+                      }}
+                    >
+                      Machine
+                    </NavLink>
+                  </NavItem>
+                </th>
+                <th>
+                  {" "}
+                  <NavItem className="navitem-cursor">
+                    <NavLink
+                      className={classnames({ active: activeTab === "4" })}
+                      onClick={() => {
+                        toggle("4");
+                      }}
+                    >
+                      Shift
+                    </NavLink>
+                  </NavItem>
+                </th>
+                <th>
+                  <NavItem className="navitem-cursor">
+                    <NavLink
+                      className={classnames({ active: activeTab === "5" })}
+                      onClick={() => {
+                        toggle("5");
+                      }}
+                    >
+                      Stoppage Reason
+                    </NavLink>
+                  </NavItem>
+                </th>
+                <th>
+                  <NavItem className="navitem-cursor">
+                    <NavLink
+                      className={classnames({ active: activeTab === "6" })}
+                      onClick={() => {
+                        toggle("6");
+                      }}
+                    >
+                      Sub Stoppage Reason
+                    </NavLink>
+                  </NavItem>
+                </th>
+                <th>
+                  <NavItem className="navitem-cursor">
+                    <NavLink
+                      className={classnames({ active: activeTab === "7" })}
+                      onClick={() => {
+                        toggle("7");
+                      }}
+                    >
+                      Rejection Reason
+                    </NavLink>
+                  </NavItem>
+                </th>
+              </tr>
+            </thead>
+          </Table>
       </Nav>
       <TabContent activeTab={activeTab}>
         <TabPane tabId="1">
@@ -209,7 +114,7 @@ const TabsSection2 = (props) => {
         </TabPane>
         <TabPane tabId="2">
           <div>
-            <h4>Content 2</h4>
+            <Tab2 />
           </div>
         </TabPane>
         <TabPane tabId="3">

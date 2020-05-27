@@ -109,6 +109,13 @@
   text-transform: none;
 }
 
+.cardsubtext2 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #e4a503;
+  text-transform: none;
+}
+
 .buttoncon {
   float: right;
   margin-top: 7%;
@@ -239,10 +246,6 @@
   border-left: 0.3em solid transparent;
 }
 
-.mobile-table {
-  display: none;
-}
-
 .navitem-cursor {
   cursor: pointer;
 }
@@ -255,7 +258,7 @@
   font-size: 0.8em !important;
   border-bottom: none;
 }
-.modal-footer{
+.modal-footer {
   border-top: none !important;
 }
 
@@ -264,15 +267,6 @@
   font-weight: 600 !important;
 }
 
-.modal-content{
+.modal-content {
   background-color: #f9f9f9 !important;
-}
-
-@media (max-width: 500px) {
-  .mobile-table {
-    display: block;
-  }
-  .desktop-table {
-    display: none;
-  }
 }
