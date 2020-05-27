@@ -22,9 +22,26 @@ const Tab2 = (props) => {
   const { buttonLabel, className } = props;
 
   const [modal, setModal] = useState(false);
-
+  const [catExpand, setCatExpand] = useState(false);
   const toggle = () => setModal(!modal);
-
+  const toggleCatExpand = () => setCatExpand(!catExpand);
+  const expandProductCategory = () => {
+    return (
+      <>
+        <div className="cardInp">
+          <h6 className="cardsubtext2">New Category</h6>
+          <InputGroup className="no-border">
+            <Input className="phold" placeholder="Type Here" />
+          </InputGroup>
+        </div>
+        <div className="cardInp">
+          <h6 className="cardsubtext2">Unit</h6>
+          <DropdownBtn />
+          <img src={require("assets/img/tick.svg")} />
+        </div>
+      </>
+    );
+  };
   return (
     <>
       <div className="content tabcon">
@@ -107,19 +124,13 @@ const Tab2 = (props) => {
                   <div className="cardInp">
                     <h6 className="cardsubtext">Product Category</h6>
                     <DropdownBtn />
-                    <img src={require("assets/img/plus-circle.svg")} />
+                    <img
+                      onClick={toggleCatExpand}
+                      src={require("assets/img/plus-circle.svg")}
+                      style={{ cursor: "pointer" }}
+                    />
                   </div>
-                  <div className="cardInp">
-                    <h6 className="cardsubtext2">New Category</h6>
-                    <InputGroup className="no-border">
-                      <Input className="phold" placeholder="Type Here" />
-                    </InputGroup>
-                  </div>
-                  <div className="cardInp">
-                    <h6 className="cardsubtext2">Unit</h6>
-                    <DropdownBtn />
-                    <img src={require("assets/img/tick.svg")} />
-                  </div>
+                  {catExpand ? expandProductCategory() : null}
                   <div className="cardInp">
                     <h6 className="cardsubtext">Product Code</h6>
                     <InputGroup className="no-border">

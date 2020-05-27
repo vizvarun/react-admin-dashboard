@@ -17,6 +17,7 @@ import {
 import "./tabs.css";
 import DropdownBtn from "components/DropdownBtn";
 import Donut from "../../variables/doughnut";
+import TableList from "../../variables/tablelist";
 
 const Tab1 = (props) => {
   const { buttonLabel, className } = props;
@@ -24,7 +25,20 @@ const Tab1 = (props) => {
   const [modal, setModal] = useState(false);
 
   const toggle = () => setModal(!modal);
-
+  const data = {
+    tableHeading: [
+      "User Name",
+      "Phone Number",
+      "Type",
+      "Contractor Name",
+      "Status",
+      "Edit",
+    ],
+    tableData: [
+      ["Manish Jain", 8889997770, "Payroll", "Mahesh Lal", true],
+      ["Mikesh Jain", 8211297770, "Payroll", "Mukesh Lal", false],
+    ],
+  };
   return (
     <>
       <div className="content tabcon">
@@ -40,52 +54,11 @@ const Tab1 = (props) => {
                 className="filtericon"
               />
             </div>
-            <Table responsive>
-              <thead>
-                <tr>
-                  <th className="tablehead">User Name</th>
-                  <th className="tablehead">Phone Number</th>
-                  <th className="tablehead">Type</th>
-                  <th className="tablehead">Contractor Name</th>
-                  <th className="tablehead">Status</th>
-                  <th className="tablehead">Edit</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Manish Jain</td>
-                  <td>8889997770</td>
-                  <td>Payroll</td>
-                  <td>N/A</td>
-                  <td>
-                    <img src={require("../../assets/img/reddot.svg")} />
-                  </td>
-                  <td>
-                    <img
-                      className="pointer-cursor"
-                      onClick={toggle}
-                      src={require("../../assets/img/edit-square.svg")}
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>Manish Jain</td>
-                  <td>8889997770</td>
-                  <td>Payroll</td>
-                  <td>N/A</td>
-                  <td>
-                    <img src={require("../../assets/img/greendot.svg")} />
-                  </td>
-                  <td>
-                    <img
-                      className="pointer-cursor"
-                      onClick={toggle}
-                      src={require("../../assets/img/edit-square.svg")}
-                    />
-                  </td>
-                </tr>
-              </tbody>
-            </Table>
+            <TableList
+              toggle={toggle}
+              tableHead={data.tableHeading}
+              tableData={data.tableData}
+            />
           </Col>
           <Col md="4">
             <Card className="cardUser">
@@ -187,12 +160,15 @@ const Tab1 = (props) => {
               </div>
               <div className="cardInp">
                 <h6 className="cardsubtext">Status</h6>
-                <form>
-                  <input type="radio" value="active" />
-                  Active
-                  <input type="radio" value="inactive" />
-                  Inactive
-                </form>
+                <input type="radio" id="active" name="status" value="active" />
+                <label for="active">Active</label>
+                <input
+                  type="radio"
+                  id="inactive"
+                  name="status"
+                  value="inactive"
+                />
+                <label for="inactive">InActive</label>
               </div>
             </div>
           </ModalBody>

@@ -1,5 +1,10 @@
-import React, { useState } from 'react';
-import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import React, { useState } from "react";
+import {
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+} from "reactstrap";
 
 const DropdownBtn = (props) => {
   const [dropdownOpen, setOpen] = useState(false);
@@ -7,9 +12,9 @@ const DropdownBtn = (props) => {
   const toggle = () => setOpen(!dropdownOpen);
 
   return (
-    <ButtonDropdown isOpen={dropdownOpen} toggle={toggle}>
+    <Dropdown isOpen={dropdownOpen} toggle={toggle} size="sm">
       <DropdownToggle caret className="droptext">
-        Choose from here 
+        Choose from here
       </DropdownToggle>
       <DropdownMenu>
         <DropdownItem header>Header</DropdownItem>
@@ -18,8 +23,8 @@ const DropdownBtn = (props) => {
         <DropdownItem divider />
         <DropdownItem>Another Action</DropdownItem>
       </DropdownMenu>
-    </ButtonDropdown>
+    </Dropdown>
   );
-}
+};
 
 export default DropdownBtn;
