@@ -1,7 +1,4 @@
 import React from "react";
-// react plugin used to create charts
-import { Line, Pie } from "react-chartjs-2";
-// reactstrap components
 import {
   Card,
   CardBody,
@@ -12,11 +9,9 @@ import {
   InputGroup,
   Table,
 } from "reactstrap";
-
-import Donut from "../../variables/charts";
-
 import "./tabs.css";
 import DropdownBtn from "components/DropdownBtn";
+import Donut from "../../variables/charts";
 
 class Tab1 extends React.Component {
   render() {
@@ -125,6 +120,9 @@ class Tab1 extends React.Component {
                     </Col>
                     <Col md="6">
                       <h5 className="cardheadtext">Your overview</h5>
+                      <div className="doughnut-graph">
+                        <Donut />
+                      </div>
                     </Col>
                   </Row>
                 </div>
