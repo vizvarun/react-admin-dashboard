@@ -100,12 +100,10 @@ const Tab4 = (props) => {
                   </div>
                   <div className="cardInp">
                     <h6 className="cardsubtext">Overnight</h6>
-                    <form>
-                      <input type="radio" value="yes" />
-                      Yes
-                      <input type="radio" value="no" />
-                      No
-                    </form>
+                    <input type="radio" id="yes" name="overnight" value="yes" />
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="no" name="overnight" value="no" />
+                    <label for="no">No</label>
                   </div>
                 </div>
                 <div className="cardInp buttoncon mb">

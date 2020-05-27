@@ -40,6 +40,27 @@ const Tab3 = (props) => {
     ],
   };
 
+  const [catExpand, setCatExpand] = useState(false);
+  const toggleCatExpand = () => setCatExpand(!catExpand);
+
+  const expandCategoryName = () => {
+    return (
+      <>
+        <div className="cardInp">
+          <h6 className="cardsubtext2">New Category</h6>
+          <InputGroup className="no-border">
+            <Input className="phold" placeholder="Type Here" />
+          </InputGroup>
+          <img
+            onClick={toggleCatExpand}
+            style={{ cursor: "pointer" }}
+            src={require("assets/img/tick.svg")}
+          />
+        </div>
+      </>
+    );
+  };
+
   return (
     <>
       <div className="content tabcon">
@@ -83,15 +104,14 @@ const Tab3 = (props) => {
                   <div className="cardInp">
                     <h6 className="cardsubtext">Category Name</h6>
                     <DropdownBtn />
-                    <img src={require("assets/img/plus-circle.svg")} />
+                    <img
+                      onClick={toggleCatExpand}
+                      style={{ cursor: "pointer" }}
+                      src={require("assets/img/plus-circle.svg")}
+                    />
                   </div>
-                  <div className="cardInp">
-                    <h6 className="cardsubtext2">New Category</h6>
-                    <InputGroup className="no-border">
-                      <Input className="phold" placeholder="Type Here" />
-                    </InputGroup>
-                    <img src={require("assets/img/tick.svg")} />
-                  </div>
+                  {catExpand ? expandCategoryName() : null}
+
                   <div className="cardInp">
                     <h6 className="cardsubtext">Machine Code</h6>
                     <InputGroup className="no-border">

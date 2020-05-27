@@ -54,7 +54,11 @@ const Tab2 = (props) => {
         <div className="cardInp">
           <h6 className="cardsubtext2">Unit</h6>
           <DropdownBtn />
-          <img src={require("assets/img/tick.svg")} />
+          <img
+            src={require("assets/img/tick.svg")}
+            onClick={toggleCatExpand}
+            style={{ cursor: "pointer" }}
+          />
         </div>
       </>
     );
