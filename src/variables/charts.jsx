@@ -29,6 +29,7 @@ class Donut extends Component {
             maintainAspectRatio: true,
             legend: {
               position: "bottom",
+			  maintainAspectRatio: true
             },
           }}
         />
