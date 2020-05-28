@@ -68,44 +68,29 @@ const Tab7 = (props) => {
               <CardBody>
                 <div className="inp-grp">
                   <CardText>
-                    <h5 className="cardheadtext">Add new Shift</h5>
+                    <h5 className="cardheadtext">Add new Rejection Reason</h5>
                   </CardText>
                   <div className="cardInp">
-                    <h6 className="cardsubtext">Shift Name</h6>
+                    <h6 className="cardsubtext">Reason Code</h6>
                     <InputGroup className="no-border">
                       <Input className="phold" placeholder="Type Here" />
                     </InputGroup>
                   </div>
                   <div className="cardInp">
-                    <h6 className="cardsubtext">Shift Description</h6>
+                    <h6 className="cardsubtext">Reason Name</h6>
                     <InputGroup className="no-border">
                       <Input className="phold" placeholder="Type Here" />
                     </InputGroup>
                   </div>
                   <div className="cardInp">
-                    <h6 className="cardsubtext">Start Time</h6>
-                    <DropdownBtn />
-                    <DropdownBtn />
-                    <img src={require("assets/img/plus-circle.svg")} />
+                    <h6 className="cardsubtext">Reason Description</h6>
+                    <InputGroup className="no-border">
+                      <Input className="phold" placeholder="Type Here" />
+                    </InputGroup>
                   </div>
                   <div className="cardInp">
-                    <h6 className="cardsubtext">Break Time</h6>
-                    <img src={require("assets/img/plus-circle.svg")} />
-                  </div>
-                  <div className="cardInp">
-                    <h6 className="cardsubtext">End Time</h6>
+                    <h6 className="cardsubtext">Product Category</h6>
                     <DropdownBtn />
-                    <DropdownBtn />
-                    <img src={require("assets/img/plus-circle.svg")} />
-                  </div>
-                  <div className="cardInp">
-                    <h6 className="cardsubtext">Overnight</h6>
-                    <form>
-                      <input type="radio" value="yes" />
-                      Yes
-                      <input type="radio" value="no" />
-                      No
-                    </form>
                   </div>
                 </div>
                 <div className="cardInp buttoncon mb">
@@ -133,40 +118,38 @@ const Tab7 = (props) => {
         </Row>
         <Modal centered isOpen={modal} toggle={toggle} className={className}>
           <ModalHeader toggle={toggle} className="modalhead">
-            Edit Existing Product
+            Edit Existing Reason
           </ModalHeader>
           <ModalBody>
             <div className="inp-grp">
               <div className="cardInp">
-                <h6 className="cardsubtext">User Type</h6>
+                <h6 className="cardsubtext">Reason Code</h6>
+                <InputGroup className="no-border">
+                  <Input className="phold" placeholder="Type Here" />
+                </InputGroup>
+              </div>
+              <div className="cardInp">
+                <h6 className="cardsubtext">Reason Name</h6>
+                <InputGroup className="no-border">
+                  <Input className="phold" placeholder="Type Here" />
+                </InputGroup>
+              </div>
+              <div className="cardInp">
+                <h6 className="cardsubtext">Reason Description</h6>
+                <InputGroup className="no-border">
+                  <Input className="phold" placeholder="Type Here" />
+                </InputGroup>
+              </div>
+              <div className="cardInp">
+                <h6 className="cardsubtext">Product Category</h6>
                 <DropdownBtn />
               </div>
               <div className="cardInp">
-                <h6 className="cardsubtext">User Name</h6>
-                <InputGroup className="no-border">
-                  <Input className="phold" placeholder="Type Here" />
-                </InputGroup>
-              </div>
-              <div className="cardInp">
-                <h6 className="cardsubtext">Phone Number</h6>
-                <InputGroup className="no-border">
-                  <Input className="phold" placeholder="Type Here" />
-                </InputGroup>
-              </div>
-              <div className="cardInp">
-                <h6 className="cardsubtext">Contractor Name</h6>
-                <InputGroup className="no-border">
-                  <Input className="phold" placeholder="Type Here" />
-                </InputGroup>
-              </div>
-              <div className="cardInp">
                 <h6 className="cardsubtext">Status</h6>
-                <form>
-                  <input type="radio" value="active" />
-                  Active
-                  <input type="radio" value="inactive" />
-                  Inactive
-                </form>
+                <input type="radio" id="yes" name="status" value="yes" />
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="status" value="no" />
+                <label for="no">No</label>
               </div>
             </div>
           </ModalBody>
