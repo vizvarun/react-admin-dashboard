@@ -15,7 +15,7 @@ import {
   ModalFooter,
   Collapse,
   FormGroup,
-  Label
+  Label,
 } from "reactstrap";
 import "./tabs.css";
 import DropdownBtn from "components/DropdownBtn";
@@ -42,124 +42,23 @@ const Tab2 = (props) => {
       ["XYZ123", "Valvet", "None", "Newcode", 400.0, "m/hr", false],
     ],
   };
-  const [catExpand, setCatExpand] = useState(false);
-  const toggle = () => setModal(!modal);
-  const toggleCatExpand = () => setCatExpand(!catExpand);
-  const [cycleExpand, setCycleExpand] = useState(false);
-  const toggleCycleExpand = () => setCycleExpand(!cycleExpand);
+
   const [isOpen, setIsOpen] = useState(false);
   const filterToggle = () => setIsOpen(!isOpen);
-  const [catModalExpand, setCatModalExpand] = useState(false);
-  const toggleCatModalExpand = () => setCatModalExpand(!catModalExpand);
-  const [cycleModalExpand, setCycleModalExpand] = useState(false);
-  const toggleCycleModalExpand = () => setCycleModalExpand(!cycleModalExpand);
-  const expandProductCategory = () => {
-    return (
-      <>
-        <div className="cardInp">
-          <h6 className="cardsubtext2">New Category</h6>
-          <InputGroup className="no-border">
-            <Input className="phold" placeholder="Type Here" />
-          </InputGroup>
-        </div>
-        <div className="cardInp">
-          <h6 className="cardsubtext2">Unit</h6>
-          <DropdownBtn />
-          <img
-            src={require("assets/img/tick.svg")}
-            onClick={toggleCatExpand}
-            style={{ cursor: "pointer" }}
-          />
-        </div>
-      </>
-    );
-  };
 
-  const expandCycleTime = () => {
-    return (
-      <>
-        <div className="cardInp">
-          <div className="cardInp2">
-            <h6 className="cardsubtext">No. of Cavities</h6>
-            <InputGroup className="no-border">
-              <Input className="phold" placeholder="" />
-            </InputGroup>
-          </div>
-          <div className="cardInp2">
-            <h6 className="cardsubtext">Wt. of single Pr.</h6>
-            <InputGroup className="no-border">
-              <Input className="phold" placeholder="" />
-            </InputGroup>
-          </div>
-          <div className="cardInp2">
-            <h6 className="cardsubtext">Shot Time</h6>
-            <InputGroup className="no-border">
-              <Input className="phold" placeholder="" />
-            </InputGroup>
-          </div>
-          <img
-            src={require("assets/img/tick.svg")}
-            style={{ cursor: "pointer" }}
-            onClick={toggleCycleExpand}
-          />
-        </div>
-      </>
-    );
-  };
+  const [isOpenProduct, setIsOpenProduct] = useState(false);
+  const productToggle = () => setIsOpenProduct(!isOpenProduct);
 
-  const expandModalProductCategory = () => {
-    return (
-      <>
-        <div className="cardInp">
-          <h6 className="cardsubtext2">New Category</h6>
-          <InputGroup className="no-border">
-            <Input className="phold" placeholder="Type Here" />
-          </InputGroup>
-        </div>
-        <div className="cardInp">
-          <h6 className="cardsubtext2">Unit</h6>
-          <DropdownBtn />
-          <img
-            src={require("assets/img/tick.svg")}
-            onClick={toggleCatModalExpand}
-            style={{ cursor: "pointer" }}
-          />
-        </div>
-      </>
-    );
-  };
+  const [isOpenCycle, setIsOpenCycle] = useState(false);
+  const cycleToggle = () => setIsOpenCycle(!isOpenCycle);
 
-  const expandModalCycleTime = () => {
-    return (
-      <>
-        <div className="cardInp">
-          <div className="cardInp2">
-            <h6 className="cardsubtext">No. of Cavities</h6>
-            <InputGroup className="no-border">
-              <Input className="phold" placeholder="" />
-            </InputGroup>
-          </div>
-          <div className="cardInp2">
-            <h6 className="cardsubtext">Wt. of single Pr.</h6>
-            <InputGroup className="no-border">
-              <Input className="phold" placeholder="" />
-            </InputGroup>
-          </div>
-          <div className="cardInp2">
-            <h6 className="cardsubtext">Shot Time</h6>
-            <InputGroup className="no-border">
-              <Input className="phold" placeholder="" />
-            </InputGroup>
-          </div>
-          <img
-            src={require("assets/img/tick.svg")}
-            style={{ cursor: "pointer" }}
-            onClick={toggleCycleModalExpand}
-          />
-        </div>
-      </>
-    );
-  };
+  const [isOpenModalProduct, setIsOpenModalProduct] = useState(false);
+  const productModalToggle = () => setIsOpenModalProduct(!isOpenModalProduct);
+
+  const [isOpenModalCycle, setIsOpenModalCycle] = useState(false);
+  const cycleModalToggle = () => setIsOpenModalCycle(!isOpenModalCycle);
+
+  const toggle = () => setModal(!modal);
 
   return (
     <>
@@ -218,12 +117,28 @@ const Tab2 = (props) => {
                     <h6 className="cardsubtext">Product Category</h6>
                     <DropdownBtn />
                     <img
-                      onClick={toggleCatExpand}
+                      onClick={productToggle}
                       src={require("assets/img/plus-circle.svg")}
                       style={{ cursor: "pointer" }}
                     />
                   </div>
-                  {catExpand ? expandProductCategory() : null}
+                  <Collapse isOpen={isOpenProduct}>
+                    <div className="cardInp">
+                      <h6 className="cardsubtext2">New Category</h6>
+                      <InputGroup className="no-border">
+                        <Input className="phold" placeholder="Type Here" />
+                      </InputGroup>
+                    </div>
+                    <div className="cardInp">
+                      <h6 className="cardsubtext2">Unit</h6>
+                      <DropdownBtn />
+                      <img
+                        src={require("assets/img/tick.svg")}
+                        onClick={productToggle}
+                        style={{ cursor: "pointer" }}
+                      />
+                    </div>
+                  </Collapse>
                   <div className="cardInp">
                     <h6 className="cardsubtext">Product Code</h6>
                     <InputGroup className="no-border">
@@ -241,13 +156,39 @@ const Tab2 = (props) => {
                     <InputGroup className="no-border">
                       <Input className="phold" placeholder="Type Here" />
                       <img
-                        onClick={toggleCycleExpand}
+                        onClick={cycleToggle}
                         src={require("assets/img/plus-circle.svg")}
                         style={{ cursor: "pointer" }}
                       />
                     </InputGroup>
                   </div>
-                  {cycleExpand ? expandCycleTime() : null}
+                  <Collapse isOpen={isOpenCycle}>
+                    <div className="cardInp">
+                      <div className="cardInp2">
+                        <h6 className="cardsubtext">No. of Cavities</h6>
+                        <InputGroup className="no-border">
+                          <Input className="phold" placeholder="" />
+                        </InputGroup>
+                      </div>
+                      <div className="cardInp2">
+                        <h6 className="cardsubtext">Wt. of single Pr.</h6>
+                        <InputGroup className="no-border">
+                          <Input className="phold" placeholder="" />
+                        </InputGroup>
+                      </div>
+                      <div className="cardInp2">
+                        <h6 className="cardsubtext">Shot Time</h6>
+                        <InputGroup className="no-border">
+                          <Input className="phold" placeholder="" />
+                        </InputGroup>
+                      </div>
+                      <img
+                        src={require("assets/img/tick.svg")}
+                        style={{ cursor: "pointer" }}
+                        onClick={cycleToggle}
+                      />
+                    </div>
+                  </Collapse>
                   <div className="cardInp buttoncon mb">
                     <button className="button">Add Product</button>
                   </div>
@@ -305,12 +246,28 @@ const Tab2 = (props) => {
                 <h6 className="cardsubtext">Product Category</h6>
                 <DropdownBtn />
                 <img
-                  onClick={toggleCatModalExpand}
+                  onClick={productModalToggle}
                   src={require("assets/img/plus-circle.svg")}
                   style={{ cursor: "pointer" }}
                 />
               </div>
-              {catModalExpand ? expandModalProductCategory() : null}
+              <Collapse isOpen={isOpenModalProduct}>
+                <div className="cardInp">
+                  <h6 className="cardsubtext2">New Category</h6>
+                  <InputGroup className="no-border">
+                    <Input className="phold" placeholder="Type Here" />
+                  </InputGroup>
+                </div>
+                <div className="cardInp">
+                  <h6 className="cardsubtext2">Unit</h6>
+                  <DropdownBtn />
+                  <img
+                    src={require("assets/img/tick.svg")}
+                    onClick={productModalToggle}
+                    style={{ cursor: "pointer" }}
+                  />
+                </div>
+              </Collapse>
               <div className="cardInp">
                 <h6 className="cardsubtext">Product Code</h6>
                 <InputGroup className="no-border">
@@ -328,13 +285,39 @@ const Tab2 = (props) => {
                 <InputGroup className="no-border">
                   <Input className="phold" placeholder="Type Here" />
                   <img
-                    onClick={toggleCycleModalExpand}
+                    onClick={cycleModalToggle}
                     src={require("assets/img/plus-circle.svg")}
                     style={{ cursor: "pointer" }}
                   />
                 </InputGroup>
               </div>
-              {cycleModalExpand ? expandModalCycleTime() : null}
+              <Collapse isOpen={isOpenModalCycle}>
+                <div className="cardInp">
+                  <div className="cardInp2">
+                    <h6 className="cardsubtext">No. of Cavities</h6>
+                    <InputGroup className="no-border">
+                      <Input className="phold" placeholder="" />
+                    </InputGroup>
+                  </div>
+                  <div className="cardInp2">
+                    <h6 className="cardsubtext">Wt. of single Pr.</h6>
+                    <InputGroup className="no-border">
+                      <Input className="phold" placeholder="" />
+                    </InputGroup>
+                  </div>
+                  <div className="cardInp2">
+                    <h6 className="cardsubtext">Shot Time</h6>
+                    <InputGroup className="no-border">
+                      <Input className="phold" placeholder="" />
+                    </InputGroup>
+                  </div>
+                  <img
+                    src={require("assets/img/tick.svg")}
+                    style={{ cursor: "pointer" }}
+                    onClick={cycleModalToggle}
+                  />
+                </div>
+              </Collapse>
               <div className="cardInp">
                 <h6 className="cardsubtext">Status</h6>
                 <input type="radio" id="active" name="status" value="active" />
