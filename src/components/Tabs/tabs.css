@@ -89,6 +89,15 @@
   padding-right: 3%;
   padding-left: 3%;
 }
+.cardInp2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5%;
+  padding-right: 3%;
+  padding-left: 3%;
+}
 
 .inp-grp {
   display: flex;

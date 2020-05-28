@@ -64,47 +64,28 @@ export default class Example extends PureComponent {
   render() {
     return (
       <>
-        <div className="desktop-view">
-          <BarChart
-            width={550}
-            height={300}
-            data={data}
-            margin={{
-              top: 20,
-              right: 30,
-              left: 20,
-              bottom: 5,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <Bar dataKey="pv" stackId="a" fill="#8884d8" />
-            <Bar dataKey="uv" stackId="a" fill="#82ca9d" />
-          </BarChart>
-        </div>
-        <div className="mobile-view">
-          <BarChart
-            width={340}
-            height={250}
-            data={data}
-            margin={{
-              top: 20,
-              right: 30,
-              left: 20,
-              bottom: 5,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <Bar dataKey="pv" stackId="a" fill="#8884d8" />
-            <Bar dataKey="uv" stackId="a" fill="#82ca9d" />
-          </BarChart>
+        <div className="table-responsive">
+          <table>
+            <BarChart
+              width={550}
+              height={300}
+              data={data}
+              margin={{
+                top: 20,
+                right: 30,
+                left: 20,
+                bottom: 5,
+              }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <Bar dataKey="pv" stackId="a" fill="#8884d8" />
+              <Bar dataKey="uv" stackId="a" fill="#82ca9d" />
+            </BarChart>
+          </table>
         </div>
       </>
     );

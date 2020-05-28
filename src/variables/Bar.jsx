@@ -63,47 +63,28 @@ export default class Bars extends PureComponent {
   render() {
     return (
       <>
-        <div className="desktop-view">
-          <BarChart
-            width={500}
-            height={300}
-            data={data}
-            margin={{
-              top: 20,
-              right: 30,
-              left: 20,
-              bottom: 20,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <Bar dataKey="pv" fill="#ED692C" />
-            <Bar dataKey="uv" fill="#1E558A" />
-          </BarChart>
-        </div>
-        <div className="mobile-view">
-          <BarChart
-            width={350}
-            height={250}
-            data={data}
-            margin={{
-              top: 20,
-              right: 30,
-              left: 20,
-              bottom: 20,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <Bar dataKey="pv" fill="#ED692C" />
-            <Bar dataKey="uv" fill="#1E558A" />
-          </BarChart>
+        <div className="table-responsive">
+          <table>
+            <BarChart
+              width={500}
+              height={300}
+              data={data}
+              margin={{
+                top: 20,
+                right: 30,
+                left: 20,
+                bottom: 20,
+              }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Legend />
+              <Bar dataKey="pv" fill="#ED692C" />
+              <Bar dataKey="uv" fill="#1E558A" />
+            </BarChart>
+          </table>
         </div>
       </>
     );

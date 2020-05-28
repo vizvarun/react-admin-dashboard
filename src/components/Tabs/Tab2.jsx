@@ -42,6 +42,13 @@ const Tab2 = (props) => {
   const [catExpand, setCatExpand] = useState(false);
   const toggle = () => setModal(!modal);
   const toggleCatExpand = () => setCatExpand(!catExpand);
+  const [cycleExpand, setCycleExpand] = useState(false);
+  const toggleCycleExpand = () => setCycleExpand(!cycleExpand);
+
+  const [catModalExpand, setCatModalExpand] = useState(false);
+  const toggleCatModalExpand = () => setCatModalExpand(!catModalExpand);
+  const [cycleModalExpand, setCycleModalExpand] = useState(false);
+  const toggleCycleModalExpand = () => setCycleModalExpand(!cycleModalExpand);
   const expandProductCategory = () => {
     return (
       <>
@@ -63,6 +70,93 @@ const Tab2 = (props) => {
       </>
     );
   };
+
+  const expandCycleTime = () => {
+    return (
+      <>
+        <div className="cardInp">
+          <div className="cardInp2">
+            <h6 className="cardsubtext">No. of Cavities</h6>
+            <InputGroup className="no-border">
+              <Input className="phold" placeholder="" />
+            </InputGroup>
+          </div>
+          <div className="cardInp2">
+            <h6 className="cardsubtext">Wt. of single Pr.</h6>
+            <InputGroup className="no-border">
+              <Input className="phold" placeholder="" />
+            </InputGroup>
+          </div>
+          <div className="cardInp2">
+            <h6 className="cardsubtext">Shot Time</h6>
+            <InputGroup className="no-border">
+              <Input className="phold" placeholder="" />
+            </InputGroup>
+          </div>
+          <img
+            src={require("assets/img/tick.svg")}
+            style={{ cursor: "pointer" }}
+            onClick={toggleCycleExpand}
+          />
+        </div>
+      </>
+    );
+  };
+
+  const expandModalProductCategory = () => {
+    return (
+      <>
+        <div className="cardInp">
+          <h6 className="cardsubtext2">New Category</h6>
+          <InputGroup className="no-border">
+            <Input className="phold" placeholder="Type Here" />
+          </InputGroup>
+        </div>
+        <div className="cardInp">
+          <h6 className="cardsubtext2">Unit</h6>
+          <DropdownBtn />
+          <img
+            src={require("assets/img/tick.svg")}
+            onClick={toggleCatModalExpand}
+            style={{ cursor: "pointer" }}
+          />
+        </div>
+      </>
+    );
+  };
+
+  const expandModalCycleTime = () => {
+    return (
+      <>
+        <div className="cardInp">
+          <div className="cardInp2">
+            <h6 className="cardsubtext">No. of Cavities</h6>
+            <InputGroup className="no-border">
+              <Input className="phold" placeholder="" />
+            </InputGroup>
+          </div>
+          <div className="cardInp2">
+            <h6 className="cardsubtext">Wt. of single Pr.</h6>
+            <InputGroup className="no-border">
+              <Input className="phold" placeholder="" />
+            </InputGroup>
+          </div>
+          <div className="cardInp2">
+            <h6 className="cardsubtext">Shot Time</h6>
+            <InputGroup className="no-border">
+              <Input className="phold" placeholder="" />
+            </InputGroup>
+          </div>
+          <img
+            src={require("assets/img/tick.svg")}
+            style={{ cursor: "pointer" }}
+            onClick={toggleCycleModalExpand}
+          />
+        </div>
+      </>
+    );
+  };
+
   return (
     <>
       <div className="content tabcon">
@@ -121,12 +215,17 @@ const Tab2 = (props) => {
                     <h6 className="cardsubtext">Cycle Time</h6>
                     <InputGroup className="no-border">
                       <Input className="phold" placeholder="Type Here" />
-                      <img src={require("assets/img/plus-circle.svg")} />
+                      <img
+                        onClick={toggleCycleExpand}
+                        src={require("assets/img/plus-circle.svg")}
+                        style={{ cursor: "pointer" }}
+                      />
                     </InputGroup>
                   </div>
-                </div>
-                <div className="cardInp buttoncon mb">
-                  <button className="button">Add Product</button>
+                  {cycleExpand ? expandCycleTime() : null}
+                  <div className="cardInp buttoncon mb">
+                    <button className="button">Add Product</button>
+                  </div>
                 </div>
               </CardBody>
             </Card>
@@ -174,35 +273,54 @@ const Tab2 = (props) => {
           <ModalBody>
             <div className="inp-grp">
               <div className="cardInp">
-                <h6 className="cardsubtext">User Type</h6>
+                <h6 className="cardsubtext">Product Type</h6>
                 <DropdownBtn />
               </div>
               <div className="cardInp">
-                <h6 className="cardsubtext">User Name</h6>
+                <h6 className="cardsubtext">Product Category</h6>
+                <DropdownBtn />
+                <img
+                  onClick={toggleCatModalExpand}
+                  src={require("assets/img/plus-circle.svg")}
+                  style={{ cursor: "pointer" }}
+                />
+              </div>
+              {catModalExpand ? expandModalProductCategory() : null}
+              <div className="cardInp">
+                <h6 className="cardsubtext">Product Code</h6>
                 <InputGroup className="no-border">
                   <Input className="phold" placeholder="Type Here" />
                 </InputGroup>
               </div>
               <div className="cardInp">
-                <h6 className="cardsubtext">Phone Number</h6>
+                <h6 className="cardsubtext">Product Name</h6>
                 <InputGroup className="no-border">
                   <Input className="phold" placeholder="Type Here" />
                 </InputGroup>
               </div>
               <div className="cardInp">
-                <h6 className="cardsubtext">Contractor Name</h6>
+                <h6 className="cardsubtext">Cycle Time</h6>
                 <InputGroup className="no-border">
                   <Input className="phold" placeholder="Type Here" />
+                  <img
+                    onClick={toggleCycleModalExpand}
+                    src={require("assets/img/plus-circle.svg")}
+                    style={{ cursor: "pointer" }}
+                  />
                 </InputGroup>
               </div>
+              {cycleModalExpand ? expandModalCycleTime() : null}
               <div className="cardInp">
                 <h6 className="cardsubtext">Status</h6>
-                <form>
-                  <input type="radio" value="active" />
-                  Active
-                  <input type="radio" value="inactive" />
-                  Inactive
-                </form>
+                <input type="radio" id="active" name="status" value="active" />
+                <label for="active">Active</label>
+                <input
+                  type="radio"
+                  id="inactive"
+                  name="status"
+                  value="inactive"
+                />
+                <label for="inactive">InActive</label>
               </div>
             </div>
           </ModalBody>
