@@ -14,6 +14,8 @@ import {
   ModalBody,
   ModalFooter,
   Collapse,
+  FormGroup,
+  Label
 } from "reactstrap";
 import "./tabs.css";
 import DropdownBtn from "components/DropdownBtn";
@@ -61,20 +63,20 @@ const Tab1 = (props) => {
             <Collapse isOpen={isOpen}>
               <Card className="cardToggle">
                 <CardBody>
-                  <input
-                    type="radio"
-                    id="active"
-                    name="status"
-                    value="active"
-                  />
-                  <label for="active" className="toggle-label">Active</label>
-                  <input
-                    type="radio"
-                    id="inactive"
-                    name="status"
-                    value="inactive"
-                  />
-                  <label for="inactive" className="toggle-label">InActive</label>
+                  <FormGroup tag="fieldset">
+                    <FormGroup check>
+                      <Label check className="toggle-label">
+                        <Input type="radio" name="radio1" />
+                        Active
+                      </Label>
+                    </FormGroup>
+                    <FormGroup check>
+                      <Label check className="toggle-label">
+                        <Input type="radio" name="radio1" />
+                        Inactive
+                      </Label>
+                    </FormGroup>
+                  </FormGroup>
                 </CardBody>
               </Card>
             </Collapse>
