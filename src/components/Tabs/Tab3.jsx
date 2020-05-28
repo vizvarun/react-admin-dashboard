@@ -61,6 +61,27 @@ const Tab3 = (props) => {
     );
   };
 
+  const [catModalExpand, setCatModalExpand] = useState(false);
+  const toggleCatModalExpand = () => setCatModalExpand(!catModalExpand);
+
+  const expandCategoryModalName = () => {
+    return (
+      <>
+        <div className="cardInp">
+          <h6 className="cardsubtext2">New Category</h6>
+          <InputGroup className="no-border">
+            <Input className="phold" placeholder="Type Here" />
+          </InputGroup>
+          <img
+            onClick={toggleCatModalExpand}
+            style={{ cursor: "pointer" }}
+            src={require("assets/img/tick.svg")}
+          />
+        </div>
+      </>
+    );
+  };
+
   return (
     <>
       <div className="content tabcon">
@@ -171,40 +192,58 @@ const Tab3 = (props) => {
         </Row>
         <Modal centered isOpen={modal} toggle={toggle} className={className}>
           <ModalHeader toggle={toggle} className="modalhead">
-            Edit Existing Product
+            Edit Existing Machine
           </ModalHeader>
           <ModalBody>
             <div className="inp-grp">
               <div className="cardInp">
-                <h6 className="cardsubtext">User Type</h6>
+                <h6 className="cardsubtext">Machine</h6>
+                <InputGroup className="no-border">
+                  <Input className="phold" placeholder="Type Here" />
+                </InputGroup>
+              </div>
+              <div className="cardInp">
+                <h6 className="cardsubtext">Location</h6>
+                <InputGroup className="no-border">
+                  <Input className="phold" placeholder="Type Here" />
+                </InputGroup>
+              </div>
+              <div className="cardInp">
+                <h6 className="cardsubtext">Category Name</h6>
                 <DropdownBtn />
+                <img
+                  onClick={toggleCatModalExpand}
+                  style={{ cursor: "pointer" }}
+                  src={require("assets/img/plus-circle.svg")}
+                />
               </div>
+              {catModalExpand ? expandCategoryModalName() : null}
+
               <div className="cardInp">
-                <h6 className="cardsubtext">User Name</h6>
+                <h6 className="cardsubtext">Machine Code</h6>
                 <InputGroup className="no-border">
                   <Input className="phold" placeholder="Type Here" />
                 </InputGroup>
               </div>
               <div className="cardInp">
-                <h6 className="cardsubtext">Phone Number</h6>
-                <InputGroup className="no-border">
-                  <Input className="phold" placeholder="Type Here" />
-                </InputGroup>
+                <h6 className="cardsubtext">Supervisor Name</h6>
+                <img src={require("assets/img/plus-circle.svg")} />
               </div>
               <div className="cardInp">
-                <h6 className="cardsubtext">Contractor Name</h6>
-                <InputGroup className="no-border">
-                  <Input className="phold" placeholder="Type Here" />
-                </InputGroup>
+                <h6 className="cardsubtext">Product Associated</h6>
+                <img src={require("assets/img/plus-circle.svg")} />
               </div>
               <div className="cardInp">
                 <h6 className="cardsubtext">Status</h6>
-                <form>
-                  <input type="radio" value="active" />
-                  Active
-                  <input type="radio" value="inactive" />
-                  Inactive
-                </form>
+                <input type="radio" id="active" name="status" value="active" />
+                <label for="active">Active</label>
+                <input
+                  type="radio"
+                  id="inactive"
+                  name="status"
+                  value="inactive"
+                />
+                <label for="inactive">InActive</label>
               </div>
             </div>
           </ModalBody>
