@@ -279,3 +279,16 @@
 .modal-content {
   background-color: #f9f9f9 !important;
 }
+
+.cardToggle {
+  background-color: #fff;
+  float: right;
+}
+
+.toggle-label {
+  color: #e4a503 !important;
+  font-size: 1em !important;
+  display: flex;
+  font-weight: 500 !important;
+  flex-direction: column;
+}

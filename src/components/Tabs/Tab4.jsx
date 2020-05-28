@@ -13,6 +13,7 @@ import {
   ModalHeader,
   ModalBody,
   ModalFooter,
+  Collapse,
 } from "reactstrap";
 import "./tabs.css";
 import DropdownBtn from "components/DropdownBtn";
@@ -25,6 +26,8 @@ const Tab4 = (props) => {
   const { buttonLabel, className } = props;
 
   const [modal, setModal] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const filterToggle = () => setIsOpen(!isOpen);
 
   const toggle = () => setModal(!modal);
   const data = {
@@ -55,8 +58,33 @@ const Tab4 = (props) => {
               <img
                 src={require("assets/img/filter2.svg")}
                 className="filtericon"
+                onClick={filterToggle}
               />
             </div>
+            <Collapse isOpen={isOpen}>
+              <Card className="cardToggle">
+                <CardBody>
+                  <input
+                    type="radio"
+                    id="overnight"
+                    name="overnight"
+                    value="overnight"
+                  />
+                  <label for="overnight" className="toggle-label">
+                    Overnight
+                  </label>
+                  <input
+                    type="radio"
+                    id="active"
+                    name="status"
+                    value="active"
+                  />
+                  <label for="active" className="toggle-label">
+                    Active
+                  </label>
+                </CardBody>
+              </Card>
+            </Collapse>
             <TableList
               toggle={toggle}
               tableHead={data.tableHeading}
