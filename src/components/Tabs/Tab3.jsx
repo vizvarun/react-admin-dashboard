@@ -27,6 +27,10 @@ const Tab3 = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const filterToggle = () => setIsOpen(!isOpen);
   const [modal, setModal] = useState(false);
+  const [isOpenCatName, setIsOpenCatName] = useState(false);
+  const cnameToggle = () => setIsOpenCatName(!isOpenCatName);
+  const [isOpenModalCatName, setIsOpenModalCatName] = useState(false);
+  const cnameModalToggle = () => setIsOpenModalCatName(!isOpenModalCatName);
 
   const toggle = () => setModal(!modal);
   const data = {
@@ -42,48 +46,6 @@ const Tab3 = (props) => {
       ["ABC345", "Noida", "ABC345", "Newcode", true],
       ["XYZ123", "Noida", "XYZ123", "Newcode", false],
     ],
-  };
-
-  const [catExpand, setCatExpand] = useState(false);
-  const toggleCatExpand = () => setCatExpand(!catExpand);
-
-  const expandCategoryName = () => {
-    return (
-      <>
-        <div className="cardInp">
-          <h6 className="cardsubtext2">New Category</h6>
-          <InputGroup className="no-border">
-            <Input className="phold" placeholder="Type Here" />
-          </InputGroup>
-          <img
-            onClick={toggleCatExpand}
-            style={{ cursor: "pointer" }}
-            src={require("assets/img/tick.svg")}
-          />
-        </div>
-      </>
-    );
-  };
-
-  const [catModalExpand, setCatModalExpand] = useState(false);
-  const toggleCatModalExpand = () => setCatModalExpand(!catModalExpand);
-
-  const expandCategoryModalName = () => {
-    return (
-      <>
-        <div className="cardInp">
-          <h6 className="cardsubtext2">New Category</h6>
-          <InputGroup className="no-border">
-            <Input className="phold" placeholder="Type Here" />
-          </InputGroup>
-          <img
-            onClick={toggleCatModalExpand}
-            style={{ cursor: "pointer" }}
-            src={require("assets/img/tick.svg")}
-          />
-        </div>
-      </>
-    );
   };
 
   return (
@@ -154,13 +116,24 @@ const Tab3 = (props) => {
                       options={["Option1", "Option2", "Option3", "Option4"]}
                     />
                     <img
-                      onClick={toggleCatExpand}
+                      onClick={cnameToggle}
                       style={{ cursor: "pointer" }}
                       src={require("assets/img/plus-circle.svg")}
                     />
                   </div>
-                  {catExpand ? expandCategoryName() : null}
-
+                  <Collapse isOpen={isOpenCatName}>
+                    <div className="cardInp">
+                      <h6 className="cardsubtext2">New Category</h6>
+                      <InputGroup className="no-border">
+                        <Input className="phold" placeholder="Type Here" />
+                      </InputGroup>
+                      <img
+                        onClick={cnameToggle}
+                        style={{ cursor: "pointer" }}
+                        src={require("assets/img/tick.svg")}
+                      />
+                    </div>
+                  </Collapse>
                   <div className="cardInp">
                     <h6 className="cardsubtext">Machine Code</h6>
                     <InputGroup className="no-border">
@@ -243,13 +216,24 @@ const Tab3 = (props) => {
                   options={["Option1", "Option2", "Option3", "Option4"]}
                 />
                 <img
-                  onClick={toggleCatModalExpand}
+                  onClick={cnameModalToggle}
                   style={{ cursor: "pointer" }}
                   src={require("assets/img/plus-circle.svg")}
                 />
               </div>
-              {catModalExpand ? expandCategoryModalName() : null}
-
+              <Collapse isOpen={isOpenModalCatName}>
+                <div className="cardInp">
+                  <h6 className="cardsubtext2">New Category</h6>
+                  <InputGroup className="no-border">
+                    <Input className="phold" placeholder="Type Here" />
+                  </InputGroup>
+                  <img
+                    onClick={cnameModalToggle}
+                    style={{ cursor: "pointer" }}
+                    src={require("assets/img/tick.svg")}
+                  />
+                </div>
+              </Collapse>
               <div className="cardInp">
                 <h6 className="cardsubtext">Machine Code</h6>
                 <InputGroup className="no-border">
