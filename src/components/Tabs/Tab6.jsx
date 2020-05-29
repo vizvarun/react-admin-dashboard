@@ -90,7 +90,10 @@ const Tab6 = (props) => {
                   </CardText>
                   <div className="cardInp">
                     <h6 className="cardsubtext">Reason Name</h6>
-                    <DropdownBtn />
+                    <DropdownBtn
+                      header="User Type"
+                      options={["Option1", "Option2", "Option3", "Option4"]}
+                    />
                   </div>
                   <div className="cardInp">
                     <h6 className="cardsubtext">Sub Reason Name</h6>
@@ -161,7 +164,10 @@ const Tab6 = (props) => {
             <div className="inp-grp">
               <div className="cardInp">
                 <h6 className="cardsubtext">Reason Name</h6>
-                <DropdownBtn />
+                <DropdownBtn
+                  header="User Type"
+                  options={["Option1", "Option2", "Option3", "Option4"]}
+                />
               </div>
               <div className="cardInp">
                 <h6 className="cardsubtext">Sub Reason Name</h6>

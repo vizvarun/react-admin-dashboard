@@ -15,7 +15,7 @@ import {
   ModalFooter,
   Collapse,
   FormGroup,
-  Label
+  Label,
 } from "reactstrap";
 import "./tabs.css";
 import DropdownBtn from "components/DropdownBtn";
@@ -64,7 +64,10 @@ const Tab2 = (props) => {
         </div>
         <div className="cardInp">
           <h6 className="cardsubtext2">Unit</h6>
-          <DropdownBtn />
+          <DropdownBtn
+            header="User Type"
+            options={["Option1", "Option2", "Option3", "Option4"]}
+          />
           <img
             src={require("assets/img/tick.svg")}
             onClick={toggleCatExpand}
@@ -118,7 +121,10 @@ const Tab2 = (props) => {
         </div>
         <div className="cardInp">
           <h6 className="cardsubtext2">Unit</h6>
-          <DropdownBtn />
+          <DropdownBtn
+            header="User Type"
+            options={["Option1", "Option2", "Option3", "Option4"]}
+          />
           <img
             src={require("assets/img/tick.svg")}
             onClick={toggleCatModalExpand}
@@ -212,11 +218,17 @@ const Tab2 = (props) => {
                   </CardText>
                   <div className="cardInp">
                     <h6 className="cardsubtext">Product Type</h6>
-                    <DropdownBtn />
+                    <DropdownBtn
+                      header="User Type"
+                      options={["Option1", "Option2", "Option3", "Option4"]}
+                    />
                   </div>
                   <div className="cardInp">
                     <h6 className="cardsubtext">Product Category</h6>
-                    <DropdownBtn />
+                    <DropdownBtn
+                      header="User Type"
+                      options={["Option1", "Option2", "Option3", "Option4"]}
+                    />
                     <img
                       onClick={toggleCatExpand}
                       src={require("assets/img/plus-circle.svg")}
@@ -299,11 +311,17 @@ const Tab2 = (props) => {
             <div className="inp-grp">
               <div className="cardInp">
                 <h6 className="cardsubtext">Product Type</h6>
-                <DropdownBtn />
+                <DropdownBtn
+                  header="User Type"
+                  options={["Option1", "Option2", "Option3", "Option4"]}
+                />
               </div>
               <div className="cardInp">
                 <h6 className="cardsubtext">Product Category</h6>
-                <DropdownBtn />
+                <DropdownBtn
+                  header="User Type"
+                  options={["Option1", "Option2", "Option3", "Option4"]}
+                />
                 <img
                   onClick={toggleCatModalExpand}
                   src={require("assets/img/plus-circle.svg")}

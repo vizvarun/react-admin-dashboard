@@ -115,7 +115,10 @@ const Tab7 = (props) => {
                   </div>
                   <div className="cardInp">
                     <h6 className="cardsubtext">Product Category</h6>
-                    <DropdownBtn />
+                    <DropdownBtn
+                      header="User Type"
+                      options={["Option1", "Option2", "Option3", "Option4"]}
+                    />
                   </div>
                 </div>
                 <div className="cardInp buttoncon mb">
@@ -167,7 +170,10 @@ const Tab7 = (props) => {
               </div>
               <div className="cardInp">
                 <h6 className="cardsubtext">Product Category</h6>
-                <DropdownBtn />
+                <DropdownBtn
+                  header="User Type"
+                  options={["Option1", "Option2", "Option3", "Option4"]}
+                />
               </div>
               <div className="cardInp">
                 <h6 className="cardsubtext">Status</h6>

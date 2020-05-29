@@ -149,7 +149,10 @@ const Tab3 = (props) => {
                   </div>
                   <div className="cardInp">
                     <h6 className="cardsubtext">Category Name</h6>
-                    <DropdownBtn />
+                    <DropdownBtn
+                      header="User Type"
+                      options={["Option1", "Option2", "Option3", "Option4"]}
+                    />
                     <img
                       onClick={toggleCatExpand}
                       style={{ cursor: "pointer" }}
@@ -235,7 +238,10 @@ const Tab3 = (props) => {
               </div>
               <div className="cardInp">
                 <h6 className="cardsubtext">Category Name</h6>
-                <DropdownBtn />
+                <DropdownBtn
+                  header="User Type"
+                  options={["Option1", "Option2", "Option3", "Option4"]}
+                />
                 <img
                   onClick={toggleCatModalExpand}
                   style={{ cursor: "pointer" }}

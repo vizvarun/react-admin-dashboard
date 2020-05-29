@@ -15,7 +15,7 @@ import {
   ModalFooter,
   Collapse,
   FormGroup,
-  Label
+  Label,
 } from "reactstrap";
 import "./tabs.css";
 import DropdownBtn from "components/DropdownBtn";
@@ -110,8 +110,14 @@ const Tab4 = (props) => {
                   </div>
                   <div className="cardInp">
                     <h6 className="cardsubtext">Start Time</h6>
-                    <DropdownBtn />
-                    <DropdownBtn />
+                    <DropdownBtn
+                      header="User Type"
+                      options={["Option1", "Option2", "Option3", "Option4"]}
+                    />
+                    <DropdownBtn
+                      header="User Type"
+                      options={["Option1", "Option2", "Option3", "Option4"]}
+                    />
                     <img src={require("assets/img/plus-circle.svg")} />
                   </div>
                   <div className="cardInp">
@@ -120,8 +126,14 @@ const Tab4 = (props) => {
                   </div>
                   <div className="cardInp">
                     <h6 className="cardsubtext">End Time</h6>
-                    <DropdownBtn />
-                    <DropdownBtn />
+                    <DropdownBtn
+                      header="User Type"
+                      options={["Option1", "Option2", "Option3", "Option4"]}
+                    />
+                    <DropdownBtn
+                      header="User Type"
+                      options={["Option1", "Option2", "Option3", "Option4"]}
+                    />
                     <img src={require("assets/img/plus-circle.svg")} />
                   </div>
                   <div className="cardInp">
@@ -163,7 +175,10 @@ const Tab4 = (props) => {
             <div className="inp-grp">
               <div className="cardInp">
                 <h6 className="cardsubtext">User Type</h6>
-                <DropdownBtn />
+                <DropdownBtn
+                  header="User Type"
+                  options={["Option1", "Option2", "Option3", "Option4"]}
+                />
               </div>
               <div className="cardInp">
                 <h6 className="cardsubtext">User Name</h6>

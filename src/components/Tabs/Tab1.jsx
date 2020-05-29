@@ -15,7 +15,7 @@ import {
   ModalFooter,
   Collapse,
   FormGroup,
-  Label
+  Label,
 } from "reactstrap";
 import "./tabs.css";
 import DropdownBtn from "components/DropdownBtn";
@@ -44,6 +44,26 @@ const Tab1 = (props) => {
       ["Mikesh Jain", 8211297770, "Payroll", "Mukesh Lal", false],
     ],
   };
+
+  const dropdownOptions = [
+    {
+      value: "opt1",
+      label: "Option 1",
+    },
+    {
+      value: "opt2",
+      label: "Option 2",
+    },
+    {
+      value: "opt3",
+      label: "Option 3",
+    },
+    {
+      value: "opt4",
+      label: "Option 4",
+    },
+  ];
+
   return (
     <>
       <div className="content tabcon">
@@ -96,7 +116,11 @@ const Tab1 = (props) => {
                   </CardText>
                   <div className="cardInp">
                     <h6 className="cardsubtext">User Type</h6>
-                    <DropdownBtn />
+                    <DropdownBtn
+                      header="User Type"
+                      options={dropdownOptions}
+                      size=""
+                    />
                   </div>
                   <div className="cardInp">
                     <h6 className="cardsubtext">User Name</h6>
@@ -165,7 +189,7 @@ const Tab1 = (props) => {
             <div className="inp-grp">
               <div className="cardInp">
                 <h6 className="cardsubtext">User Type</h6>
-                <DropdownBtn />
+                <DropdownBtn header="User Type" options={dropdownOptions} />
               </div>
               <div className="cardInp">
                 <h6 className="cardsubtext">User Name</h6>

@@ -8,20 +8,32 @@ import {
 
 const DropdownBtn = (props) => {
   const [dropdownOpen, setOpen] = useState(false);
+  const initialValue = {
+    value: "",
+    label: "Choose",
+  };
+  const [dropdownValue, setDropdownValue] = useState(initialValue);
 
   const toggle = () => setOpen(!dropdownOpen);
+  const changeDropdownValue = (event) =>
+    setDropdownValue({ label: event.target.name, value: event.target.value });
 
   return (
-    <Dropdown isOpen={dropdownOpen} toggle={toggle} size="sm">
+    <Dropdown isOpen={dropdownOpen} toggle={toggle} size={props.size}>
       <DropdownToggle caret className="droptext">
-        Choose from here
+        {dropdownValue.label}
       </DropdownToggle>
       <DropdownMenu>
-        <DropdownItem header>Header</DropdownItem>
-        <DropdownItem disabled>Action</DropdownItem>
-        <DropdownItem>Another Action</DropdownItem>
-        <DropdownItem divider />
-        <DropdownItem>Another Action</DropdownItem>
+        <DropdownItem header>{props.header}</DropdownItem>
+        {props.options.map((option) => (
+          <DropdownItem
+            value={option.value}
+            name={option.label}
+            onClick={changeDropdownValue}
+          >
+            {option.label}
+          </DropdownItem>
+        ))}
       </DropdownMenu>
     </Dropdown>
   );
