@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   Card,
   CardBody,
@@ -7,8 +7,6 @@ import {
   Col,
   Input,
   InputGroup,
-  Table,
-  Button,
   Modal,
   ModalHeader,
   ModalBody,
@@ -21,15 +19,17 @@ import "./tabs.css";
 import DropdownBtn from "components/DropdownBtn";
 import Donut from "../../variables/doughnut";
 import TableList from "../../variables/tablelist";
-import Spinner from "components/Spinner/spinner";
 import DateRange from "components/DateRange/DateRange";
 
 const Tab1 = (props) => {
-  const { buttonLabel, className } = props;
+  const { className } = props;
 
   const [modal, setModal] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const filterToggle = () => setIsOpen(!isOpen);
+
+  const [isOpenCalendar, setIsOpenCalendar] = useState(false);
+  const calendarToggle = () => setIsOpenCalendar(!isOpenCalendar);
 
   const toggle = () => setModal(!modal);
   const data = {
@@ -73,10 +73,12 @@ const Tab1 = (props) => {
           <Col md="8">
             <div className="filtericoncon">
               <img
+                alt=""
                 src={require("assets/img/filter1.svg")}
                 className="filtericon"
               />
               <img
+                alt=""
                 src={require("assets/img/filter2.svg")}
                 className="filtericon"
                 onClick={filterToggle}
@@ -152,12 +154,34 @@ const Tab1 = (props) => {
             <Card className="cardUser2">
               <div className="iconright">
                 <img
+                  alt=""
                   src={require("assets/img/filter2.svg")}
                   className="filtericon2"
+                  onClick={calendarToggle}
                 />
               </div>
-              <DateRange />
-              {/* <div className="internalrow">
+              <Collapse isOpen={isOpenCalendar}>
+                <Card className="cardToggle">
+                  <CardBody>
+                    <FormGroup tag="fieldset">
+                      <FormGroup check>
+                        <Label check className="toggle-label">
+                          <Input type="radio" name="radio1" />
+                          Last 7 days
+                        </Label>
+                      </FormGroup>
+                      <FormGroup check>
+                        <Label check className="toggle-label">
+                          <Input type="radio" name="radio1" />
+                          Last 30 days
+                        </Label>
+                      </FormGroup>
+                    </FormGroup>
+                    <DateRange />
+                  </CardBody>
+                </Card>
+              </Collapse>
+              <div className="internalrow">
                 <Row>
                   <Col md="6">
                     <h5 className="cardheadtext">Production House</h5>
@@ -180,7 +204,7 @@ const Tab1 = (props) => {
                     </div>
                   </Col>
                 </Row>
-              </div> */}
+              </div>
             </Card>
           </Col>
         </Row>
@@ -213,16 +237,31 @@ const Tab1 = (props) => {
                 </InputGroup>
               </div>
               <div className="cardInp">
-                <h6 className="cardsubtext">Status</h6>
-                <input type="radio" id="active" name="status" value="active" />
-                <label for="active">Active</label>
-                <input
-                  type="radio"
-                  id="inactive"
-                  name="status"
-                  value="inactive"
-                />
-                <label for="inactive">InActive</label>
+                <div
+                  style={{
+                    width: "60%",
+                  }}
+                  className="flex-start"
+                >
+                  <h6
+                    className="cardsubtext"
+                    style={{ marginBottom: 0, marginRight: "10%" }}
+                  >
+                    Status
+                  </h6>
+                  <div className="flex-start" style={{ width: "inherit" }}>
+                    <input type="radio" id="yes" name="status" value="yes" />
+                    <label className="mb-0 label-radio" for="yes">
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex-start" style={{ width: "inherit" }}>
+                    <input type="radio" id="no" name="status" value="no" />
+                    <label className="mb-0 label-radio" for="no">
+                      No
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
           </ModalBody>

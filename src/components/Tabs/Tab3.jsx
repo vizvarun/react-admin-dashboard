@@ -7,8 +7,6 @@ import {
   Col,
   Input,
   InputGroup,
-  Table,
-  Button,
   Modal,
   ModalHeader,
   ModalBody,
@@ -21,9 +19,10 @@ import "./tabs.css";
 import DropdownBtn from "components/DropdownBtn";
 import Donut from "../../variables/doughnut";
 import TableList from "variables/tablelist";
+import DateRange from "components/DateRange/DateRange";
 
 const Tab3 = (props) => {
-  const { buttonLabel, className } = props;
+  const { className } = props;
   const [isOpen, setIsOpen] = useState(false);
   const filterToggle = () => setIsOpen(!isOpen);
   const [modal, setModal] = useState(false);
@@ -31,6 +30,9 @@ const Tab3 = (props) => {
   const cnameToggle = () => setIsOpenCatName(!isOpenCatName);
   const [isOpenModalCatName, setIsOpenModalCatName] = useState(false);
   const cnameModalToggle = () => setIsOpenModalCatName(!isOpenModalCatName);
+
+  const [isOpenCalendar, setIsOpenCalendar] = useState(false);
+  const calendarToggle = () => setIsOpenCalendar(!isOpenCalendar);
 
   const toggle = () => setModal(!modal);
   const data = {
@@ -74,10 +76,12 @@ const Tab3 = (props) => {
           <Col md="8">
             <div className="filtericoncon">
               <img
+                alt=""
                 src={require("assets/img/filter1.svg")}
                 className="filtericon"
               />
               <img
+                alt=""
                 src={require("assets/img/filter2.svg")}
                 className="filtericon"
                 onClick={filterToggle}
@@ -130,12 +134,18 @@ const Tab3 = (props) => {
                   </div>
                   <div className="cardInp">
                     <h6 className="cardsubtext">Category Name</h6>
-                    <DropdownBtn header="User Type" options={dropdownOptions} />
-                    <img
-                      onClick={cnameToggle}
-                      style={{ cursor: "pointer" }}
-                      src={require("assets/img/plus-circle.svg")}
-                    />
+                    <div style={{ display: "flex", flexDirection: "row" }}>
+                      <DropdownBtn
+                        header="User Type"
+                        options={dropdownOptions}
+                      />
+                      <img
+                        alt=""
+                        onClick={cnameToggle}
+                        style={{ cursor: "pointer" }}
+                        src={require("assets/img/plus-circle.svg")}
+                      />
+                    </div>
                   </div>
                   <Collapse isOpen={isOpenCatName}>
                     <div className="cardInp">
@@ -144,6 +154,7 @@ const Tab3 = (props) => {
                         <Input className="phold" placeholder="Type Here" />
                       </InputGroup>
                       <img
+                        alt=""
                         onClick={cnameToggle}
                         style={{ cursor: "pointer" }}
                         src={require("assets/img/tick.svg")}
@@ -157,12 +168,38 @@ const Tab3 = (props) => {
                     </InputGroup>
                   </div>
                   <div className="cardInp">
-                    <h6 className="cardsubtext">Supervisor Name</h6>
-                    <img src={require("assets/img/plus-circle.svg")} />
+                    <div
+                      style={{
+                        width: "40%",
+                      }}
+                      className="flex-start"
+                    >
+                      <h6 className="cardsubtext" style={{ marginBottom: 0 }}>
+                        Supervisor Name
+                      </h6>
+                      <img
+                        alt=""
+                        style={{ marginLeft: "10%" }}
+                        src={require("assets/img/plus-circle.svg")}
+                      />
+                    </div>
                   </div>
                   <div className="cardInp">
-                    <h6 className="cardsubtext">Product Associated</h6>
-                    <img src={require("assets/img/plus-circle.svg")} />
+                    <div
+                      style={{
+                        width: "40%",
+                      }}
+                      className="flex-start"
+                    >
+                      <h6 className="cardsubtext" style={{ marginBottom: 0 }}>
+                        Product Associated
+                      </h6>
+                      <img
+                        alt=""
+                        style={{ marginLeft: "10%" }}
+                        src={require("assets/img/plus-circle.svg")}
+                      />
+                    </div>
                   </div>
                 </div>
                 <div className="cardInp buttoncon mb">
@@ -176,8 +213,31 @@ const Tab3 = (props) => {
                 <img
                   src={require("assets/img/filter2.svg")}
                   className="filtericon2"
+                  alt=""
+                  onClick={calendarToggle}
                 />
               </div>
+              <Collapse isOpen={isOpenCalendar}>
+                <Card className="cardToggle">
+                  <CardBody>
+                    <FormGroup tag="fieldset">
+                      <FormGroup check>
+                        <Label check className="toggle-label">
+                          <Input type="radio" name="radio1" />
+                          Last 7 days
+                        </Label>
+                      </FormGroup>
+                      <FormGroup check>
+                        <Label check className="toggle-label">
+                          <Input type="radio" name="radio1" />
+                          Last 30 days
+                        </Label>
+                      </FormGroup>
+                    </FormGroup>
+                    <DateRange />
+                  </CardBody>
+                </Card>
+              </Collapse>
               <div className="internalrow">
                 <Row>
                   <Col md="6">
@@ -227,12 +287,15 @@ const Tab3 = (props) => {
               </div>
               <div className="cardInp">
                 <h6 className="cardsubtext">Category Name</h6>
-                <DropdownBtn header="User Type" options={dropdownOptions} />
-                <img
-                  onClick={cnameModalToggle}
-                  style={{ cursor: "pointer" }}
-                  src={require("assets/img/plus-circle.svg")}
-                />
+                <div style={{ display: "flex", flexDirection: "row" }}>
+                  <DropdownBtn header="User Type" options={dropdownOptions} />
+                  <img
+                    onClick={cnameModalToggle}
+                    alt=""
+                    style={{ cursor: "pointer" }}
+                    src={require("assets/img/plus-circle.svg")}
+                  />
+                </div>
               </div>
               <Collapse isOpen={isOpenModalCatName}>
                 <div className="cardInp">
@@ -241,6 +304,7 @@ const Tab3 = (props) => {
                     <Input className="phold" placeholder="Type Here" />
                   </InputGroup>
                   <img
+                    alt=""
                     onClick={cnameModalToggle}
                     style={{ cursor: "pointer" }}
                     src={require("assets/img/tick.svg")}
@@ -254,24 +318,65 @@ const Tab3 = (props) => {
                 </InputGroup>
               </div>
               <div className="cardInp">
-                <h6 className="cardsubtext">Supervisor Name</h6>
-                <img src={require("assets/img/plus-circle.svg")} />
+                <div
+                  style={{
+                    width: "40%",
+                  }}
+                  className="flex-start"
+                >
+                  <h6 className="cardsubtext" style={{ marginBottom: 0 }}>
+                    Supervisor Name
+                  </h6>
+                  <img
+                    alt=""
+                    style={{ marginLeft: "10%" }}
+                    src={require("assets/img/plus-circle.svg")}
+                  />
+                </div>
               </div>
               <div className="cardInp">
-                <h6 className="cardsubtext">Product Associated</h6>
-                <img src={require("assets/img/plus-circle.svg")} />
+                <div
+                  style={{
+                    width: "40%",
+                  }}
+                  className="flex-start"
+                >
+                  <h6 className="cardsubtext" style={{ marginBottom: 0 }}>
+                    Product Associated
+                  </h6>
+                  <img
+                    alt=""
+                    style={{ marginLeft: "10%" }}
+                    src={require("assets/img/plus-circle.svg")}
+                  />
+                </div>
               </div>
               <div className="cardInp">
-                <h6 className="cardsubtext">Status</h6>
-                <input type="radio" id="active" name="status" value="active" />
-                <label for="active">Active</label>
-                <input
-                  type="radio"
-                  id="inactive"
-                  name="status"
-                  value="inactive"
-                />
-                <label for="inactive">InActive</label>
+                <div
+                  style={{
+                    width: "60%",
+                  }}
+                  className="flex-start"
+                >
+                  <h6
+                    className="cardsubtext"
+                    style={{ marginBottom: 0, marginRight: "10%" }}
+                  >
+                    Status
+                  </h6>
+                  <div className="flex-start" style={{ width: "inherit" }}>
+                    <input type="radio" id="yes" name="status" value="yes" />
+                    <label className="mb-0 label-radio" for="yes">
+                      Yes
+                    </label>
+                  </div>
+                  <div className="flex-start" style={{ width: "inherit" }}>
+                    <input type="radio" id="no" name="status" value="no" />
+                    <label className="mb-0 label-radio" for="no">
+                      No
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
           </ModalBody>

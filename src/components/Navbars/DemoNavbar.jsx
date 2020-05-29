@@ -14,7 +14,6 @@ import {
   Input,
 } from "reactstrap";
 
-import routes from "routes.js";
 import "./DemoNavbar.css";
 
 class Header extends React.Component {
@@ -109,7 +108,11 @@ class Header extends React.Component {
               </button>
             </div>
             <NavbarBrand href="">
-              <img src={require("assets/img/logo.png")} alt="logo" className="navbrand"/>
+              <img
+                src={require("assets/img/logo.png")}
+                alt="logo"
+                className="navbrand"
+              />
             </NavbarBrand>
           </div>
           <NavbarToggler onClick={this.toggle}>
@@ -127,7 +130,7 @@ class Header extends React.Component {
                 <Input placeholder=" Search" />
                 <InputGroupAddon addonType="append">
                   <InputGroupText>
-                    <img src={require("assets/img/search.svg")} />
+                    <img src={require("assets/img/search.svg")} alt="" />
                   </InputGroupText>
                 </InputGroupAddon>
               </InputGroup>
@@ -135,7 +138,11 @@ class Header extends React.Component {
             <Nav navbar>
               <NavItem>
                 <Link to="#" className="nav-link btn-rotate">
-                  <img src={require("assets/img/account.svg")} className="mr-3" />
+                  <img
+                    src={require("assets/img/account.svg")}
+                    className="mr-3"
+                    alt=""
+                  />
                   <p>
                     <span className="d-lg-none d-md-block">Account</span>
                   </p>

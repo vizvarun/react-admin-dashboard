@@ -29,6 +29,7 @@ class TableList extends Component {
                   ) : (
                     <td key={item.indexOf(i)}>
                       <img
+                        alt=""
                         src={
                           i
                             ? require("../assets/img/greendot.svg")
@@ -42,6 +43,7 @@ class TableList extends Component {
                 {tableHead[tableHead.length - 1] === "Edit" ? (
                   <td key={tableData.indexOf(item)}>
                     <img
+                      alt=""
                       className="pointer-cursor"
                       onClick={this.props.toggle}
                       src={require("../assets/img/edit-square.svg")}

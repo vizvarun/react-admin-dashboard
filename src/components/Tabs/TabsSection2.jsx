@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { TabContent, TabPane, Nav, NavItem, NavLink, Table } from "reactstrap";
+import React, { useState} from "react";
+import { TabContent, TabPane, Nav, NavItem, NavLink, } from "reactstrap";
 import classnames from "classnames";
 import Tab1 from "./Tab1";
 import "./tabs.css";
@@ -18,7 +18,7 @@ const TabsSection2 = (props) => {
     if (activeTab !== tab) setActiveTab(tab);
   };
 
-  const [loading, setLoading] = useState(false);
+  const [loading] = useState(false);
 
   return (
     <div>
