@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { TabContent, TabPane, Nav, NavItem, NavLink, Table } from "reactstrap";
 import classnames from "classnames";
 import Tab1 from "./Tab1";
@@ -9,6 +9,7 @@ import Tab4 from "./Tab4";
 import Tab5 from "./Tab5";
 import Tab6 from "./Tab6";
 import Tab7 from "./Tab7";
+import Spinner from "components/Spinner/spinner";
 
 const TabsSection2 = (props) => {
   const [activeTab, setActiveTab] = useState("1");
@@ -16,6 +17,8 @@ const TabsSection2 = (props) => {
   const toggle = (tab) => {
     if (activeTab !== tab) setActiveTab(tab);
   };
+
+  const [loading, setLoading] = useState(false);
 
   return (
     <div>
@@ -29,7 +32,9 @@ const TabsSection2 = (props) => {
                     <NavLink
                       className={classnames({ active: activeTab === "1" })}
                       onClick={() => {
+                        // setLoading(true);
                         toggle("1");
+                        // setLoading(false);
                       }}
                     >
                       User
@@ -117,7 +122,22 @@ const TabsSection2 = (props) => {
       </Nav>
       <TabContent activeTab={activeTab}>
         <TabPane tabId="1">
-          <Tab1 />
+          {loading ? (
+            <div
+              style={{
+                width: "100%",
+                height: "100%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              {console.log("hihcs")}
+              <Spinner />
+            </div>
+          ) : (
+            <Tab1 />
+          )}
         </TabPane>
         <TabPane tabId="2">
           <Tab2 />

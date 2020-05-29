@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Card,
   CardBody,
@@ -21,6 +21,7 @@ import "./tabs.css";
 import DropdownBtn from "components/DropdownBtn";
 import Donut from "../../variables/doughnut";
 import TableList from "../../variables/tablelist";
+import Spinner from "components/Spinner/spinner";
 
 const Tab1 = (props) => {
   const { buttonLabel, className } = props;

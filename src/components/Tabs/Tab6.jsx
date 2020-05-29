@@ -45,6 +45,26 @@ const Tab6 = (props) => {
       ["Down Time", "Break Down", "XYZ123", "lorem ipsum dolor", false],
     ],
   };
+
+  const dropdownOptions = [
+    {
+      value: "opt1",
+      label: "Option 1",
+    },
+    {
+      value: "opt2",
+      label: "Option 2",
+    },
+    {
+      value: "opt3",
+      label: "Option 3",
+    },
+    {
+      value: "opt4",
+      label: "Option 4",
+    },
+  ];
+
   return (
     <>
       <div className="content tabcon">
@@ -90,10 +110,7 @@ const Tab6 = (props) => {
                   </CardText>
                   <div className="cardInp">
                     <h6 className="cardsubtext">Reason Name</h6>
-                    <DropdownBtn
-                      header="User Type"
-                      options={["Option1", "Option2", "Option3", "Option4"]}
-                    />
+                    <DropdownBtn header="User Type" options={dropdownOptions} />
                   </div>
                   <div className="cardInp">
                     <h6 className="cardsubtext">Sub Reason Name</h6>
@@ -164,10 +181,7 @@ const Tab6 = (props) => {
             <div className="inp-grp">
               <div className="cardInp">
                 <h6 className="cardsubtext">Reason Name</h6>
-                <DropdownBtn
-                  header="User Type"
-                  options={["Option1", "Option2", "Option3", "Option4"]}
-                />
+                <DropdownBtn header="User Type" options={dropdownOptions} />
               </div>
               <div className="cardInp">
                 <h6 className="cardsubtext">Sub Reason Name</h6>

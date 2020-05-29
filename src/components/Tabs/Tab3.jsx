@@ -48,6 +48,25 @@ const Tab3 = (props) => {
     ],
   };
 
+  const dropdownOptions = [
+    {
+      value: "opt1",
+      label: "Option 1",
+    },
+    {
+      value: "opt2",
+      label: "Option 2",
+    },
+    {
+      value: "opt3",
+      label: "Option 3",
+    },
+    {
+      value: "opt4",
+      label: "Option 4",
+    },
+  ];
+
   return (
     <>
       <div className="content tabcon">
@@ -111,10 +130,7 @@ const Tab3 = (props) => {
                   </div>
                   <div className="cardInp">
                     <h6 className="cardsubtext">Category Name</h6>
-                    <DropdownBtn
-                      header="User Type"
-                      options={["Option1", "Option2", "Option3", "Option4"]}
-                    />
+                    <DropdownBtn header="User Type" options={dropdownOptions} />
                     <img
                       onClick={cnameToggle}
                       style={{ cursor: "pointer" }}
@@ -211,10 +227,7 @@ const Tab3 = (props) => {
               </div>
               <div className="cardInp">
                 <h6 className="cardsubtext">Category Name</h6>
-                <DropdownBtn
-                  header="User Type"
-                  options={["Option1", "Option2", "Option3", "Option4"]}
-                />
+                <DropdownBtn header="User Type" options={dropdownOptions} />
                 <img
                   onClick={cnameModalToggle}
                   style={{ cursor: "pointer" }}

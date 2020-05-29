@@ -43,6 +43,25 @@ const Tab2 = (props) => {
     ],
   };
 
+  const dropdownOptions = [
+    {
+      value: "opt1",
+      label: "Option 1",
+    },
+    {
+      value: "opt2",
+      label: "Option 2",
+    },
+    {
+      value: "opt3",
+      label: "Option 3",
+    },
+    {
+      value: "opt4",
+      label: "Option 4",
+    },
+  ];
+
   const [isOpen, setIsOpen] = useState(false);
   const filterToggle = () => setIsOpen(!isOpen);
 
@@ -111,17 +130,11 @@ const Tab2 = (props) => {
                   </CardText>
                   <div className="cardInp">
                     <h6 className="cardsubtext">Product Type</h6>
-                    <DropdownBtn
-                      header="User Type"
-                      options={["Option1", "Option2", "Option3", "Option4"]}
-                    />
+                    <DropdownBtn header="User Type" options={dropdownOptions} />
                   </div>
                   <div className="cardInp">
                     <h6 className="cardsubtext">Product Category</h6>
-                    <DropdownBtn
-                      header="User Type"
-                      options={["Option1", "Option2", "Option3", "Option4"]}
-                    />
+                    <DropdownBtn header="User Type" options={dropdownOptions} />
                     <img
                       onClick={productToggle}
                       src={require("assets/img/plus-circle.svg")}
@@ -137,7 +150,10 @@ const Tab2 = (props) => {
                     </div>
                     <div className="cardInp">
                       <h6 className="cardsubtext2">Unit</h6>
-                      <DropdownBtn />
+                      <DropdownBtn
+                        header="User Type"
+                        options={dropdownOptions}
+                      />
                       <img
                         src={require("assets/img/tick.svg")}
                         onClick={productToggle}
@@ -246,17 +262,11 @@ const Tab2 = (props) => {
             <div className="inp-grp">
               <div className="cardInp">
                 <h6 className="cardsubtext">Product Type</h6>
-                <DropdownBtn
-                  header="User Type"
-                  options={["Option1", "Option2", "Option3", "Option4"]}
-                />
+                <DropdownBtn header="User Type" options={dropdownOptions} />
               </div>
               <div className="cardInp">
                 <h6 className="cardsubtext">Product Category</h6>
-                <DropdownBtn
-                  header="User Type"
-                  options={["Option1", "Option2", "Option3", "Option4"]}
-                />
+                <DropdownBtn header="User Type" options={dropdownOptions} />
                 <img
                   onClick={productModalToggle}
                   src={require("assets/img/plus-circle.svg")}
@@ -272,7 +282,7 @@ const Tab2 = (props) => {
                 </div>
                 <div className="cardInp">
                   <h6 className="cardsubtext2">Unit</h6>
-                  <DropdownBtn />
+                  <DropdownBtn header="User Type" options={dropdownOptions} />
                   <img
                     src={require("assets/img/tick.svg")}
                     onClick={productModalToggle}

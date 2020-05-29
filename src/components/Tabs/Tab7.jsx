@@ -23,7 +23,7 @@ import Donut from "../../variables/doughnut";
 import VerticalLine from "variables/verticalline";
 import ResponsiveContainer from "recharts/lib/component/ResponsiveContainer";
 import TableList from "variables/tablelist";
-import Bars from "variables/Bar";
+import BarChart from "variables/Bar";
 
 const Tab7 = (props) => {
   const { buttonLabel, className } = props;
@@ -46,6 +46,24 @@ const Tab7 = (props) => {
       ["AFR456", "Asthetics", "Category 1", "Lorem Ipsum Dolor Sit", false],
     ],
   };
+  const dropdownOptions = [
+    {
+      value: "opt1",
+      label: "Option 1",
+    },
+    {
+      value: "opt2",
+      label: "Option 2",
+    },
+    {
+      value: "opt3",
+      label: "Option 3",
+    },
+    {
+      value: "opt4",
+      label: "Option 4",
+    },
+  ];
   return (
     <>
       <div className="content tabcon">
@@ -115,10 +133,7 @@ const Tab7 = (props) => {
                   </div>
                   <div className="cardInp">
                     <h6 className="cardsubtext">Product Category</h6>
-                    <DropdownBtn
-                      header="User Type"
-                      options={["Option1", "Option2", "Option3", "Option4"]}
-                    />
+                    <DropdownBtn header="User Type" options={dropdownOptions} />
                   </div>
                 </div>
                 <div className="cardInp buttoncon mb">
@@ -136,8 +151,14 @@ const Tab7 = (props) => {
               </div>
               <div className="internalrow">
                 <Row>
-                  <Col md="6">
-                    <Bars />
+                  <Col style={{ maxWidth: "100%" }}>
+                    <div className="table-responsive">
+                      <table>
+                        <thead>
+                          <BarChart />
+                        </thead>
+                      </table>
+                    </div>
                   </Col>
                 </Row>
               </div>
@@ -170,10 +191,7 @@ const Tab7 = (props) => {
               </div>
               <div className="cardInp">
                 <h6 className="cardsubtext">Product Category</h6>
-                <DropdownBtn
-                  header="User Type"
-                  options={["Option1", "Option2", "Option3", "Option4"]}
-                />
+                <DropdownBtn header="User Type" options={dropdownOptions} />
               </div>
               <div className="cardInp">
                 <h6 className="cardsubtext">Status</h6>

@@ -47,6 +47,24 @@ const Tab4 = (props) => {
       ["A-Shift", "Lorem Ipsum Dolor Sit", "09:00", "18:00", "No", false],
     ],
   };
+  const dropdownOptions = [
+    {
+      value: "opt1",
+      label: "Option 1",
+    },
+    {
+      value: "opt2",
+      label: "Option 2",
+    },
+    {
+      value: "opt3",
+      label: "Option 3",
+    },
+    {
+      value: "opt4",
+      label: "Option 4",
+    },
+  ];
   return (
     <>
       <div className="content tabcon">
@@ -110,38 +128,68 @@ const Tab4 = (props) => {
                   </div>
                   <div className="cardInp">
                     <h6 className="cardsubtext">Start Time</h6>
-                    <DropdownBtn
-                      header="User Type"
-                      options={["Option1", "Option2", "Option3", "Option4"]}
-                    />
-                    <DropdownBtn
-                      header="User Type"
-                      options={["Option1", "Option2", "Option3", "Option4"]}
-                    />
+                    <DropdownBtn header="User Type" options={dropdownOptions} />
+                    <DropdownBtn header="User Type" options={dropdownOptions} />
                     <img src={require("assets/img/plus-circle.svg")} />
                   </div>
                   <div className="cardInp">
-                    <h6 className="cardsubtext">Break Time</h6>
-                    <img src={require("assets/img/plus-circle.svg")} />
+                    <div
+                      style={{
+                        width: "40%",
+                      }}
+                      className="flex-start"
+                    >
+                      <h6 className="cardsubtext" style={{ marginBottom: 0 }}>
+                        Break Time
+                      </h6>
+                      <img
+                        style={{ marginLeft: "10%" }}
+                        src={require("assets/img/plus-circle.svg")}
+                      />
+                    </div>
                   </div>
                   <div className="cardInp">
                     <h6 className="cardsubtext">End Time</h6>
-                    <DropdownBtn
-                      header="User Type"
-                      options={["Option1", "Option2", "Option3", "Option4"]}
-                    />
-                    <DropdownBtn
-                      header="User Type"
-                      options={["Option1", "Option2", "Option3", "Option4"]}
-                    />
+                    <DropdownBtn header="User Type" options={dropdownOptions} />
+                    <DropdownBtn header="User Type" options={dropdownOptions} />
                     <img src={require("assets/img/plus-circle.svg")} />
                   </div>
                   <div className="cardInp">
-                    <h6 className="cardsubtext">Overnight</h6>
-                    <input type="radio" id="yes" name="overnight" value="yes" />
-                    <label for="yes">Yes</label>
-                    <input type="radio" id="no" name="overnight" value="no" />
-                    <label for="no">No</label>
+                    <div
+                      style={{
+                        width: "60%",
+                      }}
+                      className="flex-start"
+                    >
+                      <h6
+                        className="cardsubtext"
+                        style={{ marginBottom: 0, marginRight: "10%" }}
+                      >
+                        Overnight
+                      </h6>
+                      <div className="flex-start" style={{ width: "inherit" }}>
+                        <input
+                          type="radio"
+                          id="yes"
+                          name="overnight"
+                          value="yes"
+                        />
+                        <label className="mb-0 label-radio" for="yes">
+                          Yes
+                        </label>
+                      </div>
+                      <div className="flex-start" style={{ width: "inherit" }}>
+                        <input
+                          type="radio"
+                          id="no"
+                          name="overnight"
+                          value="no"
+                        />
+                        <label className="mb-0 label-radio" for="no">
+                          No
+                        </label>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div className="cardInp buttoncon mb">
@@ -159,8 +207,14 @@ const Tab4 = (props) => {
               </div>
               <div className="internalrow">
                 <Row>
-                  <Col md="6">
-                    <VerticalLine />
+                  <Col style={{ maxWidth: "100%" }}>
+                    <div className="table-responsive">
+                      <table>
+                        <thead>
+                          <VerticalLine />
+                        </thead>
+                      </table>
+                    </div>
                   </Col>
                 </Row>
               </div>
@@ -175,10 +229,7 @@ const Tab4 = (props) => {
             <div className="inp-grp">
               <div className="cardInp">
                 <h6 className="cardsubtext">User Type</h6>
-                <DropdownBtn
-                  header="User Type"
-                  options={["Option1", "Option2", "Option3", "Option4"]}
-                />
+                <DropdownBtn header="User Type" options={dropdownOptions} />
               </div>
               <div className="cardInp">
                 <h6 className="cardsubtext">User Name</h6>

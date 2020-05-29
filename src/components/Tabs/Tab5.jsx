@@ -44,6 +44,24 @@ const Tab5 = (props) => {
       ["XYZ123", "Lunch Break", "Yes", false],
     ],
   };
+  const dropdownOptions = [
+    {
+      value: "opt1",
+      label: "Option 1",
+    },
+    {
+      value: "opt2",
+      label: "Option 2",
+    },
+    {
+      value: "opt3",
+      label: "Option 3",
+    },
+    {
+      value: "opt4",
+      label: "Option 4",
+    },
+  ];
   return (
     <>
       <div className="content tabcon">
