@@ -22,6 +22,7 @@ import DropdownBtn from "components/DropdownBtn";
 import Donut from "../../variables/doughnut";
 import TableList from "../../variables/tablelist";
 import Spinner from "components/Spinner/spinner";
+import DateRange from "components/DateRange/DateRange";
 
 const Tab1 = (props) => {
   const { buttonLabel, className } = props;
@@ -155,7 +156,8 @@ const Tab1 = (props) => {
                   className="filtericon2"
                 />
               </div>
-              <div className="internalrow">
+              <DateRange />
+              {/* <div className="internalrow">
                 <Row>
                   <Col md="6">
                     <h5 className="cardheadtext">Production House</h5>
@@ -178,7 +180,7 @@ const Tab1 = (props) => {
                     </div>
                   </Col>
                 </Row>
-              </div>
+              </div> */}
             </Card>
           </Col>
         </Row>

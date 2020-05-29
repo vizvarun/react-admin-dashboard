@@ -14,7 +14,9 @@ class TableList extends Component {
           <thead>
             <tr>
               {tableHead.map((thead) => (
-                <th className="tablehead">{thead}</th>
+                <th key={tableHead.indexOf(thead)} className="tablehead">
+                  {thead}
+                </th>
               ))}
             </tr>
           </thead>
@@ -23,9 +25,9 @@ class TableList extends Component {
               <tr>
                 {item.map((i) =>
                   typeof i !== typeof true ? (
-                    <td>{i}</td>
+                    <td key={item.indexOf(i)}>{i}</td>
                   ) : (
-                    <td>
+                    <td key={item.indexOf(i)}>
                       <img
                         src={
                           i
@@ -38,7 +40,7 @@ class TableList extends Component {
                 )}
 
                 {tableHead[tableHead.length - 1] === "Edit" ? (
-                  <td>
+                  <td key={tableData.indexOf(item)}>
                     <img
                       className="pointer-cursor"
                       onClick={this.props.toggle}

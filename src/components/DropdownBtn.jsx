@@ -30,6 +30,7 @@ const DropdownBtn = (props) => {
             value={option.value}
             name={option.label}
             onClick={changeDropdownValue}
+            key={option.value}
           >
             {option.label}
           </DropdownItem>
