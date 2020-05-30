@@ -308,3 +308,38 @@
   margin-left: 5px;
   color: #121212 !important;
 }
+
+.doughnut-graph {
+  margin-bottom: 10%;
+  margin-top: 5%;
+}
+
+.top-graph {
+  justify-content: space-evenly !important;
+}
+
+.card-center {
+  justify-content: space-around !important;
+  text-align: center;
+  align-items: center !important;
+}
+
+.cardInpThin {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 3%;
+  padding-left: 3%;
+}
+
+.cardmaintext {
+  text-transform: none;
+  font-weight: 600;
+}
+
+.card-row {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}

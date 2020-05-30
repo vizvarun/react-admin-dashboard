@@ -28,7 +28,8 @@ class Donut extends Component {
           options={{
             maintainAspectRatio: true,
             legend: {
-              position: "bottom",
+              display: this.props.legendDisplay,
+              position: this.props.legendPosition,
               maintainAspectRatio: true,
             },
           }}

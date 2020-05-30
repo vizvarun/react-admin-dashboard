@@ -186,20 +186,24 @@ const Tab1 = (props) => {
                   <Col md="6">
                     <h5 className="cardheadtext">Production House</h5>
                     <Donut
+                        legendPosition="bottom"
                       labels={["Contractor", "Payroll"]}
                       data={[60, 40]}
                       bgColor={["#CD0F5F", "#82CA27"]}
                       hoverBgColor={["#CD0F5F", "#82CA27"]}
+                      legendDisplay="true"
                     />
                   </Col>
                   <Col md="6">
                     <h5 className="cardheadtext">Your overview</h5>
                     <div className="doughnut-graph">
                       <Donut
+                        legendPosition="bottom"
                         labels={["Contractor", "Payroll"]}
                         data={[70, 30]}
                         bgColor={["#2B47E3", "#E32B2B"]}
                         hoverBgColor={["#2B47E3", "#E32B2B"]}
+                        legendDisplay="true"
                       />
                     </div>
                   </Col>

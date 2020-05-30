@@ -173,10 +173,12 @@ const Tab6 = (props) => {
                     <h5 className="cardheadtext">Production House</h5>
                     <div className="doughnut-graph">
                       <Donut
+                        legendPosition="bottom"
                         labels={["Scheduled", "UnScheduled"]}
                         data={[70, 30]}
                         bgColor={["#336481", "#7ABEBA"]}
                         hoverBgColor={["#336481", "#7ABEBA"]}
+                        legendDisplay="true"
                       />
                     </div>
                   </Col>
@@ -184,10 +186,12 @@ const Tab6 = (props) => {
                     <h5 className="cardheadtext">Your overview</h5>
                     <div className="doughnut-graph">
                       <Donut
+                        legendPosition="bottom"
                         labels={["Scheduled", "UnScheduled"]}
                         data={[85, 15]}
                         bgColor={["#8D5CF6", "#FAD84A"]}
                         hoverBgColor={["#8D5CF6", "#FAD84A"]}
+                        legendDisplay="true"
                       />
                     </div>
                   </Col>

@@ -267,10 +267,12 @@ const Tab2 = (props) => {
                     <h5 className="cardheadtext">Production House</h5>
                     <div className="doughnut-graph">
                       <Donut
+                        legendPosition="bottom"
                         labels={["Inactive", "Active"]}
                         data={[70, 30]}
                         bgColor={["#943563", "#F3A465"]}
                         hoverBgColor={["#943563", "#F3A465"]}
+                        legendDisplay="true"
                       />
                     </div>
                   </Col>
@@ -278,10 +280,12 @@ const Tab2 = (props) => {
                     <h5 className="cardheadtext">Your overview</h5>
                     <div className="doughnut-graph">
                       <Donut
+                        legendPosition="bottom"
                         labels={["Inactive", "Active"]}
                         data={[85, 15]}
                         bgColor={["#1F578E", "#ED692C"]}
                         hoverBgColor={["#1F578E", "#ED692C"]}
+                        legendDisplay="true"
                       />
                     </div>
                   </Col>
