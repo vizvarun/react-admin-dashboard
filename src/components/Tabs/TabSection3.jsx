@@ -78,77 +78,52 @@ const TabsSection3 = (props) => {
             </div>
           </Col>
         </Row>
+
         <Card className="cardUser mt-2">
-          <CardBody
-            className="card-center card-row"
-          >
-            <div>
-              <h6 className="cardmaintext">Production and Downtime Entry</h6>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "baseline",
-                justifyContent: "space-evenly",
-              }}
-            >
-              <h6 className="cardsubtext mr-5">Date</h6>
-              <DatePick />
-            </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "baseline",
-                justifyContent: "space-evenly",
-              }}
-            >
-              <h6 className="cardsubtext mr-5">Shift</h6>
-              <DropdownBtn
-                header="User Type"
-                options={dropdownOptions}
-                size=""
-              />
-            </div>
+          <CardBody>
+            <Row>
+              <Col md="4">
+                <h6 className="cardmaintext mt-4 ml-4 ">Production and Downtime Entry</h6>
+              </Col>
+              <Col md="4" className="card-row">
+                <h6 className="cardsubtext mr-5 mt-4">Date</h6>
+                <DatePick />
+              </Col>
+              <Col md="4" className="card-row">
+                <h6 className="cardsubtext mr-5 pb-3">Machine</h6>
+                <DropdownBtn
+                  header="User Type"
+                  options={dropdownOptions}
+                  size=""
+                />
+              </Col>
+            </Row>
           </CardBody>
         </Card>
 
-        <Card className="cardUser mt-2">
-          <CardBody className="card-center card-row">
-            <div>
-              <h6 className="cardmaintext">Machine & Operator Entry</h6>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "baseline",
-                justifyContent: "space-evenly",
-              }}
-            >
-              <h6 className="cardsubtext mr-5">Machine</h6>
-              <DropdownBtn
-                header="User Type"
-                options={dropdownOptions}
-                size=""
-              />
-            </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "baseline",
-                justifyContent: "space-evenly",
-              }}
-            >
-              <h6 className="cardsubtext mr-5">Operator</h6>
-              <DropdownBtn
-                header="User Type"
-                options={dropdownOptions}
-                size=""
-              />
-            </div>
+        <Card className="cardUser mt-4">
+          <CardBody>
+            <Row>
+              <Col md="4">
+                <h6 className="cardmaintext mt-4 ml-4">Machine & Operator Entry</h6>
+              </Col>
+              <Col md="4" className="card-row">
+                <h6 className="cardsubtext mr-5">Machine</h6>
+                <DropdownBtn
+                  header="User Type"
+                  options={dropdownOptions}
+                  size=""
+                />
+              </Col>
+              <Col md="4" className="card-row">
+                <h6 className="cardsubtext mr-5 pb-3">Machine</h6>
+                <DropdownBtn
+                  header="User Type"
+                  options={dropdownOptions}
+                  size=""
+                />
+              </Col>
+            </Row>
           </CardBody>
         </Card>
       </div>
