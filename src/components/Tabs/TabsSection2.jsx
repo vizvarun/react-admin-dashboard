@@ -1,5 +1,5 @@
-import React, { useState} from "react";
-import { TabContent, TabPane, Nav, NavItem, NavLink, } from "reactstrap";
+import React, { useState } from "react";
+import { TabContent, TabPane, Nav, NavItem, NavLink } from "reactstrap";
 import classnames from "classnames";
 import Tab1 from "./Tab1";
 import "./tabs.css";
@@ -22,7 +22,7 @@ const TabsSection2 = (props) => {
 
   return (
     <div>
-      <Nav tabs>
+      <Nav tabs style={{ border: "none" }}>
         <div className="table-responsive">
           <table>
             <thead>

@@ -14,9 +14,6 @@
 .nav-tabs .nav-item.show .nav-link {
   color: #e4a503 !important;
   transition: ease-in-out 1.2ms;
-  border-top: none !important;
-  border-left: none !important;
-  border-right: none !important ;
   border-bottom: 0.17em solid #e4a503 !important;
 }
 
@@ -24,16 +21,12 @@
   text-transform: none;
   color: #b8b8b8 !important;
   font-weight: 500 !important;
+  border: none !important;
 }
 
 .nav-tabs {
-  border: none !important;
   font-weight: 600;
   color: #b8b8b8;
-}
-
-.nav-tab:hover {
-  border: none !important;
 }
 
 .nav-link:hover {
