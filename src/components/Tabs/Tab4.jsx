@@ -299,8 +299,9 @@ const Tab4 = (props) => {
                   </h6>
                   <img
                     alt=""
-                    style={{ marginLeft: "10%" }}
+                    style={{ marginLeft: "10%" , cursor: "pointer"}}
                     src={require("assets/img/plus-circle.svg")}
+                    onClick={toggleBreaktimeModal}
                   />
                 </div>
               </div>
