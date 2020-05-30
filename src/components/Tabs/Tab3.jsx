@@ -21,7 +21,9 @@ import Donut from "../../variables/doughnut";
 import TableList from "variables/tablelist";
 import DateRange from "components/DateRange/DateRange";
 
-import ModalComp from "../ModalComp/ModalComp";
+import SupervisorModal from "../ModalComp/SupervisorModal";
+import ProductModal from "../ModalComp/ProductModal";
+
 const Tab3 = (props) => {
   const { className } = props;
   const [isOpen, setIsOpen] = useState(false);
@@ -37,9 +39,13 @@ const Tab3 = (props) => {
 
   const toggle = () => setModal(!modal);
 
-  const [supervisorModal, setSupervisorModal] = useState(true);
+  const [supervisorModal, setSupervisorModal] = useState(false);
 
   const toggleSupervisorModal = () => setSupervisorModal(!supervisorModal);
+
+  const [productModal, setProductModal] = useState(false);
+
+  const toggleProductModal = () => setProductModal(!productModal);
 
   const data = {
     tableHeading: [
@@ -202,8 +208,9 @@ const Tab3 = (props) => {
                         Product Associated
                       </h6>
                       <img
+                        onClick={toggleProductModal}
                         alt=""
-                        style={{ marginLeft: "10%" }}
+                        style={{ marginLeft: "10%", cursor: "pointer" }}
                         src={require("assets/img/plus-circle.svg")}
                       />
                     </div>
@@ -274,11 +281,17 @@ const Tab3 = (props) => {
             </Card>
           </Col>
         </Row>
-        <ModalComp
+        <SupervisorModal
           toggle={toggleSupervisorModal}
           modal={supervisorModal}
           className={className}
         />
+        <ProductModal
+          toggle={toggleProductModal}
+          modal={productModal}
+          className={className}
+        />
+
         <Modal centered isOpen={modal} toggle={toggle} className={className}>
           <ModalHeader toggle={toggle} className="modalhead">
             Edit Existing Machine
@@ -358,8 +371,9 @@ const Tab3 = (props) => {
                     Product Associated
                   </h6>
                   <img
+                    onClick={toggleProductModal}
                     alt=""
-                    style={{ marginLeft: "10%" }}
+                    style={{ marginLeft: "10%", cursor: "pointer" }}
                     src={require("assets/img/plus-circle.svg")}
                   />
                 </div>
