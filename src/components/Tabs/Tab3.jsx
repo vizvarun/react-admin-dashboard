@@ -21,6 +21,7 @@ import Donut from "../../variables/doughnut";
 import TableList from "variables/tablelist";
 import DateRange from "components/DateRange/DateRange";
 
+import ModalComp from "../ModalComp/ModalComp";
 const Tab3 = (props) => {
   const { className } = props;
   const [isOpen, setIsOpen] = useState(false);
@@ -35,6 +36,11 @@ const Tab3 = (props) => {
   const calendarToggle = () => setIsOpenCalendar(!isOpenCalendar);
 
   const toggle = () => setModal(!modal);
+
+  const [supervisorModal, setSupervisorModal] = useState(true);
+
+  const toggleSupervisorModal = () => setSupervisorModal(!supervisorModal);
+
   const data = {
     tableHeading: [
       "Machine",
@@ -178,8 +184,9 @@ const Tab3 = (props) => {
                         Supervisor Name
                       </h6>
                       <img
+                        onClick={toggleSupervisorModal}
                         alt=""
-                        style={{ marginLeft: "10%" }}
+                        style={{ marginLeft: "10%", cursor: "pointer" }}
                         src={require("assets/img/plus-circle.svg")}
                       />
                     </div>
@@ -267,6 +274,11 @@ const Tab3 = (props) => {
             </Card>
           </Col>
         </Row>
+        <ModalComp
+          toggle={toggleSupervisorModal}
+          modal={supervisorModal}
+          className={className}
+        />
         <Modal centered isOpen={modal} toggle={toggle} className={className}>
           <ModalHeader toggle={toggle} className="modalhead">
             Edit Existing Machine
@@ -328,8 +340,9 @@ const Tab3 = (props) => {
                     Supervisor Name
                   </h6>
                   <img
+                    onClick={toggleSupervisorModal}
                     alt=""
-                    style={{ marginLeft: "10%" }}
+                    style={{ marginLeft: "10%", cursor: "pointer" }}
                     src={require("assets/img/plus-circle.svg")}
                   />
                 </div>

@@ -303,6 +303,13 @@
   justify-content: flex-start;
 }
 
+.flex-end {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
 .label-radio {
   margin-left: 5px;
   color: #121212 !important;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Dropdown,
   DropdownToggle,
@@ -9,14 +9,21 @@ import {
 const DropdownBtn = (props) => {
   const [dropdownOpen, setOpen] = useState(false);
   const initialValue = {
-    value: "",
+    id: 0,
+    value: null,
     label: "Choose",
   };
   const [dropdownValue, setDropdownValue] = useState(initialValue);
 
   const toggle = () => setOpen(!dropdownOpen);
-  const changeDropdownValue = (event) =>
-    setDropdownValue({ label: event.target.name, value: event.target.value });
+  const changeDropdownValue = (event) => {
+    setDropdownValue({
+      label: event.target.name,
+      value: event.target.value,
+      id: event.target.id,
+    });
+    props.getDropdownVal(dropdownValue);
+  };
 
   return (
     <Dropdown isOpen={dropdownOpen} toggle={toggle} size={props.size}>
@@ -30,7 +37,8 @@ const DropdownBtn = (props) => {
             value={option.value}
             name={option.label}
             onClick={changeDropdownValue}
-            key={option.value}
+            key={option.id}
+            id={option.id}
           >
             {option.label}
           </DropdownItem>
