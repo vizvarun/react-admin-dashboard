@@ -139,8 +139,20 @@ class Header extends React.Component {
               <NavItem>
                 <Link to="#" className="nav-link btn-rotate">
                   <img
+                    src={require("assets/img/bell.svg")}
+                    className="ml-4"
+                    alt=""
+                  />
+                  <p>
+                    <span className="d-lg-none d-md-block">Notifications</span>
+                  </p>
+                </Link>
+              </NavItem>
+              <NavItem>
+                <Link to="#" className="nav-link btn-rotate">
+                  <img
                     src={require("assets/img/account.svg")}
-                    className="mr-3"
+                    className="ml-3 mr-2"
                     alt=""
                   />
                   <p>
