@@ -13,45 +13,52 @@ import "./bar.css";
 
 const data = [
   {
-    name: "Page A",
-    uv: 4000,
-    pv: 2400,
+    name: "A Shift",
+    Break: 4000,
+    Start: 2400,
+    End: 2600,
     amt: 2400,
   },
   {
-    name: "Page B",
-    uv: 3000,
-    pv: 1398,
+    name: "B Shift",
+    Break: 3000,
+    Start: 1398,
+    End: 3200,
     amt: 2210,
   },
   {
-    name: "Page C",
-    uv: 2000,
-    pv: 9800,
+    name: "C Shift",
+    Break: 2000,
+    End: 2700,
+    Start: 9800,
     amt: 2290,
   },
   {
-    name: "Page D",
-    uv: 2780,
-    pv: 3908,
+    name: "D Shift",
+    Break: 2780,
+    End: 3600,
+    Start: 3908,
     amt: 2000,
   },
   {
-    name: "Page E",
-    uv: 1890,
-    pv: 4800,
+    name: "E Shift",
+    Break: 1890,
+    End: 3000,
+    Start: 4800,
     amt: 2181,
   },
   {
-    name: "Page F",
-    uv: 2390,
-    pv: 3800,
+    name: "F Shift",
+    Break: 2390,
+    End: 2200,
+    Start: 3800,
     amt: 2500,
   },
   {
-    name: "Page G",
-    uv: 3490,
-    pv: 4300,
+    name: "G Shift",
+    Break: 3490,
+    Start: 4300,
+    End: 3500,
     amt: 2100,
   },
 ];
@@ -76,8 +83,9 @@ export default class Example extends PureComponent {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey="pv" stackId="a" fill="#8884d8" />
-          <Bar dataKey="uv" stackId="a" fill="#82ca9d" />
+          <Bar dataKey="Start" stackId="a" fill="#8884d8" />
+          <Bar dataKey="Break" stackId="a" fill="#82ca9d" />
+          <Bar dataKey="End" stackId="a" fill="#ff1999" />
         </BarChart>
       </>
     );
