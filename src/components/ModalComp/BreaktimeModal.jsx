@@ -1,22 +1,8 @@
 import React, { Component } from "react";
-import {
-  Card,
-  CardBody,
-  CardText,
-  Row,
-  Col,
-  Input,
-  InputGroup,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Label,
-  Collapse,
-  FormGroup,
-} from "reactstrap";
+import { Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
 import DropdownBtn from "components/DropdownBtn";
+import TimeDropdown from "../TimePicker/TimePicker";
 
 const dropdownOptions = [
   { id: 1, value: "Reason1", label: "Reason 1" },
@@ -36,7 +22,7 @@ class BreaktimeModal extends Component {
 
   addSuperVisorHandler = () => {
     const arr = this.state.supervisors;
-    arr.push({ id: 4, value: "Reason4", label: "Reason" });
+    arr.push({ id: 4, value: "Reason4", label: "2nd break time" });
     this.setState({
       supervisor: arr,
     });
@@ -77,14 +63,26 @@ class BreaktimeModal extends Component {
                   options={dropdownOptions}
                   getDropdownVal={this.updateDropdownVal.bind(this)}
                 />
-                <img
-                  onClick={this.addSuperVisorHandler}
-                  alt=""
-                  style={{ cursor: "pointer" }}
-                  src={require("assets/img/plus-circle.svg")}
-                />
               </div>
             </div>
+            <div className="cardInp">
+              <h6 className="cardsubtext">Start Time</h6>
+              <div style={{ display: "flex", flexDirection: "row" }}>
+                <TimeDropdown />
+              </div>
+            </div>
+            <div className="cardInp">
+              <h6 className="cardsubtext">End Time</h6>
+              <div style={{ display: "flex", flexDirection: "row" }}>
+                <TimeDropdown />
+              </div>
+            </div>
+            <img
+              onClick={this.addSuperVisorHandler}
+              alt=""
+              style={{ cursor: "pointer", marginTop: "5%"}}
+              src={require("assets/img/plus-circle.svg")}
+            />
             {this.state.supervisors.map((supervisor) => (
               <div className="cardInp">
                 <div

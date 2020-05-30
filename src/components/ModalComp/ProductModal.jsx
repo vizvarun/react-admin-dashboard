@@ -1,20 +1,5 @@
 import React, { Component } from "react";
-import {
-  Card,
-  CardBody,
-  CardText,
-  Row,
-  Col,
-  Input,
-  InputGroup,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Label,
-  Collapse,
-  FormGroup,
-} from "reactstrap";
+import { Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
 import DropdownBtn from "components/DropdownBtn";
 

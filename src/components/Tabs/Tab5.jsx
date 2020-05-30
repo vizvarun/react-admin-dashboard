@@ -110,26 +110,28 @@ const Tab5 = (props) => {
                   <div className="cardInp">
                     <div
                       style={{
-                        width: "60%",
+                        width: "100%",
                       }}
                       className="flex-start"
                     >
-                      <h6
-                        className="cardsubtext"
-                        style={{ marginBottom: 0, marginRight: "10%" }}
-                      >
-                        Scheduled Loss
-                      </h6>
                       <div className="flex-start" style={{ width: "inherit" }}>
                         <input type="radio" id="yes" name="loss" value="yes" />
-                        <label className="mb-0 label-radio" for="yes">
-                          Yes
+                        <label
+                          className="mb-0 label-radio"
+                          for="yes"
+                          style={{ fontSize: "0.8rem" }}
+                        >
+                          Scheduled Loss
                         </label>
                       </div>
                       <div className="flex-start" style={{ width: "inherit" }}>
                         <input type="radio" id="no" name="loss" value="no" />
-                        <label className="mb-0 label-radio" for="no">
-                          No
+                        <label
+                          className="mb-0 label-radio"
+                          for="no"
+                          style={{ fontSize: "0.8rem" }}
+                        >
+                          UnScheduled Loss
                         </label>
                       </div>
                     </div>

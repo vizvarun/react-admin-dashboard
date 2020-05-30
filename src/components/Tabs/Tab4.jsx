@@ -16,7 +16,6 @@ import {
   Label,
 } from "reactstrap";
 import "./tabs.css";
-import DropdownBtn from "components/DropdownBtn";
 import VerticalLine from "variables/verticalline";
 import TableList from "variables/tablelist";
 import DateRange from "components/DateRange/DateRange";
@@ -53,24 +52,7 @@ const Tab4 = (props) => {
       ["A-Shift", "Lorem Ipsum Dolor Sit", "09:00", "18:00", "No", false],
     ],
   };
-  const dropdownOptions = [
-    {
-      value: "opt1",
-      label: "Option 1",
-    },
-    {
-      value: "opt2",
-      label: "Option 2",
-    },
-    {
-      value: "opt3",
-      label: "Option 3",
-    },
-    {
-      value: "opt4",
-      label: "Option 4",
-    },
-  ];
+
   return (
     <>
       <div className="content tabcon">
@@ -138,8 +120,6 @@ const Tab4 = (props) => {
                     <h6 className="cardsubtext">Start Time</h6>
                     <div style={{ display: "flex", flexDirection: "row" }}>
                       <TimeDropdown />
-
-                      <img src={require("assets/img/plus-circle.svg")} alt="" />
                     </div>
                   </div>
                   <div className="cardInp">
@@ -164,7 +144,6 @@ const Tab4 = (props) => {
                     <h6 className="cardsubtext">End Time</h6>
                     <div style={{ display: "flex", flexDirection: "row" }}>
                       <TimeDropdown />
-                      <img src={require("assets/img/plus-circle.svg")} alt="" />
                     </div>
                   </div>
                   <div className="cardInp">
@@ -283,8 +262,6 @@ const Tab4 = (props) => {
                 <h6 className="cardsubtext">Start Time</h6>
                 <div style={{ display: "flex", flexDirection: "row" }}>
                   <TimeDropdown />
-
-                  <img src={require("assets/img/plus-circle.svg")} alt="" />
                 </div>
               </div>
               <div className="cardInp">
@@ -299,7 +276,7 @@ const Tab4 = (props) => {
                   </h6>
                   <img
                     alt=""
-                    style={{ marginLeft: "10%" , cursor: "pointer"}}
+                    style={{ marginLeft: "10%", cursor: "pointer" }}
                     src={require("assets/img/plus-circle.svg")}
                     onClick={toggleBreaktimeModal}
                   />
@@ -309,8 +286,6 @@ const Tab4 = (props) => {
                 <h6 className="cardsubtext">End Time</h6>
                 <div style={{ display: "flex", flexDirection: "row" }}>
                   <TimeDropdown />
-
-                  <img src={require("assets/img/plus-circle.svg")} alt="" />
                 </div>
               </div>
               <div className="cardInp">
