@@ -20,6 +20,7 @@ import DropdownBtn from "components/DropdownBtn";
 import VerticalLine from "variables/verticalline";
 import TableList from "variables/tablelist";
 import DateRange from "components/DateRange/DateRange";
+import TimeDropdown from "components/TimePicker/TimePicker";
 
 const Tab4 = (props) => {
   const { className } = props;
@@ -30,6 +31,10 @@ const Tab4 = (props) => {
 
   const [isOpenCalendar, setIsOpenCalendar] = useState(false);
   const calendarToggle = () => setIsOpenCalendar(!isOpenCalendar);
+
+  const [breaktimeModal, setBreaktimeModal] = useState(false);
+
+  const toggleBreaktimeModal = () => setBreaktimeModal(!breaktimeModal);
 
   const toggle = () => setModal(!modal);
   const data = {
@@ -131,16 +136,8 @@ const Tab4 = (props) => {
                   <div className="cardInp">
                     <h6 className="cardsubtext">Start Time</h6>
                     <div style={{ display: "flex", flexDirection: "row" }}>
-                      <DropdownBtn
-                        header="User Type"
-                        options={dropdownOptions}
-                        size="sm"
-                      />
-                      <DropdownBtn
-                        header="User Type"
-                        size="sm"
-                        options={dropdownOptions}
-                      />
+                      <TimeDropdown />
+
                       <img src={require("assets/img/plus-circle.svg")} alt="" />
                     </div>
                   </div>
@@ -164,16 +161,7 @@ const Tab4 = (props) => {
                   <div className="cardInp">
                     <h6 className="cardsubtext">End Time</h6>
                     <div style={{ display: "flex", flexDirection: "row" }}>
-                      <DropdownBtn
-                        header="User Type"
-                        options={dropdownOptions}
-                        size="sm"
-                      />
-                      <DropdownBtn
-                        header="User Type"
-                        options={dropdownOptions}
-                        size="sm"
-                      />
+                      <TimeDropdown />
                       <img src={require("assets/img/plus-circle.svg")} alt="" />
                     </div>
                   </div>
@@ -266,7 +254,11 @@ const Tab4 = (props) => {
             </Card>
           </Col>
         </Row>
-
+        {/* <BreaktimeModal
+          toggle={toggleBreaktimeModal}
+          modal={breakTimeModal}
+          className={className}
+        /> */}
         <Modal centered isOpen={modal} toggle={toggle} className={className}>
           <ModalHeader toggle={toggle} className="modalhead">
             Edit Existing Shift
