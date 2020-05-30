@@ -65,7 +65,7 @@ class ProductModal extends Component {
         className={this.props.className}
       >
         <ModalHeader toggle={this.props.toggle} className="modalhead">
-          Add Product
+          Add Multiple Product Categories
         </ModalHeader>
         <ModalBody>
           <div className="inp-grp">

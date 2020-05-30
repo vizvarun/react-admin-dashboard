@@ -21,6 +21,7 @@ import VerticalLine from "variables/verticalline";
 import TableList from "variables/tablelist";
 import DateRange from "components/DateRange/DateRange";
 import TimeDropdown from "components/TimePicker/TimePicker";
+import BreaktimeModal from "../ModalComp/BreaktimeModal";
 
 const Tab4 = (props) => {
   const { className } = props;
@@ -153,8 +154,9 @@ const Tab4 = (props) => {
                       </h6>
                       <img
                         alt=""
-                        style={{ marginLeft: "10%" }}
+                        style={{ marginLeft: "10%", cursor: "pointer" }}
                         src={require("assets/img/plus-circle.svg")}
+                        onClick={toggleBreaktimeModal}
                       />
                     </div>
                   </div>
@@ -254,11 +256,11 @@ const Tab4 = (props) => {
             </Card>
           </Col>
         </Row>
-        {/* <BreaktimeModal
+        <BreaktimeModal
           toggle={toggleBreaktimeModal}
-          modal={breakTimeModal}
+          modal={breaktimeModal}
           className={className}
-        /> */}
+        />
         <Modal centered isOpen={modal} toggle={toggle} className={className}>
           <ModalHeader toggle={toggle} className="modalhead">
             Edit Existing Shift
@@ -280,16 +282,8 @@ const Tab4 = (props) => {
               <div className="cardInp">
                 <h6 className="cardsubtext">Start Time</h6>
                 <div style={{ display: "flex", flexDirection: "row" }}>
-                  <DropdownBtn
-                    header="User Type"
-                    options={dropdownOptions}
-                    size="sm"
-                  />
-                  <DropdownBtn
-                    header="User Type"
-                    size="sm"
-                    options={dropdownOptions}
-                  />
+                  <TimeDropdown />
+
                   <img src={require("assets/img/plus-circle.svg")} alt="" />
                 </div>
               </div>
@@ -313,16 +307,8 @@ const Tab4 = (props) => {
               <div className="cardInp">
                 <h6 className="cardsubtext">End Time</h6>
                 <div style={{ display: "flex", flexDirection: "row" }}>
-                  <DropdownBtn
-                    header="User Type"
-                    options={dropdownOptions}
-                    size="sm"
-                  />
-                  <DropdownBtn
-                    header="User Type"
-                    options={dropdownOptions}
-                    size="sm"
-                  />
+                  <TimeDropdown />
+
                   <img src={require("assets/img/plus-circle.svg")} alt="" />
                 </div>
               </div>
