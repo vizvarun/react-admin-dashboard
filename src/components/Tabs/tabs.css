@@ -128,11 +128,16 @@
 .button {
   background-color: #e4a503;
   color: white;
-  border: none;
   width: 7rem;
   height: 2.5rem;
   font-weight: 600;
   border-radius: 10px !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.button:focus{
+  background-color: #ffb700;
 }
 
 .mb {

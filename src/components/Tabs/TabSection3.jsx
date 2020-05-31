@@ -4,6 +4,7 @@ import { Row, Col, Card, CardBody } from "reactstrap";
 import Donut from "../../variables/doughnut";
 import DatePick from "components/DateRange/DatePicker";
 import DropdownBtn from "components/DropdownBtn";
+import Section3Tab from "./Section3Tab";
 
 const dropdownOptions = [
   {
@@ -83,7 +84,9 @@ const TabsSection3 = (props) => {
           <CardBody>
             <Row>
               <Col md="4">
-                <h6 className="cardmaintext mt-4 ml-4 ">Production and Downtime Entry</h6>
+                <h6 className="cardmaintext mt-4 ml-4 ">
+                  Production and Downtime Entry
+                </h6>
               </Col>
               <Col md="4" className="card-row">
                 <h6 className="cardsubtext mr-5 mt-4">Date</h6>
@@ -105,7 +108,7 @@ const TabsSection3 = (props) => {
           <CardBody>
             <Row>
               <Col md="4">
-                <h6 className="cardmaintext mt-4 ml-4">Machine & Operator Entry</h6>
+                <h6 className="cardmaintext mt-4 ml-4"></h6>
               </Col>
               <Col md="4" className="card-row">
                 <h6 className="cardsubtext mr-5">Machine</h6>
@@ -116,7 +119,7 @@ const TabsSection3 = (props) => {
                 />
               </Col>
               <Col md="4" className="card-row">
-                <h6 className="cardsubtext mr-5 pb-3">Machine</h6>
+                <h6 className="cardsubtext mr-5 pb-3">Operator</h6>
                 <DropdownBtn
                   header="User Type"
                   options={dropdownOptions}
@@ -126,6 +129,12 @@ const TabsSection3 = (props) => {
             </Row>
           </CardBody>
         </Card>
+        <div>
+          <Section3Tab />
+          <div className="cardInp buttoncon mb">
+            <button className="button">Import Excel</button>
+          </div>
+        </div>
       </div>
     </div>
   );

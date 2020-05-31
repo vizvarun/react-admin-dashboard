@@ -224,9 +224,9 @@ const Tab2 = (props) => {
                       />
                     </div>
                   </Collapse>
-                  <div className="cardInp buttoncon mb">
-                    <button className="button">Add Product</button>
-                  </div>
+                </div>
+                <div className="cardInp buttoncon mb">
+                  <button className="button">Add Product</button>
                 </div>
               </CardBody>
             </Card>
