@@ -348,3 +348,16 @@
   flex-direction: row;
   align-items: baseline;
 }
+
+.filtericon3 {
+  margin-bottom: 5%;
+  cursor: pointer;
+  margin-left: 15%;
+  margin-top: 5%;
+}
+
+.icon-toggle{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}

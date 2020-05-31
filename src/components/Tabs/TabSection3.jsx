@@ -129,11 +129,15 @@ const TabsSection3 = (props) => {
             </Row>
           </CardBody>
         </Card>
+        <div className="mb-4" style={{ float: "right" }}>
+          <button className="button mt-2">Import Excel</button>
+          <div className="mt-2 icon-toggle">
+            <img alt="" src={require("assets/img/filter1.svg")} className="filtericon3" />
+            <img alt="" src={require("assets/img/filter2.svg")} className="filtericon3" />
+          </div>
+        </div>
         <div>
           <Section3Tab />
-          <div className="cardInp buttoncon mb">
-            <button className="button">Import Excel</button>
-          </div>
         </div>
       </div>
     </div>
