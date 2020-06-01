@@ -28,7 +28,7 @@ const dropdownOptions = [
 const TabsSection3 = (props) => {
   return (
     <div className="content">
-      <div style={{ marginTop: "8%" }}>
+      <div style={{ marginTop: "2%" }}>
         <Row className="top-graph">
           <Col md="2">
             <div className="doughnut-graph">
