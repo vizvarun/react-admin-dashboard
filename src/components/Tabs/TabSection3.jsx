@@ -30,7 +30,7 @@ const TabsSection3 = (props) => {
     <div className="content">
       <div style={{ marginTop: "8%" }}>
         <Row className="top-graph">
-          <Col md="2" sm="6">
+          <Col md="2">
             <div className="doughnut-graph">
               <Donut
                 legendPosition="left"
@@ -42,7 +42,7 @@ const TabsSection3 = (props) => {
               />
             </div>
           </Col>
-          <Col md="2" sm="6">
+          <Col md="2">
             <div className="doughnut-graph">
               <Donut
                 legendPosition="left"
@@ -54,7 +54,7 @@ const TabsSection3 = (props) => {
               />
             </div>
           </Col>
-          <Col md="2" sm="6">
+          <Col md="2">
             <div className="doughnut-graph">
               <Donut
                 legendPosition="left"
@@ -66,7 +66,7 @@ const TabsSection3 = (props) => {
               />
             </div>
           </Col>
-          <Col md="2" sm="6">
+          <Col md="2">
             <div className="doughnut-graph">
               <Donut
                 legendPosition="left"
