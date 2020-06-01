@@ -3,9 +3,10 @@ import { TabContent, TabPane, Nav, NavItem, NavLink } from "reactstrap";
 import classnames from "classnames";
 import "./tabs.css";
 
-import ProductionTab from "./ProductionTab";
-import DowntimeTab from "./DowntimeTab";
 import Section4SubTab1 from "./Section4SubTab1";
+import Section4SubTab2 from "./Section4SubTab2";
+import Section4SubTab3 from "./Section4SubTab3";
+import Section4SubTab4 from "./Section4SubTab4";
 
 const Section4Tab = (props) => {
   const [activeTab, setActiveTab] = useState("1");
@@ -84,13 +85,13 @@ const Section4Tab = (props) => {
           <Section4SubTab1 />
         </TabPane>
         <TabPane tabId="2">
-          <DowntimeTab />
+          <Section4SubTab2 />
         </TabPane>
         <TabPane tabId="3">
-          <DowntimeTab />
+          <Section4SubTab3 />
         </TabPane>
         <TabPane tabId="4">
-          <DowntimeTab />
+          <Section4SubTab4 />
         </TabPane>
       </TabContent>
     </div>

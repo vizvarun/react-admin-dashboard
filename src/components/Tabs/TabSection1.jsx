@@ -6,7 +6,7 @@ import DatePick from "components/DateRange/DatePicker";
 import DropdownBtn from "components/DropdownBtn";
 import Section3Tab from "./Section3Tab";
 import Section4Tab from "./Section4Tab";
-import { Bar } from "react-chartjs-2";
+import { Bar, Bubble } from "react-chartjs-2";
 
 const dropdownOptions = [
   {
@@ -77,7 +77,7 @@ const TabsSection1 = (props) => {
           <Col md="6">
             <Card className="cardUser">
               <div className="p-4">
-                <Bar />
+                <Bubble />
               </div>
             </Card>
           </Col>

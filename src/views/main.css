@@ -21,12 +21,12 @@
   }
 }
 
-*::-webkit-scrollbar {
+.table-responsive::-webkit-scrollbar {
   display: none !important;
 }
-*::-webkit-scrollbar-track {
+.table-responsive::-webkit-scrollbar-track {
   display: none !important;
 }
-*::-webkit-scrollbar-thumb {
+.table-responsive::-webkit-scrollbar-thumb {
   display: none !important;
 }
