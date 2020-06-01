@@ -5,9 +5,32 @@ import Donut from "../../variables/doughnut";
 import StatisticsCard from "components/StatisticsCard/StatisticsCard";
 import WorstPerformerCard from "components/StatisticsCard/WorstPerformerCard";
 import { Bar } from "react-chartjs-2";
-import TableList from 'variables/tablelist';
+import TableList from "variables/tablelist";
 
 const Section4SubTab2 = (props) => {
+  const dataBar = {
+    labels: ["January", "February", "March", "April", "May", "June"],
+    datasets: [
+      {
+        label: "AR",
+        backgroundColor: "#1E558A",
+        borderColor: "#1E558A",
+        borderWidth: 1,
+        hoverBackgroundColor: "#1E558Acc",
+        hoverBorderColor: "#1E558Acc",
+        data: [65, 59, 80, 81, 56, 55, 40],
+      },
+      {
+        label: "QR",
+        backgroundColor: "#D50C0C",
+        borderColor: "#D50C0C",
+        borderWidth: 1,
+        hoverBackgroundColor: "#D50C0Ccc",
+        hoverBorderColor: "#D50C0Ccc",
+        data: [45, 69, 50, 61, 86, 75, 60],
+      },
+    ],
+  };
   const toggle = () => setModal(!modal);
   const [modal, setModal] = useState(false);
   const data = {
@@ -32,7 +55,15 @@ const Section4SubTab2 = (props) => {
             }}
           >
             <div className="pt-5 pb-5">
-              <Bar />
+              <Bar
+                data={dataBar}
+                options={{
+                  legend: {
+                    position: "bottom",
+                    maintainAspectRatio: true,
+                  },
+                }}
+              />
             </div>
           </Col>
           <Col md="3">
