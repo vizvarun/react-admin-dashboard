@@ -2,13 +2,22 @@ import React, { useState } from "react";
 import "./tabs.css";
 import { Row, Col, Card, CardBody } from "reactstrap";
 import Donut from "../../variables/doughnut";
+import StatisticsCard from "components/StatisticsCard/StatisticsCard";
+import WorstPerformerCard from "components/StatisticsCard/WorstPerformerCard";
 
 const Section4SubTab1 = (props) => {
   return (
     <div className="content">
       <div>
         <Row className="top-graph">
-          <Col md="8">
+          <Col
+            md="8"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+            }}
+          >
             <Row>
               <Col md="3">
                 <div className="doughnut-graph">
@@ -60,7 +69,10 @@ const Section4SubTab1 = (props) => {
               </Col>
             </Row>
           </Col>
-          <Col md="4">Hello</Col>
+          <Col md="3">
+            <StatisticsCard />
+            <WorstPerformerCard />
+          </Col>
         </Row>
       </div>
     </div>

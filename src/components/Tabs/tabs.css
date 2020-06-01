@@ -136,7 +136,7 @@
   outline: none !important;
 }
 
-.button:focus{
+.button:focus {
   background-color: #ffb700;
 }
 
@@ -356,8 +356,31 @@
   margin-top: 5%;
 }
 
-.icon-toggle{
+.icon-toggle {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+}
+
+.success-btn {
+  width: 50%;
+  height: 4vh;
+  border-radius: 8px;
+  font-weight: 500;
+  border: none;
+  color: white;
+  background-color: #82ca27;
+  outline: none !important;
+}
+
+.failure-btn {
+  width: 50%;
+  min-width: fit-content;
+  height: 4vh;
+  border-radius: 8px;
+  border: none;
+  font-weight: 500;
+  color: white;
+  outline: none !important;
+  background-color: #d50c0c;
 }
