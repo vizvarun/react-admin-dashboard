@@ -5,6 +5,7 @@ import Donut from "../../variables/doughnut";
 import DatePick from "components/DateRange/DatePicker";
 import DropdownBtn from "components/DropdownBtn";
 import Section3Tab from "./Section3Tab";
+import CardCarousel from "../CardCarousel/CardCarousel";
 
 const dropdownOptions = [
   {
@@ -131,6 +132,9 @@ const TabsSection3 = (props) => {
             </Row>
           </CardBody>
         </Card>
+        <div style={{ display: "flex", justifyContent: "space-around" }}>
+          <CardCarousel />
+        </div>
         <div className="mb-4" style={{ float: "right" }}>
           <button className="button mt-2">Import Excel</button>
           <div className="mt-2 icon-toggle">
@@ -146,6 +150,7 @@ const TabsSection3 = (props) => {
             />
           </div>
         </div>
+
         <div>
           <Section3Tab />
         </div>
