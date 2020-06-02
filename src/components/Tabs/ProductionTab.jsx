@@ -14,6 +14,7 @@ const ProductionTab = () => {
       "Total Rejection",
       "Status",
       "Edit",
+      "Approve",
     ],
     tableData: [
       [
