@@ -32,6 +32,9 @@ const Tab1 = (props) => {
   const calendarToggle = () => setIsOpenCalendar(!isOpenCalendar);
 
   const toggle = () => setModal(!modal);
+
+  const [dropdownVal, setDropdownVal] = useState({});
+  const updateDropdownVal = (val) => setDropdownVal(val);
   const data = {
     tableHeading: [
       "User Name",
@@ -121,9 +124,9 @@ const Tab1 = (props) => {
                   <div className="cardInp">
                     <h6 className="cardsubtext">User Type</h6>
                     <DropdownBtn
+                      getDropdownVal={() => updateDropdownVal()}
                       header="User Type"
                       options={dropdownOptions}
-                      size=""
                     />
                   </div>
                   <div className="cardInp">
@@ -186,7 +189,7 @@ const Tab1 = (props) => {
                   <Col md="6">
                     <h5 className="cardheadtext">Production House</h5>
                     <Donut
-                        legendPosition="bottom"
+                      legendPosition="bottom"
                       labels={["Contractor", "Payroll"]}
                       data={[60, 40]}
                       bgColor={["#CD0F5F", "#82CA27"]}
@@ -220,7 +223,11 @@ const Tab1 = (props) => {
             <div className="inp-grp">
               <div className="cardInp">
                 <h6 className="cardsubtext">User Type</h6>
-                <DropdownBtn header="User Type" options={dropdownOptions} />
+                <DropdownBtn
+                  getDropdownVal={() => updateDropdownVal()}
+                  header="User Type"
+                  options={dropdownOptions}
+                />
               </div>
               <div className="cardInp">
                 <h6 className="cardsubtext">User Name</h6>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Table } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-class TableList extends Component {
+class ProductionTable extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -47,24 +47,11 @@ class TableList extends Component {
           <tbody>
             {tableData.map((item) => (
               <tr>
-                {item.map((i) =>
-                  typeof i !== typeof true ? (
-                    <td key={item.indexOf(i)}>{i}</td>
-                  ) : (
-                    <td key={item.indexOf(i)}>
-                      <img
-                        alt=""
-                        src={
-                          i
-                            ? require("../assets/img/greendot.svg")
-                            : require("../assets/img/reddot.svg")
-                        }
-                      />
-                    </td>
-                  )
-                )}
+                {item.map((i) => (
+                  <td key={item.indexOf(i)}>{i}</td>
+                ))}
 
-                {tableHead[tableHead.length - 1] === "Edit" ? (
+                {tableHead[tableHead.length - 2] === "Edit" ? (
                   <td key={tableData.indexOf(item)}>
                     <img
                       alt=""
@@ -106,4 +93,4 @@ class TableList extends Component {
   }
 }
 
-export default TableList;
+export default ProductionTable;

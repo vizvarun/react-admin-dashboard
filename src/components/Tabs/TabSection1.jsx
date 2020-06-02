@@ -28,6 +28,8 @@ const dropdownOptions = [
 ];
 
 const TabsSection1 = (props) => {
+  const [dropdownVal, setDropdownVal] = useState({});
+  const updateDropdownVal = (val) => setDropdownVal(val);
   return (
     <div className="content">
       <div>
@@ -43,7 +45,7 @@ const TabsSection1 = (props) => {
                 <DropdownBtn
                   header="User Type"
                   options={dropdownOptions}
-                  size=""
+                  getDropdownVal={() => updateDropdownVal()}
                 />
               </Col>
               <Col md="4" className="card-row">
@@ -51,7 +53,7 @@ const TabsSection1 = (props) => {
                 <DropdownBtn
                   header="User Type"
                   options={dropdownOptions}
-                  size=""
+                  getDropdownVal={() => updateDropdownVal()}
                 />
               </Col>
             </Row>
