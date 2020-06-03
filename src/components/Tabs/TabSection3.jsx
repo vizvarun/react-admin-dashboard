@@ -5,6 +5,7 @@ import Donut from "../../variables/doughnut";
 import DatePick from "components/DateRange/DatePicker";
 import DropdownBtn from "components/DropdownBtn";
 import Section3Tab from "./Section3Tab";
+import CardCarousel from "../CardCarousel/CardCarousel";
 
 const dropdownOptions = [
   {
@@ -26,6 +27,8 @@ const dropdownOptions = [
 ];
 
 const TabsSection3 = (props) => {
+  const [dropdownVal, setDropdownVal] = useState({});
+  const updateDropdownVal = (val) => setDropdownVal(val);
   return (
     <div className="content">
       <div style={{ marginTop: "2%" }}>
@@ -97,7 +100,7 @@ const TabsSection3 = (props) => {
                 <DropdownBtn
                   header="User Type"
                   options={dropdownOptions}
-                  size=""
+                  getDropdownVal={() => updateDropdownVal()}
                 />
               </Col>
             </Row>
@@ -115,7 +118,7 @@ const TabsSection3 = (props) => {
                 <DropdownBtn
                   header="User Type"
                   options={dropdownOptions}
-                  size=""
+                  getDropdownVal={() => updateDropdownVal()}
                 />
               </Col>
               <Col md="4" className="card-row">
@@ -123,19 +126,31 @@ const TabsSection3 = (props) => {
                 <DropdownBtn
                   header="User Type"
                   options={dropdownOptions}
-                  size=""
+                  getDropdownVal={() => updateDropdownVal()}
                 />
               </Col>
             </Row>
           </CardBody>
         </Card>
+        <div style={{ display: "flex", justifyContent: "space-around" }}>
+          <CardCarousel />
+        </div>
         <div className="mb-4" style={{ float: "right" }}>
           <button className="button mt-2">Import Excel</button>
           <div className="mt-2 icon-toggle">
-            <img alt="" src={require("assets/img/filter1.svg")} className="filtericon3" />
-            <img alt="" src={require("assets/img/filter2.svg")} className="filtericon3" />
+            <img
+              alt=""
+              src={require("assets/img/filter1.svg")}
+              className="filtericon3"
+            />
+            <img
+              alt=""
+              src={require("assets/img/filter2.svg")}
+              className="filtericon3"
+            />
           </div>
         </div>
+
         <div>
           <Section3Tab />
         </div>

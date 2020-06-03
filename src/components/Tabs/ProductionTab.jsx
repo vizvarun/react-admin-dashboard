@@ -1,5 +1,5 @@
 import React, { Component, useState } from "react";
-import TableList from "../../variables/tablelist";
+import ProductionTable from "../../variables/productionTable";
 
 const ProductionTab = () => {
   const data = {
@@ -12,8 +12,8 @@ const ProductionTab = () => {
       "Total Production",
       "Rework",
       "Total Rejection",
-      "Status",
       "Edit",
+      "Approve",
     ],
     tableData: [
       [
@@ -25,7 +25,6 @@ const ProductionTab = () => {
         "1000",
         "20",
         "60",
-        true,
       ],
       [
         "12/12/20",
@@ -36,7 +35,6 @@ const ProductionTab = () => {
         "1000",
         "20",
         "60",
-        false,
       ],
     ],
   };
@@ -47,7 +45,7 @@ const ProductionTab = () => {
   return (
     <>
       <div>
-        <TableList
+        <ProductionTable
           toggle={toggle}
           tableHead={data.tableHeading}
           tableData={data.tableData}
