@@ -140,6 +140,25 @@
   background-color: #ffb700;
 }
 
+.button2 {
+  background-color: #4d4d4d;
+  color: white;
+  width: 7rem;
+  height: 2.5rem;
+  font-weight: 600;
+  border-radius: 10px !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.button2:hover {
+  background-color: #c1c1c1;
+}
+
+.button2:focus {
+  background-color: #e4a503;
+}
+
 .mb {
   margin-bottom: 5%;
 }
@@ -188,6 +207,11 @@
 .reddot {
   margin-top: -2%;
   margin-right: 5%;
+}
+
+.max-width{
+  width: 90% !important;
+  margin-top: 5%;
 }
 
 @media (max-width: 500px) {
