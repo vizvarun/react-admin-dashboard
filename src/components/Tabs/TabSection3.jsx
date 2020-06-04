@@ -18,7 +18,7 @@ import DropdownBtn from "components/DropdownBtn";
 import Section3Tab from "./Section3Tab";
 import CardCarousel from "../CardCarousel/CardCarousel";
 import Section3UpperTab from "./Section3UpperTab";
-import TimeDropdown from '../TimePicker/TimePicker';
+import TimeDropdown from "../TimePicker/TimePicker";
 
 const dropdownOptions = [
   {
@@ -48,7 +48,11 @@ const TabsSection3 = (props) => {
   const toggle = () => setModal(!modal);
   const [modal2, setModal2] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
-  const toggle2 = () => setModal2(!modal2);
+  const toggle2 = () => {
+    setModal2(!modal2);
+    setModal(false);
+  };
+
   return (
     <div className="content">
       <div style={{ marginTop: "2%" }}>
@@ -232,13 +236,17 @@ const TabsSection3 = (props) => {
                 />
               </div>
               <div className="cardInp">
-                <h6 className="cardsubtext" style={{ fontWeight: 500 }}>Start Time</h6>
+                <h6 className="cardsubtext" style={{ fontWeight: 500 }}>
+                  Start Time
+                </h6>
                 <div style={{ display: "flex", flexDirection: "row" }}>
                   <TimeDropdown />
                 </div>
               </div>
               <div className="cardInp">
-                <h6 className="cardsubtext mt-2" style={{ fontWeight: 500 }}>End Time</h6>
+                <h6 className="cardsubtext mt-2" style={{ fontWeight: 500 }}>
+                  End Time
+                </h6>
                 <div style={{ display: "flex", flexDirection: "row" }}>
                   <TimeDropdown />
                 </div>
