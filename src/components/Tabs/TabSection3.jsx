@@ -6,6 +6,7 @@ import DatePick from "components/DateRange/DatePicker";
 import DropdownBtn from "components/DropdownBtn";
 import Section3Tab from "./Section3Tab";
 import CardCarousel from "../CardCarousel/CardCarousel";
+import Section3UpperTab from "./Section3UpperTab";
 
 const dropdownOptions = [
   {
@@ -132,8 +133,8 @@ const TabsSection3 = (props) => {
             </Row>
           </CardBody>
         </Card>
-        <div style={{ display: "flex", justifyContent: "space-around" }}>
-          <CardCarousel />
+        <div className="mt-4 mb-4">
+          <Section3UpperTab />
         </div>
         <div className="mb-4" style={{ float: "right" }}>
           <button className="button mt-2">Import Excel</button>
