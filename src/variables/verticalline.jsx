@@ -63,13 +63,13 @@ const data = [
   },
 ];
 
-export default class Example extends PureComponent {
+export default class VerticalLine extends PureComponent {
   render() {
     return (
       <>
         <BarChart
-          width={550}
-          height={300}
+          width={this.props.width}
+          height={this.props.height}
           data={data}
           margin={{
             top: 20,

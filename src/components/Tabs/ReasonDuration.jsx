@@ -1,9 +1,9 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "../Tabs/tabs.css";
 import { Row, Col, Card, CardBody, CardText } from "reactstrap";
 import TableList from "variables/tablelist";
 import { Bar } from "react-chartjs-2";
-
+import VerticalLine from "variables/verticalline";
 
 const ReasonDuration = () => {
   const toggle = () => setModal(!modal);
@@ -34,7 +34,13 @@ const ReasonDuration = () => {
                       <Card className="cardUser">
                         <CardBody>
                           <div className="pt-5 pb-5">
-                            <Bar />
+                            <div className="table-responsive">
+                              <table>
+                                <thead>
+                                  <VerticalLine width={1200} height={500} />
+                                </thead>
+                              </table>
+                            </div>
                           </div>
                         </CardBody>
                       </Card>

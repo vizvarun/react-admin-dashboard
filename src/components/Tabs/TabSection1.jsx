@@ -7,6 +7,9 @@ import DropdownBtn from "components/DropdownBtn";
 import Section3Tab from "./Section3Tab";
 import Section4Tab from "./Section4Tab";
 import { Bar, Bubble } from "react-chartjs-2";
+import VerticalLine from "variables/verticalline";
+import BubbleChart from "variables/BubbleChart";
+import SingleBarChart from "variables/SingleBar";
 
 const dropdownOptions = [
   {
@@ -63,14 +66,20 @@ const TabsSection1 = (props) => {
           <Col md="6">
             <Card className="cardUser">
               <div className="p-4">
-                <Bar />
+                <div className="table-responsive">
+                  <table>
+                    <thead>
+                      <VerticalLine width={1200} height={400} />
+                    </thead>
+                  </table>
+                </div>
               </div>
             </Card>
           </Col>
           <Col md="6">
             <Card className="cardUser">
               <div className="p-4">
-                <Bar />
+                <SingleBarChart />
               </div>
             </Card>
           </Col>
@@ -79,14 +88,14 @@ const TabsSection1 = (props) => {
           <Col md="6">
             <Card className="cardUser">
               <div className="p-4">
-                <Bubble />
+                <BubbleChart />
               </div>
             </Card>
           </Col>
           <Col md="6">
             <Card className="cardUser">
               <div className="p-4">
-                <Bar />
+                <SingleBarChart />
               </div>
             </Card>
           </Col>

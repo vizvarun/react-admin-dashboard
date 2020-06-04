@@ -3,6 +3,7 @@ import "../Tabs/tabs.css";
 import { Row, Col, Card, CardBody, CardText } from "reactstrap";
 import TableList from "variables/tablelist";
 import { Bar } from "react-chartjs-2";
+import BubbleChart from "../../variables/BubbleChart";
 
 const RunnerRepeater = () => {
   const toggle = () => setModal(!modal);
@@ -33,7 +34,7 @@ const RunnerRepeater = () => {
                       <Card className="cardUser">
                         <CardBody>
                           <div className="pt-5 pb-5">
-                            <Bar />
+                            <BubbleChart />
                           </div>
                         </CardBody>
                       </Card>

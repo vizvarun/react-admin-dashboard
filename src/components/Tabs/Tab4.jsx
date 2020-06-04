@@ -225,7 +225,7 @@ const Tab4 = (props) => {
                     <div className="table-responsive">
                       <table>
                         <thead>
-                          <VerticalLine />
+                          <VerticalLine width={550} height={300} />
                         </thead>
                       </table>
                     </div>

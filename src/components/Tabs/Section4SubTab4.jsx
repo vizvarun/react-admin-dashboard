@@ -8,6 +8,7 @@ import { Bar, Bubble } from "react-chartjs-2";
 import TableList from "variables/tablelist";
 import ReasonDuration from "./ReasonDuration";
 import RunnerRepeater from "./RunnerRepeater";
+import BubbleChart from "variables/BubbleChart";
 
 const Section4SubTab4 = (props) => {
   const toggle = () => setModal(!modal);
@@ -34,7 +35,7 @@ const Section4SubTab4 = (props) => {
             }}
           >
             <div className="pt-5 pb-5">
-              <Bubble />
+              <BubbleChart />
             </div>
           </Col>
           <Col md="3">

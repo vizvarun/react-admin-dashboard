@@ -10,6 +10,9 @@ import RunnerRepeaterQR from "./RunnerRepeaterQR";
 import PRTable from "./PRTable";
 import OEETable from "./OEETable";
 import QRTable from "./QRTable";
+import VerticalLine from "variables/verticalline";
+import LineChart from "variables/LineChart";
+import BubbleChart from "variables/BubbleChart";
 
 const Section4SubTab1 = (props) => {
   const [activeTab, setActiveTab] = useState("1");
@@ -49,6 +52,21 @@ const Section4SubTab1 = (props) => {
     setIsOpenOne(false);
     setIsOpenTwo(false);
     setIsOpenThree(false);
+  };
+
+  const dataBar = {
+    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    datasets: [
+      {
+        label: "My First dataset",
+        backgroundColor: "rgba(255,99,132,0.2)",
+        borderColor: "rgba(255,99,132,1)",
+        borderWidth: 1,
+        hoverBackgroundColor: "rgba(255,99,132,0.4)",
+        hoverBorderColor: "rgba(255,99,132,1)",
+        data: [65, 59, 80, 81, 56, 55, 40],
+      },
+    ],
   };
 
   return (
@@ -152,7 +170,7 @@ const Section4SubTab1 = (props) => {
                   }}
                 >
                   <div className="pt-5 pb-5">
-                    <Bubble />
+                    <BubbleChart />
                   </div>
                 </Col>
               </Row>
@@ -172,7 +190,13 @@ const Section4SubTab1 = (props) => {
                   }}
                 >
                   <div className="pt-5 pb-5">
-                    <Bar />
+                    <div className="table-responsive">
+                      <table>
+                        <thead>
+                          <VerticalLine width={1400} height={500} />
+                        </thead>
+                      </table>
+                    </div>
                   </div>
                 </Col>
               </Row>
@@ -206,7 +230,7 @@ const Section4SubTab1 = (props) => {
                   }}
                 >
                   <div className="pt-5 pb-5">
-                    <Bar />
+                    <BubbleChart />
                   </div>
                 </Col>
               </Row>
@@ -240,7 +264,7 @@ const Section4SubTab1 = (props) => {
                   }}
                 >
                   <div className="pt-5 pb-5">
-                    <Bar />
+                    <LineChart />
                   </div>
                 </Col>
               </Row>
