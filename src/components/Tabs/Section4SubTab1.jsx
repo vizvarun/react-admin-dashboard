@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import "./tabs.css";
-import { Row, Col, Collapse, CardBody, Card } from "reactstrap";
+import { Row, Col, Collapse, Card } from "reactstrap";
 import Donut from "../../variables/doughnut";
-import classnames from "classnames";
 import StatisticsCard from "components/StatisticsCard/StatisticsCard";
 import WorstPerformerCard from "components/StatisticsCard/WorstPerformerCard";
 import { Bubble, Bar } from "react-chartjs-2";
 import ReasonDurationQR from "./ReasonDurationQR";
 import RunnerRepeaterQR from "./RunnerRepeaterQR";
 import PRTable from "./PRTable";
-import TableList from "variables/tablelist";
 import OEETable from "./OEETable";
 import QRTable from "./QRTable";
 
@@ -21,16 +19,37 @@ const Section4SubTab1 = (props) => {
   };
 
   const [isOpenOne, setIsOpenOne] = useState(false);
-  const toggleCollapseOne = () => setIsOpenOne(!isOpenOne);
-
   const [isOpenTwo, setIsOpenTwo] = useState(false);
-  const toggleCollapseTwo = () => setIsOpenTwo(!isOpenTwo);
-
   const [isOpenThree, setIsOpenThree] = useState(false);
-  const toggleCollapseThree = () => setIsOpenThree(!isOpenThree);
-
   const [isOpenFour, setIsOpenFour] = useState(false);
-  const toggleCollapseFour = () => setIsOpenFour(!isOpenFour);
+
+  const toggleCollapseOne = () => {
+    setIsOpenOne(!isOpenOne);
+    setIsOpenTwo(false);
+    setIsOpenThree(false);
+    setIsOpenFour(false);
+  };
+
+  const toggleCollapseTwo = () => {
+    setIsOpenTwo(!isOpenTwo);
+    setIsOpenOne(false);
+    setIsOpenThree(false);
+    setIsOpenFour(false);
+  };
+
+  const toggleCollapseThree = () => {
+    setIsOpenThree(!isOpenThree);
+    setIsOpenOne(false);
+    setIsOpenTwo(false);
+    setIsOpenFour(false);
+  };
+
+  const toggleCollapseFour = () => {
+    setIsOpenFour(!isOpenFour);
+    setIsOpenOne(false);
+    setIsOpenTwo(false);
+    setIsOpenThree(false);
+  };
 
   return (
     <div className="content">
