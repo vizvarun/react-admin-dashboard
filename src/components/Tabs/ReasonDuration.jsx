@@ -37,7 +37,7 @@ const ReasonDuration = () => {
                             <div className="table-responsive">
                               <table>
                                 <thead>
-                                  <VerticalLine width={1200} height={500} />
+                                  <VerticalLine width={1100} height={500} />
                                 </thead>
                               </table>
                             </div>

@@ -90,63 +90,61 @@ const Section3UpperTab = (props) => {
         <TabPane tabId="1">
           <div className="mt-5 mb-4">
             <Row>
-              <Col md="4">
-                <Card className="cardUser">
+              <Col>
+                <Card className="cardUser mt-2">
                   <CardBody>
-                    <div className="inp-grp">
-                      <CardText>
-                        <h5 className="cardheadtext">Production Entry</h5>
-                      </CardText>
-                      <div className="cardInp">
-                        <h6
-                          className="cardsubtext"
-                          style={{ fontWeight: "600" }}
-                        >
-                          Select Product
-                        </h6>
+                    <Row>
+                      <Col md="3" className="card-row">
+                        <h6 className="cardsubtext mr-5 mt-4">Date</h6>
                         <DropdownBtn
-                          getDropdownVal={() => updateDropdownVal()}
                           header="User Type"
                           options={dropdownOptions}
+                          getDropdownVal={() => updateDropdownVal()}
                         />
-                      </div>
-                      <div className="cardInp">
-                        <h6
-                          className="cardsubtext"
-                          style={{ fontWeight: "600" }}
-                        >
-                          Total Production
-                        </h6>
-                        <InputGroup className="no-border">
-                          <Input className="phold" placeholder="Type Here" />
-                        </InputGroup>
-                      </div>
-                      <div className="cardInp">
-                        <h6
-                          className="cardsubtext"
-                          style={{ fontWeight: "600" }}
-                        >
-                          Rework
-                        </h6>
-                        <InputGroup className="no-border">
-                          <Input className="phold" placeholder="Type Here" />
-                        </InputGroup>
-                      </div>
-                      <div className="cardInp">
-                        <h6
-                          className="cardsubtext"
-                          style={{ fontWeight: "600" }}
-                        >
-                          Rejection Reason
-                        </h6>
-                        <InputGroup className="no-border">
-                          <Input className="phold" placeholder="Type Here" />
-                        </InputGroup>
-                      </div>
-                    </div>
-                    <div className="cardInp buttoncon mb">
-                      <button className="button">Add Entry</button>
-                    </div>
+                      </Col>
+                      <Col md="3" className="card-row">
+                        <h6 className="cardsubtext mr-5 pb-3">Machine</h6>
+                        <DropdownBtn
+                          header="User Type"
+                          options={dropdownOptions}
+                          getDropdownVal={() => updateDropdownVal()}
+                        />
+                      </Col>
+                     
+                      <Col md="3" className="card-row mt-3">
+                        <h6 className="cardsubtext mr-5 pb-3">Machine</h6>
+                        <DropdownBtn
+                          header="User Type"
+                          options={dropdownOptions}
+                          getDropdownVal={() => updateDropdownVal()}
+                        />
+                      </Col>
+                      <Col md="3" className="card-row mt-3">
+                        <h6 className="cardsubtext mr-5 mt-4">Date</h6>
+                        <DropdownBtn
+                          header="User Type"
+                          options={dropdownOptions}
+                          getDropdownVal={() => updateDropdownVal()}
+                        />
+                      </Col>
+                     
+                      <Col md="3" className="card-row mt-3">
+                        <h6 className="cardsubtext mr-5 pb-3">Machine</h6>
+                        <DropdownBtn
+                          header="User Type"
+                          options={dropdownOptions}
+                          getDropdownVal={() => updateDropdownVal()}
+                        />
+                      </Col>
+                      <Col md="3" className="card-row mt-3">
+                        <h6 className="cardsubtext mr-5 mt-4">Date</h6>
+                        <DropdownBtn
+                          header="User Type"
+                          options={dropdownOptions}
+                          getDropdownVal={() => updateDropdownVal()}
+                        />
+                      </Col>
+                    </Row>
                   </CardBody>
                 </Card>
               </Col>
