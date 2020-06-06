@@ -215,7 +215,7 @@ const TabsSection3 = (props) => {
               </div>
               <div className="cardInp">
                 <div className="cardInp2">
-                  <h6 className="cardsubtext">Asthetic</h6>
+                  <h6 className="cardsubtext mb-3">Asthetic</h6>
                   <InputGroup style={{ border: "1px solid", borderRadius: 10 }}>
                     <Input
                       className="phold"

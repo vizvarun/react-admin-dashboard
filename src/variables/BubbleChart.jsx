@@ -11,6 +11,8 @@ class BubbleChart extends PureComponent {
       <>
         <Bubble
           data={this.props.data}
+          width={this.props.width}
+          height={this.props.height}
           options={{
             maintainAspectRatio: true,
             legend: {

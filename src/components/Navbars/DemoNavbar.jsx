@@ -123,7 +123,7 @@ class Header extends React.Component {
                 tooltip
               </Tooltip>{" "}
               on right.
-            </p> */}
+            </p>   */}
           </div>
           <NavbarToggler onClick={this.toggle}>
             <span className="navbar-toggler-bar navbar-kebab" />

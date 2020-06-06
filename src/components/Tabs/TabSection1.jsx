@@ -171,7 +171,13 @@ const TabsSection1 = (props) => {
           <Col md="6">
             <Card className="cardUser">
               <div className="p-4">
-                <BubbleChart data={data} />
+                <div className="table-responsive">
+                  <table>
+                    <thead>
+                      <BubbleChart data={data} width={1200} height={400} />
+                    </thead>
+                  </table>
+                </div>
               </div>
             </Card>
           </Col>
