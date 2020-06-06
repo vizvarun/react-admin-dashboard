@@ -16,6 +16,58 @@ const ReasonDuration = () => {
       ["R3", "SB3", "20", "2"],
     ],
   };
+
+  const verticleData = [
+    {
+      name: "A Shift",
+      Break: 40,
+      Start: 24,
+      End: 26,
+      amt: 24,
+    },
+    {
+      name: "B Shift",
+      Break: 30,
+      Start: 13,
+      End: 32,
+      amt: 22,
+    },
+    {
+      name: "C Shift",
+      Break: 20,
+      End: 27,
+      Start: 98,
+      amt: 22,
+    },
+    {
+      name: "D Shift",
+      Break: 27,
+      End: 36,
+      Start: 39,
+      amt: 20,
+    },
+    {
+      name: "E Shift",
+      Break: 18,
+      End: 30,
+      Start: 48,
+      amt: 21,
+    },
+    {
+      name: "F Shift",
+      Break: 23,
+      End: 22,
+      Start: 38,
+      amt: 25,
+    },
+    {
+      name: "G Shift",
+      Break: 34,
+      Start: 43,
+      End: 35,
+      amt: 21,
+    },
+  ];
   return (
     <>
       <Row>
@@ -37,7 +89,11 @@ const ReasonDuration = () => {
                             <div className="table-responsive">
                               <table>
                                 <thead>
-                                  <VerticalLine width={1100} height={500} />
+                                  <VerticalLine
+                                    width={1100}
+                                    height={500}
+                                    data={verticleData}
+                                  />
                                 </thead>
                               </table>
                             </div>

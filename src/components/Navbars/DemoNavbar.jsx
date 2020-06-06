@@ -13,8 +13,8 @@ import {
   InputGroupAddon,
   Input,
 } from "reactstrap";
-
 import "./DemoNavbar.css";
+import Tooltip from "../Sidebar/Tooltip/Tooltip";
 
 class Header extends React.Component {
   constructor(props) {
@@ -114,6 +114,16 @@ class Header extends React.Component {
                 className="navbrand"
               />
             </NavbarBrand>
+            {/* <p>
+              Here is a{" "}
+              <Tooltip
+                message={"Hello, I am a super cool tooltip"}
+                position={"right"}
+              >
+                tooltip
+              </Tooltip>{" "}
+              on right.
+            </p> */}
           </div>
           <NavbarToggler onClick={this.toggle}>
             <span className="navbar-toggler-bar navbar-kebab" />

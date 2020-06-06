@@ -14,11 +14,29 @@ const Section4SubTab4 = (props) => {
   const toggle = () => setModal(!modal);
   const [modal, setModal] = useState(false);
   const data = {
-    tableHeading: ["Reason", "Sub Reason", "Schedule Loss", "Frequency"],
-    tableData: [
-      ["R01", "SB1", "20", "4"],
-      ["R20", "SB2", "20", "7"],
-      ["R3", "SB3", "20", "2"],
+    labels: ["January"],
+    datasets: [
+      {
+        label: "My First dataset",
+        fill: false,
+        lineTension: 0.1,
+        backgroundColor: "rgba(75,192,192,0.4)",
+        borderColor: "rgba(75,192,192,1)",
+        borderCapStyle: "butt",
+        borderDash: [],
+        borderDashOffset: 0.0,
+        borderJoinStyle: "miter",
+        pointBorderColor: "rgba(75,192,192,1)",
+        pointBackgroundColor: "#fff",
+        pointBorderWidth: 1,
+        pointHoverRadius: 5,
+        pointHoverBackgroundColor: "rgba(75,192,192,1)",
+        pointHoverBorderColor: "rgba(220,220,220,1)",
+        pointHoverBorderWidth: 2,
+        pointRadius: 1,
+        pointHitRadius: 10,
+        data: [{ x: 10, y: 20, r: 5 }],
+      },
     ],
   };
 
@@ -35,7 +53,7 @@ const Section4SubTab4 = (props) => {
             }}
           >
             <div className="pt-5 pb-5">
-              <BubbleChart />
+              <BubbleChart data={data} />
             </div>
           </Col>
           <Col md="3">

@@ -14,6 +14,33 @@ import VerticalLine from "variables/verticalline";
 import LineChart from "variables/LineChart";
 import BubbleChart from "variables/BubbleChart";
 
+const data = {
+  labels: ["January", "February", "March", "April", "May", "June", "July"],
+  datasets: [
+    {
+      label: "My First dataset",
+      fill: false,
+      lineTension: 0.1,
+      backgroundColor: "rgba(75,192,192,0.4)",
+      borderColor: "rgba(75,192,192,1)",
+      borderCapStyle: "butt",
+      borderDash: [],
+      borderDashOffset: 0.0,
+      borderJoinStyle: "miter",
+      pointBorderColor: "rgba(75,192,192,1)",
+      pointBackgroundColor: "#fff",
+      pointBorderWidth: 1,
+      pointHoverRadius: 5,
+      pointHoverBackgroundColor: "rgba(75,192,192,1)",
+      pointHoverBorderColor: "rgba(220,220,220,1)",
+      pointHoverBorderWidth: 2,
+      pointRadius: 1,
+      pointHitRadius: 10,
+      data: [65, 59, 80, 81, 56, 55, 40],
+    },
+  ],
+};
+
 const Section4SubTab1 = (props) => {
   const [activeTab, setActiveTab] = useState("1");
 
@@ -68,6 +95,58 @@ const Section4SubTab1 = (props) => {
       },
     ],
   };
+
+  const verticleData = [
+    {
+      name: "A Shift",
+      Break: 40,
+      Start: 24,
+      End: 26,
+      amt: 24,
+    },
+    {
+      name: "B Shift",
+      Break: 30,
+      Start: 13,
+      End: 32,
+      amt: 22,
+    },
+    {
+      name: "C Shift",
+      Break: 20,
+      End: 27,
+      Start: 98,
+      amt: 22,
+    },
+    {
+      name: "D Shift",
+      Break: 27,
+      End: 36,
+      Start: 39,
+      amt: 20,
+    },
+    {
+      name: "E Shift",
+      Break: 18,
+      End: 30,
+      Start: 48,
+      amt: 21,
+    },
+    {
+      name: "F Shift",
+      Break: 23,
+      End: 22,
+      Start: 38,
+      amt: 25,
+    },
+    {
+      name: "G Shift",
+      Break: 34,
+      Start: 43,
+      End: 35,
+      amt: 21,
+    },
+  ];
 
   return (
     <div className="content">
@@ -170,7 +249,7 @@ const Section4SubTab1 = (props) => {
                   }}
                 >
                   <div className="pt-5 pb-5">
-                    <BubbleChart />
+                    <BubbleChart data={data} />
                   </div>
                 </Col>
               </Row>
@@ -193,7 +272,11 @@ const Section4SubTab1 = (props) => {
                     <div className="table-responsive">
                       <table>
                         <thead>
-                          <VerticalLine width={1400} height={500} />
+                          <VerticalLine
+                            width={1400}
+                            height={500}
+                            data={verticleData}
+                          />
                         </thead>
                       </table>
                     </div>
@@ -230,7 +313,7 @@ const Section4SubTab1 = (props) => {
                   }}
                 >
                   <div className="pt-5 pb-5">
-                    <BubbleChart />
+                    <BubbleChart data={data} />
                   </div>
                 </Col>
               </Row>
@@ -264,7 +347,7 @@ const Section4SubTab1 = (props) => {
                   }}
                 >
                   <div className="pt-5 pb-5">
-                    <LineChart />
+                    <LineChart data={data} />
                   </div>
                 </Col>
               </Row>

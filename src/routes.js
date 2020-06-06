@@ -10,6 +10,7 @@ var routes = [
     image: require("./assets/img/grid.svg"),
     component: Section1,
     layout: "/admin",
+    id: "sec1",
   },
   {
     path: "/section2",
@@ -17,6 +18,7 @@ var routes = [
     image: require("./assets/img/add-to-list.svg"),
     component: Section2,
     layout: "/admin",
+    id: "sec2",
   },
 
   {
@@ -25,6 +27,7 @@ var routes = [
     image: require("./assets/img/menu3.svg"),
     component: Section3,
     layout: "/admin",
+    id: "sec3",
   },
 
   {
@@ -33,6 +36,7 @@ var routes = [
     image: require("./assets/img/menu4.svg"),
     component: Section4,
     layout: "/admin",
+    id: "sec4",
   },
 ];
 export default routes;

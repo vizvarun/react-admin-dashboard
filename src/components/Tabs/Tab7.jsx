@@ -20,7 +20,50 @@ import DropdownBtn from "components/DropdownBtn";
 import TableList from "variables/tablelist";
 import BarChart from "variables/Bar";
 import DateRange from "components/DateRange/DateRange";
-
+const data = [
+  {
+    name: "Astetics",
+    Comapy: 4000,
+    Yours: 2400,
+    amt: 2400,
+  },
+  {
+    name: "Astetics",
+    Comapy: 3000,
+    Yours: 1398,
+    amt: 2210,
+  },
+  {
+    name: "Astetics",
+    Comapy: 2000,
+    Yours: 9800,
+    amt: 2290,
+  },
+  {
+    name: "Astetics",
+    Comapy: 2780,
+    Yours: 3908,
+    amt: 2000,
+  },
+  {
+    name: "Astetics",
+    Comapy: 1890,
+    Yours: 4800,
+    amt: 2181,
+  },
+  {
+    name: "Astetics",
+    Comapy: 2390,
+    Yours: 3800,
+    amt: 2500,
+  },
+  {
+    name: "Astetics ",
+    Comapy: 3490,
+    Yours: 4300,
+    amt: 2100,
+  },
+];
 const Tab7 = (props) => {
   const { className } = props;
   const [isOpen, setIsOpen] = useState(false);
@@ -178,7 +221,7 @@ const Tab7 = (props) => {
                     <div className="table-responsive">
                       <table>
                         <thead>
-                          <BarChart />
+                          <BarChart data={data} />
                         </thead>
                       </table>
                     </div>

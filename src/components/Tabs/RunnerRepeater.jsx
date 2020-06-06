@@ -4,6 +4,32 @@ import { Row, Col, Card, CardBody, CardText } from "reactstrap";
 import TableList from "variables/tablelist";
 import { Bar } from "react-chartjs-2";
 import BubbleChart from "../../variables/BubbleChart";
+const data = {
+  labels: ["January"],
+  datasets: [
+    {
+      label: "My First dataset",
+      fill: false,
+      lineTension: 0.1,
+      backgroundColor: "rgba(75,192,192,0.4)",
+      borderColor: "rgba(75,192,192,1)",
+      borderCapStyle: "butt",
+      borderDash: [],
+      borderDashOffset: 0.0,
+      borderJoinStyle: "miter",
+      pointBorderColor: "rgba(75,192,192,1)",
+      pointBackgroundColor: "#fff",
+      pointBorderWidth: 1,
+      pointHoverRadius: 5,
+      pointHoverBackgroundColor: "rgba(75,192,192,1)",
+      pointHoverBorderColor: "rgba(220,220,220,1)",
+      pointHoverBorderWidth: 2,
+      pointRadius: 1,
+      pointHitRadius: 10,
+      data: [{ x: 10, y: 20, r: 5 }],
+    },
+  ],
+};
 
 const RunnerRepeater = () => {
   const toggle = () => setModal(!modal);
@@ -34,7 +60,7 @@ const RunnerRepeater = () => {
                       <Card className="cardUser">
                         <CardBody>
                           <div className="pt-5 pb-5">
-                            <BubbleChart />
+                            <BubbleChart data={data} />
                           </div>
                         </CardBody>
                       </Card>

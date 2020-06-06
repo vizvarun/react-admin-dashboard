@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./tabs.css";
 import {
   Row,
@@ -52,6 +52,24 @@ const TabsSection3 = (props) => {
     setModal2(!modal2);
     setModal(false);
   };
+
+  const [inpOne, setInpOne] = useState(0);
+  const [inpTwo, setInpTwo] = useState(0);
+  const [inpThree, setInpThree] = useState(0);
+  const [inpSum, setInpSum] = useState(0);
+  const changeInpOne = (event) => setInpOne(event.target.value);
+
+  const changeInpTwo = (event) => setInpTwo(event.target.value);
+  const changeInpThree = (event) => setInpThree(event.target.value);
+
+  const changeInpSum = () => {
+    let sum = parseInt(inpOne) + parseInt(inpTwo) + parseInt(inpThree);
+    return setInpSum(sum);
+  };
+
+  useEffect(() => {
+    changeInpSum();
+  }, [inpOne, inpTwo, inpThree]);
 
   return (
     <div className="content">
@@ -194,9 +212,55 @@ const TabsSection3 = (props) => {
                 <h6 className="cardsubtext" style={{ fontWeight: 500 }}>
                   Rejection Reason
                 </h6>
-                <InputGroup className="no-border">
-                  <Input className="phold" placeholder="Type Here" />
-                </InputGroup>
+              </div>
+              <div className="cardInp">
+                <div className="cardInp2">
+                  <h6 className="cardsubtext">Asthetic</h6>
+                  <InputGroup style={{ border: "1px solid", borderRadius: 10 }}>
+                    <Input
+                      className="phold"
+                      placeholder=""
+                      onChange={changeInpOne}
+                      value={inpOne}
+                    />
+                  </InputGroup>
+                </div>
+                <span style={{ fontSize: "x-large" }}>&#43;</span>
+                <div className="cardInp2">
+                  <h6 className="cardsubtext">Functional Issue</h6>
+                  <InputGroup style={{ border: "1px solid", borderRadius: 10 }}>
+                    <Input
+                      className="phold"
+                      placeholder=""
+                      onChange={changeInpTwo}
+                      value={inpTwo}
+                    />
+                  </InputGroup>
+                </div>
+                <span style={{ fontSize: "x-large" }}>&#43;</span>
+                <div className="cardInp2">
+                  <h6 className="cardsubtext">Low efficiency</h6>
+                  <InputGroup style={{ border: "1px solid", borderRadius: 10 }}>
+                    <Input
+                      className="phold"
+                      placeholder=""
+                      onChange={changeInpThree}
+                      value={inpThree}
+                    />
+                  </InputGroup>
+                </div>
+                <span style={{ fontSize: "x-large" }}>&#61;</span>
+                <div className="cardInp2">
+                  <h6 className="cardsubtext">Total Rejection</h6>
+                  <InputGroup style={{ border: "1px solid", borderRadius: 10 }}>
+                    <Input
+                      className="phold"
+                      placeholder=""
+                      value={inpSum}
+                      disabled
+                    />
+                  </InputGroup>
+                </div>
               </div>
             </div>
           </ModalBody>

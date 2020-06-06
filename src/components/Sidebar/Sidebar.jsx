@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { Nav } from "reactstrap";
+import Tooltip from "./Tooltip/Tooltip";
+
 import "./Sidebar.css";
 
 class Sidebar extends React.Component {
@@ -35,10 +37,15 @@ class Sidebar extends React.Component {
                     to={prop.layout + prop.path}
                     className="nav-link"
                     activeClassName="active"
+                    id={prop.id}
                   >
-                    {/* <i className={prop.icon} /> */}
                     <div className="flexdisp">
-                      <img src={prop.image} alt="" className="imageicon" />
+                      <img
+                        src={prop.image}
+                        alt=""
+                        className="imageicon"
+                        // onClick={() => this.toggleTooltip(prop.id)}
+                      />
                       {/* <p className="nametext">{prop.name}</p> */}
                     </div>
                   </NavLink>
