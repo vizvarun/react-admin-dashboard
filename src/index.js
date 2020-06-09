@@ -15,6 +15,8 @@ import {
   faCheckCircle,
   faTimesCircle,
 } from "@fortawesome/free-regular-svg-icons";
+import LoginPage from "components/Authentication/Login";
+import OtpPage from "components/Authentication/OTP";
 
 library.add(fab, faCheckCircle, faTimesCircle);
 const hist = createBrowserHistory();
@@ -23,7 +25,9 @@ ReactDOM.render(
   <Router history={hist}>
     <Switch>
       <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
-      <Redirect to="/admin/section1" />
+      <Route path="/login" render={(props) => <LoginPage {...props} />} />
+      <Route path="/otp" render={(props) => <OtpPage {...props} />} />
+      <Redirect to="/login" />
     </Switch>
   </Router>,
   document.getElementById("root")

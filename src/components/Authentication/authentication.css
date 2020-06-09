@@ -1,0 +1,9 @@
+.loginCard {
+  min-width: 35vw;
+}
+
+@media(max-width:768px){
+    .loginCard{
+        min-width: 45vw;
+    }
+}
