@@ -35,7 +35,7 @@ const LoginPage = () => {
                     Password
                   </h6>
                   <InputGroup className="no-border mt-2">
-                    <Input className="phold" placeholder="Type Here" />
+                    <Input className="phold" type="password" placeholder="Type Here" />
                   </InputGroup>
                 </div>
               </div>
