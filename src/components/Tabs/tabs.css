@@ -457,3 +457,9 @@
   width: inherit;
   max-width: 10vw;
 }
+
+@media(max-width: 768px){
+  .card-sec1{
+    margin-top: 15%;
+  }
+}

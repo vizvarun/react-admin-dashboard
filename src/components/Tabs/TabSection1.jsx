@@ -123,7 +123,7 @@ const TabsSection1 = (props) => {
                 <DatePick />
               </Col>
               <Col md="4" className="card-row">
-                <h6 className="cardsubtext mr-5 pb-3">Machine Category</h6>
+                <h6 className="cardsubtext card-sec1 mr-5 pb-3">Machine Category</h6>
                 <DropdownBtn
                   header="User Type"
                   options={dropdownOptions}
