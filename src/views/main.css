@@ -36,10 +36,10 @@
   box-sizing: border-box;
   width: inherit;
   max-width: 10vw;
-  min-width: 8vw;
+  min-width: 10vw;
 }
 
-@media(max-width: 500px){
+@media(max-width: 768px){
   .css-10nd86i {
     position: relative;
     box-sizing: border-box;
