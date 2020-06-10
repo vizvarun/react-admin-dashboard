@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 import "./tabs.css";
-import { Row, Col, Card, CardBody, FormGroup,Collapse,Label, Input } from "reactstrap";
+import {
+  Row,
+  Col,
+  Card,
+  CardBody,
+  FormGroup,
+  Collapse,
+  Label,
+  Input,
+} from "reactstrap";
 import Donut from "../../variables/doughnut";
 import DatePick from "components/DateRange/DatePicker";
 import DropdownBtn from "components/DropdownBtn";
@@ -143,7 +152,7 @@ const TabsSection1 = (props) => {
                           <div className="radio-btns ml-3">
                             <div className="row">
                               <div className="col-lg-4 col-md-3 col-sm-6">
-                                <FormGroup tag="fieldset">
+                                <FormGroup tag="fieldset" className="dope">
                                   <FormGroup check>
                                     <Label check className="toggle-label">
                                       <Input
@@ -193,7 +202,7 @@ const TabsSection1 = (props) => {
                                 </FormGroup>
                               </div>
                               <div className="col-lg-4 col-md-3 col-sm-6">
-                                <FormGroup tag="fieldset">
+                                <FormGroup tag="fieldset" className="dope">
                                   <FormGroup check>
                                     <Label check className="toggle-label">
                                       <Input
@@ -237,7 +246,7 @@ const TabsSection1 = (props) => {
                                 </FormGroup>
                               </div>
                               <div className="col-lg-4 col-md-3 col-sm-6">
-                                <FormGroup tag="fieldset">
+                                <FormGroup tag="fieldset" className="dope">
                                   <FormGroup check>
                                     <Label check className="toggle-label">
                                       <Input
@@ -294,18 +303,18 @@ const TabsSection1 = (props) => {
                               </div>
                             </div>
                           </div>
-                          <div className="cardInp buttoncon mb">
-                            <button className="button" onClick={dateToggle}>
-                              Apply
-                            </button>
-                          </div>
+                        </div>
+                        <div className="cardInp buttoncon mb">
+                          <button className="button" onClick={dateToggle}>
+                            Apply
+                          </button>
                         </div>
                       </CardBody>
                     </Card>
                   </Collapse>
                 </div>
               </Col>
-              <Col md="4" className="card-row">
+              <div className="card-row" style={{ marginRight: "5%" }}>
                 <h6 className="cardsubtext card-sec1 mr-5 pb-3">
                   Machine Category
                 </h6>
@@ -314,15 +323,15 @@ const TabsSection1 = (props) => {
                   options={dropdownOptions}
                   getDropdownVal={() => updateDropdownVal()}
                 />
-              </Col>
-              <Col md="4" className="card-row">
+              </div>
+              <div className="card-row">
                 <h6 className="cardsubtext mr-5 pb-3">Machine</h6>
                 <DropdownBtn
                   header="User Type"
                   options={dropdownOptions}
                   getDropdownVal={() => updateDropdownVal()}
                 />
-              </Col>
+              </div>
             </Row>
           </CardBody>
         </Card>
