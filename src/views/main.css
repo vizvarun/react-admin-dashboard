@@ -30,3 +30,12 @@
 .table-responsive::-webkit-scrollbar-thumb {
   display: none !important;
 }
+
+.css-10nd86i {
+  position: relative;
+  box-sizing: border-box;
+  width: inherit;
+  max-width: 10vw;
+  min-width: 8vw;
+
+}

@@ -450,3 +450,10 @@
 .btn-date::after {
   margin-left: 0.5em;
 }
+
+.css-10nd86i {
+  position: relative;
+  box-sizing: border-box;
+  width: inherit;
+  max-width: 10vw;
+}
