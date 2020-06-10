@@ -440,15 +440,11 @@
 
 .btn-date {
   width: max-content;
-  margin-left: 15%;
-  margin-top: -2%;
+  margin-left: unset;
+  margin-top: unset;
   background-color: #fff !important;
   height: max-content;
   border: none;
-}
-
-.btn-date::after {
-  margin-left: 0.5em;
 }
 
 .css-10nd86i {
@@ -458,8 +454,17 @@
   max-width: 10vw;
 }
 
-@media(max-width: 768px){
-  .card-sec1{
+@media (max-width: 768px) {
+  .card-sec1 {
     margin-top: 15%;
   }
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-collapse {
+  min-width: 70vw;
 }
