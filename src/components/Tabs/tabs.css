@@ -437,3 +437,16 @@
   outline: none !important;
   background-color: #d50c0c;
 }
+
+.btn-date {
+  width: max-content;
+  margin-left: 15%;
+  margin-top: -2%;
+  background-color: #fff !important;
+  height: max-content;
+  border: none;
+}
+
+.btn-date::after {
+  margin-left: 0.5em;
+}
