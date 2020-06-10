@@ -37,6 +37,7 @@
   width: inherit;
   max-width: 10vw;
   min-width: 10vw;
+  margin-top: 4%;
 }
 
 @media(max-width: 768px){

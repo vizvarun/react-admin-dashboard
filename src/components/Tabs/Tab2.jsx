@@ -134,7 +134,12 @@ const Tab2 = (props) => {
                   </CardText>
                   <div className="cardInp">
                     <h6 className="cardsubtext">Product Type</h6>
-                    <DropdownBtn header="User Type" options={dropdownOptions} />
+                    <div className="mr-4">
+                      <DropdownBtn
+                        header="User Type"
+                        options={dropdownOptions}
+                      />
+                    </div>
                   </div>
                   <div className="cardInp">
                     <h6 className="cardsubtext">Product Category</h6>
@@ -174,15 +179,19 @@ const Tab2 = (props) => {
                   </Collapse>
                   <div className="cardInp">
                     <h6 className="cardsubtext">Product Code</h6>
-                    <InputGroup className="no-border">
-                      <Input className="phold" placeholder="Type Here" />
-                    </InputGroup>
+                    <div className="mr-4">
+                      <InputGroup className="no-border">
+                        <Input className="phold" placeholder="Type Here" />
+                      </InputGroup>
+                    </div>
                   </div>
                   <div className="cardInp">
                     <h6 className="cardsubtext">Product Name</h6>
-                    <InputGroup className="no-border">
-                      <Input className="phold" placeholder="Type Here" />
-                    </InputGroup>
+                    <div className="mr-4">
+                      <InputGroup className="no-border">
+                        <Input className="phold" placeholder="Type Here" />
+                      </InputGroup>
+                    </div>
                   </div>
                   <div className="cardInp">
                     <h6 className="cardsubtext">Cycle Time</h6>

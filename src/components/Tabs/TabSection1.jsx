@@ -115,7 +115,7 @@ const TabsSection1 = (props) => {
   return (
     <div className="content">
       <div>
-        <Card className="cardUser mt-2">
+        <Card className="cardUser">
           <CardBody>
             <Row>
               <Col md="4" className="card-row">

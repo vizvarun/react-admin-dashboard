@@ -36,8 +36,8 @@ const TabsSection4 = (props) => {
       <div>
         <Card className="cardUser mt-2">
           <CardBody>
-            <Row>
-              <Col md="4" className="card-row">
+            <Row style={{display: "flex", flexDirection: "row", justifyContent: "center"}}>
+              <Col md="3" className="card-row">
                 <h6 className="cardsubtext mr-5 mt-4">Date</h6>
                 <div className="">
                   <button
@@ -62,7 +62,7 @@ const TabsSection4 = (props) => {
                   </Collapse>
                 </div>
               </Col>
-              <Col md="4" className="card-row">
+              <Col md="3" className="card-row">
                 <h6 className="cardsubtext mr-5 pb-3">Machine Category</h6>
                 <DropdownBtn
                   header="User Type"
@@ -70,7 +70,7 @@ const TabsSection4 = (props) => {
                   getDropdownVal={() => updateDropdownVal()}
                 />
               </Col>
-              <Col md="4" className="card-row">
+              <Col md="3" className="card-row">
                 <h6 className="cardsubtext mr-5 pb-3">Machine</h6>
                 <DropdownBtn
                   header="User Type"

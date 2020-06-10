@@ -131,7 +131,7 @@ const TabsSection3 = (props) => {
         <Card className="cardUser mt- ">
           <CardBody className="ml-2">
             <Row>
-              <h6 className="cardmaintext mt-4 mb-4 ml-3 ">
+              <h6 className="cardmaintext ml-3 ">
                 Production and Downtime Entry
               </h6>
             </Row>

@@ -2,6 +2,7 @@ import Section1 from "views/Section1.jsx";
 import Section3 from "views/Section3.jsx";
 import Section4 from "views/Section4.jsx";
 import Section2 from "views/Section2.jsx";
+import Settings from "views/Settings";
 
 var routes = [
   {
@@ -37,6 +38,15 @@ var routes = [
     component: Section4,
     layout: "/admin",
     id: "sec4",
+  },
+
+  {
+    path: "/settings",
+    name: " Settings",
+    image: require("./assets/img/cog.svg"),
+    component: Settings,
+    layout: "/admin",
+    id: "settings",
   },
 ];
 export default routes;
