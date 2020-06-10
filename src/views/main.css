@@ -48,3 +48,13 @@
     min-width: 35vw;
   }
 }
+
+
+.logout-btn{
+  background-color: #e4a503;
+  color: white;
+  height: 2.5rem;
+  border-radius: 10px !important;
+  border: none !important;
+  outline: none !important;
+}

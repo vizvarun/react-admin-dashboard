@@ -12,6 +12,9 @@ import {
   InputGroupText,
   InputGroupAddon,
   Input,
+  Modal,
+  ModalFooter,
+  ModalHeader,
 } from "reactstrap";
 import "./DemoNavbar.css";
 import Tooltip from "../Sidebar/Tooltip/Tooltip";
@@ -25,9 +28,11 @@ class Header extends React.Component {
       color: "transparent",
     };
     this.toggle = this.toggle.bind(this);
+    this.toggleModal = this.toggle.bind(this);
     this.dropdownToggle = this.dropdownToggle.bind(this);
     this.sidebarToggle = React.createRef();
   }
+
   toggle() {
     if (this.state.isOpen) {
       this.setState({
@@ -169,6 +174,11 @@ class Header extends React.Component {
                     <span className="d-lg-none d-md-block">Account</span>
                   </p>
                 </Link>
+              </NavItem>
+              <NavItem>
+                <Link to="/login" className="nav-link btn-rotate">
+                  <button className="logout-btn">Logout</button>
+                  </Link>
               </NavItem>
             </Nav>
           </Collapse>
