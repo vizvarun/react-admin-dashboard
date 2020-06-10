@@ -14,10 +14,7 @@ const OtpPage = (props) => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            position: "fixed",
-            top: "45%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
+            marginTop: "5%"
           }}
         >
           <img src={require("assets/img/logo.png")} alt="logo" className="" />
