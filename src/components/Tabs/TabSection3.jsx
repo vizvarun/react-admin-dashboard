@@ -11,6 +11,7 @@ import {
   InputGroup,
   Input,
   ModalFooter,
+  Collapse,
 } from "reactstrap";
 import Donut from "../../variables/doughnut";
 import DatePick from "components/DateRange/DatePicker";
@@ -48,6 +49,8 @@ const TabsSection3 = (props) => {
   const toggle = () => setModal(!modal);
   const [modal2, setModal2] = useState(false);
   const [isOpen2, setIsOpen2] = useState(false);
+  const [isOpenDate, setIsOpenDate] = useState(false);
+  const dateToggle = () => setIsOpenDate(!isOpenDate);
   const toggle2 = () => {
     setModal2(!modal2);
     setModal(false);
@@ -141,8 +144,29 @@ const TabsSection3 = (props) => {
               }}
             >
               <Col md="2" className="card-row">
-                <h6 className="cardsubtext mr-5 mt-4 mb-2">Date</h6>
-                <DatePick />
+                <h6 className="cardsubtext mr-5 mt-4">Date</h6>
+                <div className="">
+                  <button
+                    type="button"
+                    onClick={dateToggle}
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    class="droptext dropdown-toggle btn btn-secondary btn-date"
+                  >
+                    Choose
+                  </button>
+                  <Collapse isOpen={isOpenDate}>
+                    <Card className="cardToggle mt-3">
+                      <CardBody>
+                        <div className="mb-2">To</div> <DatePick />
+                        <div className="mt-3">
+                          <div className="mb-2">From </div>
+                          <DatePick />
+                        </div>
+                      </CardBody>
+                    </Card>
+                  </Collapse>
+                </div>
               </Col>
               <Col md="2" className="card-row">
                 <h6 className="cardsubtext mr-5 pb-3 mb-2">Shift</h6>
