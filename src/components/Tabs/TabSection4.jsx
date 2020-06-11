@@ -236,7 +236,7 @@ const TabsSection4 = (props) => {
                   </Collapse>
                 </div>
               </Col>
-              <div className="card-row" style={{ marginRight: "5%" }}>
+              <div className="card-row" style={{ marginRight: "5%" , paddingLeft: "2.5%" }}>
                 <h6 className="cardsubtext card-sec1 mr-5 pb-3">
                   Machine Category
                 </h6>
@@ -247,7 +247,7 @@ const TabsSection4 = (props) => {
                 />
               </div>
               <div className="card-row">
-                <h6 className="cardsubtext mr-5 pb-3">Machine</h6>
+                <h6 className="cardsubtext mr-5 pb-3" style={{paddingLeft: "2.5%" }}>Machine</h6>
                 <DropdownBtn
                   header="User Type"
                   options={dropdownOptions}
