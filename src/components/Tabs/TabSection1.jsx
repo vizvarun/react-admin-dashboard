@@ -143,7 +143,6 @@ const TabsSection1 = (props) => {
                   </button>
                   <Collapse isOpen={isOpen}>
                     <div className="table-responsive">
-
                     <Card className="cardToggle mt-3 card-collapse">
                       <CardBody>
                         <div className="flex-row">
@@ -151,7 +150,7 @@ const TabsSection1 = (props) => {
                           <DatePick />
                           <div className="mb-2 mr-3 mt-1 ml-3">To </div>
                           <DatePick />
-                          <div className="radio-btns ml-3">
+                          <div className="radio-btns ml-3 inp-rad">
                             <div className="row">
                               <div className="col-lg-4 col-md-3 col-sm-6">
                                 <FormGroup tag="fieldset" className="dope">
@@ -317,7 +316,7 @@ const TabsSection1 = (props) => {
                   </Collapse>
                 </div>
               </Col>
-              <div className="card-row" style={{ marginRight: "5%" }}>
+              <div className="card-row" style={{ marginRight: "5%", paddingLeft: "2.5%" }}>
                 <h6 className="cardsubtext card-sec1 mr-5 pb-3">
                   Machine Category
                 </h6>
@@ -327,7 +326,7 @@ const TabsSection1 = (props) => {
                   getDropdownVal={() => updateDropdownVal()}
                 />
               </div>
-              <div className="card-row">
+              <div className="card-row" style={{paddingLeft: "2.5%" }}>
                 <h6 className="cardsubtext mr-5 pb-3">Machine</h6>
                 <DropdownBtn
                   header="User Type"

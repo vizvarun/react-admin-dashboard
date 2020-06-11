@@ -49,7 +49,6 @@ const TabsSection4 = (props) => {
               style={{
                 display: "flex",
                 flexDirection: "row",
-                justifyContent: "center",
               }}
             >
               <Col md="3" className="card-row">
@@ -72,7 +71,7 @@ const TabsSection4 = (props) => {
                           <DatePick />
                           <div className="mb-2 mr-3 mt-1 ml-3">To </div>
                           <DatePick />
-                          <div className="radio-btns ml-3">
+                          <div className="radio-btns ml-3 inp-rad">
                             <div className="row">
                               <div className="col-lg-4 col-md-3 col-sm-6">
                                 <FormGroup tag="fieldset" className="dope">

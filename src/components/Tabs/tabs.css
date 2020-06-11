@@ -482,4 +482,18 @@
 
 .card-collapse {
   min-width: 70vw;
+  background-color: #f9f9f9;
+  box-shadow: none;
+}
+
+
+
+@media(max-width:991px){
+  .flex-row{
+    display: block;
+  }
+  .inp-rad{
+    margin-top: 15%;
+  }
+
 }
