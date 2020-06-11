@@ -44,6 +44,7 @@ class Sidebar extends React.Component {
                         src={prop.image}
                         alt=""
                         className="imageicon"
+                        title={prop.name}
                         // onClick={() => this.toggleTooltip(prop.id)}
                       />
                       {/* <p className="nametext">{prop.name}</p> */}

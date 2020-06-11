@@ -142,6 +142,8 @@ const TabsSection1 = (props) => {
                     Choose
                   </button>
                   <Collapse isOpen={isOpen}>
+                    <div className="table-responsive">
+
                     <Card className="cardToggle mt-3 card-collapse">
                       <CardBody>
                         <div className="flex-row">
@@ -311,6 +313,7 @@ const TabsSection1 = (props) => {
                         </div>
                       </CardBody>
                     </Card>
+                    </div>
                   </Collapse>
                 </div>
               </Col>
