@@ -247,7 +247,7 @@ const TabsSection4 = (props) => {
                 />
               </div>
               <div className="card-row">
-                <h6 className="cardsubtext mr-5 pb-3" style={{paddingLeft: "2.5%" }}>Machine</h6>
+                <h6 className="cardsubtext mr-5 pb-3" style={{paddingLeft: "1.5%" }}>Machine</h6>
                 <DropdownBtn
                   header="User Type"
                   options={dropdownOptions}
