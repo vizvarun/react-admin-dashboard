@@ -10,7 +10,7 @@
     "@fortawesome/react-fontawesome": "^0.1.9",
     "@wojtekmaj/react-daterange-picker": "^3.0.0",
     "bootstrap": "4.3.1",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "history": "4.9.0",
     "moment": "^2.26.0",
     "node-sass": "4.12.0",
